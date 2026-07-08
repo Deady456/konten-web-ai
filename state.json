@@ -3,7 +3,12 @@
     "pengaruh-anime-jepang",
     "karakter-anime-yang-memiliki-pengaruh-besar-pada-budaya-populer",
     "karya-senyata-manga-dalam-sejarah",
-    "pengaruh-anime-pada-ekonomi-jepang"
+    "pengaruh-anime-pada-ekonomi-jepang",
+    "one-piece-film-red-keberhasilan",
+    "oshi-no-ko-season-2",
+    "jujutsu-kaisen-musim-ke-2",
+    "attack-on-titan-the-final-season",
+    "studio-pierrot-rilis-trailer-baru"
   ],
   "published": [
     {
@@ -35,6 +40,46 @@
       "topic": "pengaruh-anime-pada-ekonomi-jepang",
       "title": "Bagaimana Anime Mempengaruhi Ekonomi Jepang?",
       "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_024332_pengaruh-anime-pada-ekonomi-jepang\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_025237",
+      "topic": "one-piece-film-red-keberhasilan",
+      "title": "One Piece Film Red Pecahkan Rekor Penjualan!",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_025237_one-piece-film-red-keberhasilan\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_025845",
+      "topic": "oshi-no-ko-season-2",
+      "title": "Oshi no Ko Season 2 Rilis!",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_025845_oshi-no-ko-season-2\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_030749",
+      "topic": "jujutsu-kaisen-musim-ke-2",
+      "title": "Jujutsu Kaisen Musim 2 Rilis",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_030749_jujutsu-kaisen-musim-ke-2\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_031513",
+      "topic": "attack-on-titan-the-final-season",
+      "title": "Attack on Titan The Final Season",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_031513_attack-on-titan-the-final-season\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_032147",
+      "topic": "studio-pierrot-rilis-trailer-baru",
+      "title": "Studio Pierrot Rilis Trailer Baru!",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_032147_studio-pierrot-rilis-trailer-baru\\final.mp4",
       "video_id": null,
       "publish_at": null
     }

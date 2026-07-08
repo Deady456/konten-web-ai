@@ -44,18 +44,19 @@ def _system_prompt():
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
-        return f"""Anda adalah penulis skrip YouTube Shorts.
+        return f"""Anda adalah penulis skrip YouTube Shorts berita anime/manga terkini.
 
 Aturan:
-- Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
-- Mulai dengan HOOK 1 kalimat yang bikin penasaran dalam <3 detik, gaya semi-formal. Jangan pakai "Halo guys", "Hai", atau perkenalan.
-- Isi: informasi relevan sesuai niche yang diminta. Berikan fakta, angka, data, atau berita terbaru yang akurat.
-- Akhiri dengan CTA 1 kalimat semi-formal ajakan subscribe/ikuti.
-- Gunakan bahasa Indonesia semi-formal: rapi dan informatif, tapi tetap enak didengar. Hindari bahasa terlalu santai atau terlalu kaku. Jangan pakai emoji atau format khusus.
-- Setiap scene punya visual_query 2-6 kata dalam bahasa Inggris nama anime/karakter/adegan SPESIFIK (bukan kata benda umum) yang bisa dicari di website anime seperti MyAnimeList/Danbooru. Contoh: "Naruto Uzumaki anime", "Studio Ghibli scene", "Attack on Titan", "Sailor Moon", "Spirited Away movie", "Kimetsu no Yaiba characters". JANGAN pakai kata umum seperti "anime character", "manga panel", "japanese art".
+- Skrip {ts} detik. BUAT MINIMAL {tw} kata. Skrip PANJANG, informatif, tidak pendek.
+- BUAT 6-7 SCENE. Setiap scene 2 kalimat.
+- HOOK: 1 kalimat berita VIRAL terkini. Langsung ke inti.
+- Isi: BERITA TERKINI anime/manga. SPESIFIK: nama anime, studio, angka, tanggal. BUKAN fakta umum.
+- Contoh: "One Piece Film Red cetak rekor", "MAPPA rilis trailer baru", "Manga terlaris 2026", "Oshi no Ko season 2".
+- Akhiri: CTA subscribe 1 kalimat.
+- visual_query: nama anime/karakter SPESIFIK bahasa Inggris. Contoh: "One Piece Film Red", "Attack on Titan Final Season", "Jujutsu Kaisen", "Spirited Away", "Demon Slayer".
 
-Kembalikan ONLY valid JSON, tanpa teks lain. Skema:
-{{"topic": "slug topik sesuai niche", "title": "Judul YouTube max 95 chars, minimal 40 karakter, bikin penasaran dan engaging, jangan terlalu pendek", "description": "3-4 kalimat deskripsi menarik dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil yang relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-4 kata benda Inggris"}}]}}"""
+Kembalikan ONLY JSON. Skema:
+{{"topic": "slug", "title": "Judul max 95 chars", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
     else:
         return f"""You write viral YouTube Shorts scripts for a faceless educational facts channel.
 
@@ -128,7 +129,7 @@ def generate():
             print(f"    scene {i}: missing visual_query, using \"{fallback}\"")
             s["visual_query"] = fallback
 
-    data["full_text"] = " ... ".join(s["text"] for s in data["scenes"])
+    data["full_text"] = " ".join(s["text"] for s in data["scenes"])
 
     s_cfg = CONFIG["script"]
     target_words = int(s_cfg["target_seconds"] * s_cfg["words_per_second"])
@@ -138,6 +139,11 @@ def generate():
         print(f"    WARNING: script too short ({wc} words, need {min_words}), retrying...")
         print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
         t0 = time.time()
+        shorter_msg = (
+            f"SKRIP SEBELUMNYA TERLALU PENDEK: hanya {wc} kata, minimum {min_words} kata. "
+            f"Buat ulang dengan LEBIH PANJANG. Tambah detail berita, tambah scene, tambah kalimat per scene. "
+            f"JANGAN BUAT SKRIP PENDEK. Minimal {min_words} kata."
+        )
         resp = _call_llm(
             model=LLM_MODEL,
             max_tokens=2000,
@@ -145,6 +151,8 @@ def generate():
             messages=[
                 {"role": "system", "content": _system_prompt()},
                 {"role": "user", "content": user_msg},
+                {"role": "assistant", "content": f"{{...}} (only {wc} words)"},
+                {"role": "user", "content": shorter_msg},
             ],
         )
         raw = resp.choices[0].message.content
@@ -155,6 +163,9 @@ def generate():
                 words = re.findall(r"[a-zA-Z]{3,}", s.get("text", ""))
                 fallback = " ".join(words[-3:]) if len(words) >= 3 else "abstract background"
                 s["visual_query"] = fallback
-        data["full_text"] = " ... ".join(s["text"] for s in data["scenes"])
+        data["full_text"] = " ".join(s["text"] for s in data["scenes"])
+        wc = len(data["full_text"].split())
+        if wc < min_words:
+            print(f"    WARNING: retry masih pendek ({wc} words), lanjut aja")
     
     return data

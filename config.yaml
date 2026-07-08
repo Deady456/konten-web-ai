@@ -1,11 +1,11 @@
-niche: "fakta unik dan menarik tentang anime & manga (anime populer, karakter ikonik, studio anime, sejarah manga, fakta tersembunyi, rekomendasi anime, budaya Jepang, perbandingan karakter)"
-audience: "penggemar anime dan manga Indonesia dari segala usia yang ingin tahu fakta unik, sejarah, dan hal menarik di balik anime/manga favorit mereka"
+niche: "berita dan trend terkini anime & manga dunia (rilis anime baru, manga terbaru, adaptasi live-action, kolaborasi brand, rekor penjualan, pengumuman studio, berita voice actor, teknologi animasi, fenomena viral anime)"
+audience: "penggemar anime Indonesia yang up-to-date dengan berita dan trend terbaru dunia anime & manga"
 language: id
 
 script:
   model: llama-3.3-70b-versatile
-  target_seconds: 60
-  words_per_second: 2.5
+  target_seconds: 55
+  words_per_second: 2.3
 
 voice:
   provider: edge
