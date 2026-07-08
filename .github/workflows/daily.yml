@@ -1,0 +1,61 @@
+name: Daily Pexels Video
+
+on:
+  workflow_dispatch:
+
+env:
+  PIPELINE: pexels
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check upload hour
+        id: check
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> $GITHUB_OUTPUT
+          else
+            HOUR=$(date -u +%H)
+            if echo "23" | grep -qw "$HOUR"; then
+              echo "run=true" >> $GITHUB_OUTPUT
+            else
+              echo "run=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.run == 'true'
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install FFmpeg
+        if: steps.check.outputs.run == 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Install Python dependencies
+        if: steps.check.outputs.run == 'true'
+        run: pip install -r requirements.txt
+      - name: Decode YouTube credentials
+        if: steps.check.outputs.run == 'true'
+        run: |
+          echo "${{ secrets.CLIENT_SECRET_B64 }}" | base64 -d > client_secret.json
+          echo "${{ secrets.TOKEN_B64 }}" | base64 -d > token_default.json
+      - name: Run Pexels pipeline
+        if: steps.check.outputs.run == 'true'
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python -m src.pipeline
+      - name: Commit refreshed token (if changed)
+        if: steps.check.outputs.run == 'true'
+        run: |
+          if git diff --quiet token_default.json 2>/dev/null; then
+            echo "Token unchanged"
+          else
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add token_default.json
+            git commit -m "auto: refresh YouTube token"
+            git push
+          fi

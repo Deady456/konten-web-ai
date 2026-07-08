@@ -1,0 +1,47 @@
+niche: "fakta unik dan menarik tentang anime & manga (anime populer, karakter ikonik, studio anime, sejarah manga, fakta tersembunyi, rekomendasi anime, budaya Jepang, perbandingan karakter)"
+audience: "penggemar anime dan manga Indonesia dari segala usia yang ingin tahu fakta unik, sejarah, dan hal menarik di balik anime/manga favorit mereka"
+language: id
+
+script:
+  model: llama-3.3-70b-versatile
+  target_seconds: 60
+  words_per_second: 2.5
+
+voice:
+  provider: edge
+  voice: id-ID-ArdiNeural
+  rate: "-12%"
+  pitch: "+0Hz"
+
+captions:
+  whisper_model: base
+  font: "Anton"
+  font_size: 90
+  primary_color: "&H00FFFFFF"
+  outline_color: "&H00000000"
+  outline: 6
+  words_per_caption: 3
+  position_y: 0.55
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+
+visuals:
+  # Hybrid visual strategy: web scraping + AI generation
+  source: hybrid  # "web", "ai", or "hybrid" (random mix)
+  hybrid_mix: 0.5  # 50% web, 50% AI (0.0 = all AI, 1.0 = all web)
+
+upload:
+  privacy: "public"
+  category_id: "27"
+  made_for_kids: false
+  channel: "animewebai"
+  default_tags: ["fakta anime", "anime unik", "manga", "fakta manga", "anime facts", "rekomendasi anime", "anime Indonesia", "kultur Jepang", "anime viral", "fakta karakter"]
+
+comments:
+  model: llama-3.1-8b-instant
+  poll_interval_minutes: 180
+  auto_reply: true
+  delete_spam: true
