@@ -1,6 +1,7 @@
 name: Rak Anime
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -20,7 +21,8 @@ jobs:
           echo "${{ secrets.CLIENT_SECRET_B64 }}" | base64 -d > client_secret.json
           echo "${{ secrets.TOKEN_RAK_ANIME_B64 }}" | base64 -d > token_rak_anime.json
       - name: Set channel for Rak Anime
-        run: sed -i 's/channel:.*/channel: "rak_anime"/' config.yaml
+        run: >-
+          sed -i 's|channel:.*|channel: "rak_anime"|' config.yaml
       - name: Run hybrid pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
