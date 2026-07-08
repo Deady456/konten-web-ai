@@ -1,6 +1,6 @@
 import requests, random
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 POLLINATIONS_URL = "https://image.pollinations.ai/prompt/"
 COLORS = [
@@ -50,14 +50,11 @@ def _generate_fallback(prompt: str, out_path: Path, width=1080, height=1920):
 
     try:
         font = ImageFont.truetype("arialbd.ttf", 64)
-        font2 = ImageFont.truetype("arial.ttf", 32)
     except (IOError, OSError):
         try:
             font = ImageFont.truetype("DejaVuSans-Bold.ttf", 64)
-            font2 = ImageFont.truetype("DejaVuSans.ttf", 32)
         except (IOError, OSError):
             font = ImageFont.load_default()
-            font2 = font
 
     words = prompt.split()
     lines = []
@@ -85,14 +82,31 @@ def _generate_fallback(prompt: str, out_path: Path, width=1080, height=1920):
 
     img.save(out_path, quality=92)
 
+def _ensure_portrait(img_path: Path, target_w=1080, target_h=1920):
+    img = Image.open(img_path).convert("RGB")
+    w, h = img.size
+    if w <= h * 1.1:
+        return
+
+    bg = img.resize((target_w, target_h), Image.LANCZOS)
+    bg = bg.filter(ImageFilter.GaussianBlur(radius=30))
+
+    img.thumbnail((target_w, int(target_h * 0.9)), Image.LANCZOS)
+    x = (target_w - img.width) // 2
+    y = (target_h - img.height) // 2
+    bg.paste(img, (x, y))
+    bg.save(img_path, quality=92)
+
 def generate(prompt: str, out_path: Path, width=1080, height=1920) -> Path:
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    url = f"{POLLINATIONS_URL}{requests.utils.quote(prompt)}?width={width}&height={height}&nologo=true"
+    portrait_prompt = f"{prompt}, portrait, vertical composition, anime style"
+    url = f"{POLLINATIONS_URL}{requests.utils.quote(portrait_prompt)}?width={width}&height={height}&nologo=true"
     for attempt in range(3):
         try:
             resp = requests.get(url, timeout=60)
             if resp.status_code == 200 and len(resp.content) > 1000:
                 out_path.write_bytes(resp.content)
+                _ensure_portrait(out_path, width, height)
                 return out_path
         except requests.RequestException:
             pass

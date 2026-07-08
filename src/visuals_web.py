@@ -1,67 +1,104 @@
-import re
-import time
-import requests
+import re, json, time, subprocess
 from pathlib import Path
+from urllib.parse import quote
+import requests
 from .config import CONFIG
 
 _HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
-_ANIME_SOURCES = [
-    "https://myanimelist.net/anime.php?q={q}",
-    "https://anilist.co/search/anime?search={q}",
-    "https://wall.alphacoders.com/search.php?search={q}",
-]
+def _search_danbooru(query: str) -> list[str]:
+    try:
+        tags = quote(query.replace(" ", "_"))
+        url = f"https://danbooru.donmai.us/posts.json?tags={tags}+rating:s&limit=5"
+        r = requests.get(url, headers=_HEADERS, timeout=15)
+        r.raise_for_status()
+        posts = r.json()
+        urls = []
+        for p in posts:
+            f = p.get("file_url", "")
+            if f and "pximg.net" in f:
+                urls.append(f)
+        for p in posts:
+            f = p.get("file_url", "")
+            if f and f not in urls:
+                urls.append(f)
+        return urls[:5]
+    except Exception:
+        return []
 
-def _search_google_images(query: str, max_retries: int = 2) -> list[str]:
-    for attempt in range(max_retries):
-        try:
-            search_url = f"https://www.google.com/search?tbm=isch&q={requests.utils.quote(query)}+anime&hl=id"
-            r = requests.get(search_url, headers=_HEADERS, timeout=15)
-            r.raise_for_status()
-            urls = re.findall(r'"(https://[^"]+\.(?:jpg|jpeg|png|webp))"', r.text)
-            seen = set()
-            clean = []
-            for u in urls:
-                if any(x in u for x in ("gstatic", "google", "favicon", "logo")):
-                    continue
-                if u not in seen:
-                    seen.add(u)
-                    clean.append(u)
-            if clean:
-                return clean
-        except Exception:
-            time.sleep(1)
-    return []
+def _search_anilist(query: str) -> list[str]:
+    try:
+        ql = """
+        query($s:String){Page(page:1,perPage:5){
+          media(search:$s,type:ANIME){coverImage{large extraLarge}}
+          characters(search:$s){image{large}}
+        }}"""
+        r = requests.post("https://graphql.anilist.co",
+            json={"query": ql, "variables": {"s": query}},
+            headers={"Content-Type": "application/json"}, timeout=15)
+        r.raise_for_status()
+        data = r.json().get("data", {}).get("Page", {})
+        urls = []
+        for m in data.get("media", []):
+            ci = m.get("coverImage", {})
+            for k in ("extraLarge", "large"):
+                if ci.get(k):
+                    urls.append(ci[k])
+        for c in data.get("characters", []):
+            ci = c.get("image", {})
+            if ci.get("large"):
+                urls.append(ci["large"])
+        return urls[:5]
+    except Exception:
+        return []
+
+def _search_konachan(query: str) -> list[str]:
+    try:
+        tags = quote(query.replace(" ", "+"))
+        url = f"https://konachan.com/post.json?tags={tags}+rating:s&limit=5"
+        r = requests.get(url, headers=_HEADERS, timeout=15)
+        r.raise_for_status()
+        posts = r.json()
+        urls = []
+        for p in posts:
+            f = p.get("file_url", "")
+            if f:
+                urls.append(f)
+        return urls[:5]
+    except Exception:
+        return []
+
+def _search_zerochan(query: str) -> list[str]:
+    try:
+        url = f"https://www.zerochan.net/{quote(query)}?s=rating"
+        r = requests.get(url, headers=_HEADERS, timeout=15)
+        r.raise_for_status()
+        urls = re.findall(r'(https://static\.zerochan\.net/[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
+        return urls[:5]
+    except Exception:
+        return []
 
 def _search_myanimelist(query: str) -> list[str]:
     try:
-        search_url = f"https://myanimelist.net/anime.php?q={requests.utils.quote(query)}&cat=anime"
-        r = requests.get(search_url, headers=_HEADERS, timeout=15)
+        url = f"https://myanimelist.net/anime.php?q={quote(query)}&cat=anime"
+        r = requests.get(url, headers=_HEADERS, timeout=15)
         r.raise_for_status()
-        urls = re.findall(r'data-src="(https://cdn\.myanimelist\.net[^"]+\.(?:jpg|jpeg|png|webp))"', r.text)
-        return urls[:5]
+        urls = re.findall(r'(https://cdn\.myanimelist\.net/[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
+        seen = []
+        for u in urls:
+            if u not in seen and "questionmark" not in u:
+                seen.append(u)
+        return seen[:5]
     except Exception:
         return []
 
-def _search_anime_news_network(query: str) -> list[str]:
-    try:
-        search_url = f"https://www.animenewsnetwork.com/search?q={requests.utils.quote(query)}"
-        r = requests.get(search_url, headers=_HEADERS, timeout=15)
-        r.raise_for_status()
-        urls = re.findall(r'(https://www\.animenewsnetwork\.com/images/[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
-        return urls[:5]
-    except Exception:
-        return []
-
-def _search_wallpaper(query: str) -> list[str]:
-    try:
-        search_url = f"https://wall.alphacoders.com/search.php?search={requests.utils.quote(query)}"
-        r = requests.get(search_url, headers=_HEADERS, timeout=15)
-        r.raise_for_status()
-        urls = re.findall(r'(https://initia\.alphacoders\.com[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
-        return urls[:5]
-    except Exception:
-        return []
+_SOURCES = [
+    ("Danbooru", _search_danbooru),
+    ("AniList", _search_anilist),
+    ("Konachan", _search_konachan),
+    ("Zerochan", _search_zerochan),
+    ("MyAnimeList", _search_myanimelist),
+]
 
 def _download(url: str, out_path: Path) -> bool:
     try:
@@ -74,34 +111,31 @@ def _download(url: str, out_path: Path) -> bool:
     except Exception:
         return False
 
-def _image_to_clip(img_path: Path, out_path: Path, duration: float, w: int, h: int, fps: int):
-    import subprocess
+def _ensure_portrait_clip(img_path: Path, out_path: Path, duration: float, w: int, h: int, fps: int):
     frames = int(duration * fps)
-    cmd = [
+    subprocess.run([
         "ffmpeg", "-y", "-loop", "1", "-i", str(img_path),
         "-vf",
         f"scale={w}:{h}:force_original_aspect_ratio=increase,"
         f"crop={w}:{h},"
-        f"zoompan=z='if(eq(on,1),1,min(1.2,zoom+0.01))':d={frames}:s={w}x{h}:fps={fps}",
+        f"zoompan=z='if(eq(on,1),1,min(1.15,zoom+0.008))':d={frames}:"
+        f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={w}x{h}:fps={fps}",
         "-c:v", "libx264", "-preset", "fast", "-crf", "20",
         "-pix_fmt", "yuv420p",
         "-t", f"{duration:.3f}",
         str(out_path),
-    ]
-    subprocess.run(cmd, capture_output=True, text=True)
+    ], capture_output=True, text=True)
     return out_path
 
 def _fallback_clip(out_path: Path, duration: float, w: int, h: int, fps: int):
-    import subprocess
-    cmd = [
+    subprocess.run([
         "ffmpeg", "-y", "-f", "lavfi",
         "-i", f"color=c=#1a1a2e:s={w}x{h}:r={fps}:d={duration:.3f}",
-        "-vf", f"drawtext=text='Anime Facts':fontcolor=white:fontsize=48:x=(w-text_w)/2:y=(h-text_h)/2",
+        "-vf", "drawtext=text='Anime Facts':fontcolor=white:fontsize=48:x=(w-text_w)/2:y=(h-text_h)/2",
         "-c:v", "libx264", "-preset", "fast", "-crf", "20",
         "-pix_fmt", "yuv420p",
         str(out_path),
-    ]
-    subprocess.run(cmd, capture_output=True, text=True)
+    ], capture_output=True, text=True)
 
 def fetch_for_scenes(scenes: list[dict], out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -118,22 +152,20 @@ def fetch_for_scenes(scenes: list[dict], out_dir: Path) -> list[Path]:
         t0 = time.time()
         img_url = None
 
-        all_urls = _search_google_images(q)
-        if not all_urls:
-            all_urls = _search_myanimelist(q)
-        if not all_urls:
-            all_urls = _search_anime_news_network(q)
-        if not all_urls:
-            all_urls = _search_wallpaper(q)
-
-        for url in all_urls:
-            if _download(url, out_dir / f"img_{i:02d}.jpg"):
-                img_url = url
-                print(f"      found: {url[:80]}...")
+        for src_name, src_fn in _SOURCES:
+            urls = src_fn(q)
+            if urls:
+                print(f"      trying {src_name}...")
+                for url in urls:
+                    if _download(url, out_dir / f"img_{i:02d}.jpg"):
+                        img_url = url
+                        print(f"      found via {src_name}: {url[:80]}...")
+                        break
+            if img_url:
                 break
 
         if img_url:
-            _image_to_clip(
+            _ensure_portrait_clip(
                 out_dir / f"img_{i:02d}.jpg",
                 out_path, scene_dur, w, h, fps,
             )

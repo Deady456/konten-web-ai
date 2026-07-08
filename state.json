@@ -1,1 +1,33 @@
-{"used_topics": [], "published": []}
+{
+  "used_topics": [
+    "pengaruh-anime-jepang",
+    "karakter-anime-yang-memiliki-pengaruh-besar-pada-budaya-populer",
+    "karya-senyata-manga-dalam-sejarah"
+  ],
+  "published": [
+    {
+      "ts": "20260709_021732",
+      "topic": "pengaruh-anime-jepang",
+      "title": "Fakta Menarik: Bagaimana Anime Mempengaruhi Budaya Jepang Modern?",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_021732_pengaruh-anime-jepang\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_022639",
+      "topic": "karakter-anime-yang-memiliki-pengaruh-besar-pada-budaya-populer",
+      "title": "5 Karakter Anime Paling Berpengaruh Di Dunia",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_022639_karakter-anime-yang-memiliki-pengaruh-besar-pada-budaya-popu\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_023210",
+      "topic": "karya-senyata-manga-dalam-sejarah",
+      "title": "Mengenal Karya Seni Manga yang Menginspirasi Gerakan Seni Rupa Dunia",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_023210_karya-senyata-manga-dalam-sejarah\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    }
+  ]
+}

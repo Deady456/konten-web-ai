@@ -65,7 +65,7 @@ def build(
 
     zoom_profiles = [
         (1.0, 1.06),    # slow zoom-in
-        (1.04, 1.0),    # zoom-out
+        (1.0, 1.04),    # subtle zoom-in
         (1.0, 1.0),     # static
     ]
 

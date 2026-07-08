@@ -14,7 +14,7 @@ def _log(msg: str):
 
 _AI_STYLES = [
     "Studio Ghibli style", "Makoto Shinkai style", "KyoAni style",
-    "Ufotable style", "anime art style", "manga panel style",
+    "Ufotable style", "anime style", "manga panel style",
     "vintage anime 80s style", "A-1 Pictures style",
 ]
 
@@ -58,9 +58,22 @@ def run_once(publish_at: str | None = None,
             web_dir = work / "broll_web"
             clips = visuals_web.fetch_for_scenes([scene], web_dir)
             if clips and clips[0].exists() and clips[0].stat().st_size > 5000:
-                image_paths.append(clips[0])
-                _log(f"      done in {time.time()-t1:.0f}s")
-                continue
+                clip_path = clips[0]
+                if clip_path.suffix == ".mp4":
+                    frame_path = work / "images" / f"scene_{i:02d}_web.jpg"
+                    import subprocess
+                    subprocess.run([
+                        "ffmpeg", "-y", "-ss", "0.5", "-i", str(clip_path),
+                        "-vframes", "1", "-q:v", "2", str(frame_path),
+                    ], capture_output=True, text=True)
+                    if frame_path.exists():
+                        image_paths.append(frame_path)
+                        _log(f"      done in {time.time()-t1:.0f}s")
+                        continue
+                else:
+                    image_paths.append(clip_path)
+                    _log(f"      done in {time.time()-t1:.0f}s")
+                    continue
             _log(f"      web failed, fallback to AI")
 
         style = random.choice(_AI_STYLES)
