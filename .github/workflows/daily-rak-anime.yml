@@ -1,0 +1,41 @@
+name: Daily Rak Anime Video
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Decode YouTube credentials
+        run: |
+          echo "${{ secrets.CLIENT_SECRET_B64 }}" | base64 -d > client_secret.json
+          echo "${{ secrets.TOKEN_RAK_ANIME_B64 }}" | base64 -d > token_rak_anime.json
+      - name: Set channel for Rak Anime
+        run: sed -i 's/channel:.*/channel: "rak_anime"/' config.yaml
+      - name: Run hybrid pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python -m src.pipeline_hybrid
+      - name: Commit refreshed token
+        run: |
+          if git diff --quiet token_rak_anime.json 2>/dev/null; then
+            echo "Token unchanged"
+          else
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add token_rak_anime.json
+            git add -f state.json 2>/dev/null || true
+            git commit -m "auto: refresh Rak Anime token [skip ci]"
+            git push
+          fi
