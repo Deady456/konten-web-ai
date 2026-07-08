@@ -52,7 +52,7 @@ Aturan:
 - Isi: informasi relevan sesuai niche yang diminta. Berikan fakta, angka, data, atau berita terbaru yang akurat.
 - Akhiri dengan CTA 1 kalimat semi-formal ajakan subscribe/ikuti.
 - Gunakan bahasa Indonesia semi-formal: rapi dan informatif, tapi tetap enak didengar. Hindari bahasa terlalu santai atau terlalu kaku. Jangan pakai emoji atau format khusus.
-- Setiap scene punya visual_query 2-4 kata benda bahasa Inggris untuk cari video stok di Pexels yang relevan dengan niche.
+- Setiap scene punya visual_query 2-6 kata dalam bahasa Inggris nama anime/karakter/adegan SPESIFIK (bukan kata benda umum) yang bisa dicari di website anime seperti MyAnimeList/Danbooru. Contoh: "Naruto Uzumaki anime", "Studio Ghibli scene", "Attack on Titan", "Sailor Moon", "Spirited Away movie", "Kimetsu no Yaiba characters". JANGAN pakai kata umum seperti "anime character", "manga panel", "japanese art".
 
 Kembalikan ONLY valid JSON, tanpa teks lain. Skema:
 {{"topic": "slug topik sesuai niche", "title": "Judul YouTube max 95 chars, minimal 40 karakter, bikin penasaran dan engaging, jangan terlalu pendek", "description": "3-4 kalimat deskripsi menarik dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil yang relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-4 kata benda Inggris"}}]}}"""

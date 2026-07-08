@@ -2,7 +2,8 @@
   "used_topics": [
     "pengaruh-anime-jepang",
     "karakter-anime-yang-memiliki-pengaruh-besar-pada-budaya-populer",
-    "karya-senyata-manga-dalam-sejarah"
+    "karya-senyata-manga-dalam-sejarah",
+    "pengaruh-anime-pada-ekonomi-jepang"
   ],
   "published": [
     {
@@ -26,6 +27,14 @@
       "topic": "karya-senyata-manga-dalam-sejarah",
       "title": "Mengenal Karya Seni Manga yang Menginspirasi Gerakan Seni Rupa Dunia",
       "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_023210_karya-senyata-manga-dalam-sejarah\\final.mp4",
+      "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_024332",
+      "topic": "pengaruh-anime-pada-ekonomi-jepang",
+      "title": "Bagaimana Anime Mempengaruhi Ekonomi Jepang?",
+      "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_024332_pengaruh-anime-pada-ekonomi-jepang\\final.mp4",
       "video_id": null,
       "publish_at": null
     }

@@ -6,18 +6,62 @@ from .config import CONFIG
 
 _HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
-def _search_danbooru(query: str) -> list[str]:
+def _anilist_graphql(query_str: str, var: str) -> list[str]:
+    try:
+        r = requests.post("https://graphql.anilist.co",
+            json={"query": query_str, "variables": {"s": var}},
+            headers={"Content-Type": "application/json"}, timeout=15)
+        r.raise_for_status()
+        return r.json()
+    except Exception:
+        return {}
+
+def _search_anilist_media(query: str) -> list[str]:
+    try:
+        q = 'query($s:String){Page(page:1,perPage:5){media(search:$s){coverImage{large extraLarge}}}}'
+        data = _anilist_graphql(q, query).get("data",{}).get("Page",{}).get("media",[])
+        urls = []
+        for m in data:
+            ci = m.get("coverImage",{})
+            for k in ("extraLarge", "large"):
+                if ci.get(k):
+                    urls.append(ci[k])
+        if not urls:
+            words = query.split()
+            if len(words) > 1:
+                return _search_anilist_media(words[-1])
+        return urls[:5]
+    except Exception:
+        return []
+
+def _search_anilist_char(query: str) -> list[str]:
+    try:
+        q = 'query($s:String){Page(page:1,perPage:5){characters(search:$s){image{large}}}}'
+        chars = _anilist_graphql(q, query).get("data",{}).get("Page",{}).get("characters",[])
+        urls = []
+        for c in chars:
+            ci = c.get("image",{})
+            if ci.get("large"):
+                urls.append(ci["large"])
+        return urls[:5]
+    except Exception:
+        return []
+
+def _search_safebooru(query: str) -> list[str]:
     try:
         tags = quote(query.replace(" ", "_"))
-        url = f"https://danbooru.donmai.us/posts.json?tags={tags}+rating:s&limit=5"
+        url = f"https://safebooru.org/index.php?page=dapi&s=post&q=index&json=1&tags={tags}&limit=5"
         r = requests.get(url, headers=_HEADERS, timeout=15)
         r.raise_for_status()
         posts = r.json()
+        if not posts:
+            words = query.split()
+            short = quote(words[-1]) if words else query
+            url = f"https://safebooru.org/index.php?page=dapi&s=post&q=index&json=1&tags={short}&limit=5"
+            r = requests.get(url, headers=_HEADERS, timeout=15)
+            r.raise_for_status()
+            posts = r.json()
         urls = []
-        for p in posts:
-            f = p.get("file_url", "")
-            if f and "pximg.net" in f:
-                urls.append(f)
         for p in posts:
             f = p.get("file_url", "")
             if f and f not in urls:
@@ -26,28 +70,12 @@ def _search_danbooru(query: str) -> list[str]:
     except Exception:
         return []
 
-def _search_anilist(query: str) -> list[str]:
+def _search_zerochan(query: str) -> list[str]:
     try:
-        ql = """
-        query($s:String){Page(page:1,perPage:5){
-          media(search:$s,type:ANIME){coverImage{large extraLarge}}
-          characters(search:$s){image{large}}
-        }}"""
-        r = requests.post("https://graphql.anilist.co",
-            json={"query": ql, "variables": {"s": query}},
-            headers={"Content-Type": "application/json"}, timeout=15)
+        url = f"https://www.zerochan.net/{quote(query)}?s=rating"
+        r = requests.get(url, headers=_HEADERS, timeout=15)
         r.raise_for_status()
-        data = r.json().get("data", {}).get("Page", {})
-        urls = []
-        for m in data.get("media", []):
-            ci = m.get("coverImage", {})
-            for k in ("extraLarge", "large"):
-                if ci.get(k):
-                    urls.append(ci[k])
-        for c in data.get("characters", []):
-            ci = c.get("image", {})
-            if ci.get("large"):
-                urls.append(ci["large"])
+        urls = re.findall(r'<img[^>]+src="(https://static\.zerochan\.net/\d+/\d+\.(?:jpg|jpeg|png|webp))"', r.text)
         return urls[:5]
     except Exception:
         return []
@@ -62,42 +90,35 @@ def _search_konachan(query: str) -> list[str]:
         urls = []
         for p in posts:
             f = p.get("file_url", "")
-            if f:
+            if f and f not in urls:
                 urls.append(f)
         return urls[:5]
     except Exception:
         return []
 
-def _search_zerochan(query: str) -> list[str]:
+def _search_danbooru(query: str) -> list[str]:
     try:
-        url = f"https://www.zerochan.net/{quote(query)}?s=rating"
+        tags = quote(query.replace(" ", "_"))
+        url = f"https://danbooru.donmai.us/posts.json?tags={tags}&limit=5"
         r = requests.get(url, headers=_HEADERS, timeout=15)
         r.raise_for_status()
-        urls = re.findall(r'(https://static\.zerochan\.net/[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
+        posts = r.json()
+        urls = []
+        for p in posts:
+            f = p.get("file_url", "") or p.get("large_file_url", "")
+            if f and f not in urls:
+                urls.append(f)
         return urls[:5]
     except Exception:
         return []
 
-def _search_myanimelist(query: str) -> list[str]:
-    try:
-        url = f"https://myanimelist.net/anime.php?q={quote(query)}&cat=anime"
-        r = requests.get(url, headers=_HEADERS, timeout=15)
-        r.raise_for_status()
-        urls = re.findall(r'(https://cdn\.myanimelist\.net/[^"\'\\]+\.(?:jpg|jpeg|png|webp))', r.text)
-        seen = []
-        for u in urls:
-            if u not in seen and "questionmark" not in u:
-                seen.append(u)
-        return seen[:5]
-    except Exception:
-        return []
-
 _SOURCES = [
-    ("Danbooru", _search_danbooru),
-    ("AniList", _search_anilist),
-    ("Konachan", _search_konachan),
-    ("Zerochan", _search_zerochan),
-    ("MyAnimeList", _search_myanimelist),
+    ("AniList",      _search_anilist_media),
+    ("AniListChar",  _search_anilist_char),
+    ("Safebooru",    _search_safebooru),
+    ("Konachan",     _search_konachan),
+    ("Zerochan",     _search_zerochan),
+    ("Danbooru",     _search_danbooru),
 ]
 
 def _download(url: str, out_path: Path) -> bool:
@@ -155,11 +176,11 @@ def fetch_for_scenes(scenes: list[dict], out_dir: Path) -> list[Path]:
         for src_name, src_fn in _SOURCES:
             urls = src_fn(q)
             if urls:
-                print(f"      trying {src_name}...")
+                print(f"      {src_name} returned {len(urls)} urls, downloading...")
                 for url in urls:
                     if _download(url, out_dir / f"img_{i:02d}.jpg"):
                         img_url = url
-                        print(f"      found via {src_name}: {url[:80]}...")
+                        print(f"      OK: {url[:80]}...")
                         break
             if img_url:
                 break
