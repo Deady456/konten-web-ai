@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 from openai import OpenAI, RateLimitError
 from .config import LLM_API_KEYS, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG
-from . import state
+from . import state, news_fetcher
 
 _key_idx = 0
 _client = OpenAI(api_key=LLM_API_KEYS[_key_idx], base_url=LLM_BASE_URL)
@@ -37,36 +37,39 @@ def _call_llm(model, max_tokens, response_format, messages, retries=5):
             else:
                 raise
 
-def _system_prompt():
+def _system_prompt(news_context: str = ""):
     s = CONFIG["script"]
     lang = CONFIG.get("language", "en")
     target_words = int(s["target_seconds"] * s["words_per_second"])
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
-        return f"""Anda adalah penulis skrip YouTube Shorts berita anime/manga terkini.
+        date_str = datetime.now().strftime("%d %B %Y")
+        return f"""Anda adalah penulis skrip YouTube Shorts berita anime/manga terkini. Hari ini: {date_str}.
 
 Aturan:
 - Skrip {ts} detik. BUAT MINIMAL {tw} kata. Skrip PANJANG, informatif, tidak pendek.
 - BUAT 6-7 SCENE. Setiap scene 2 kalimat.
 - HOOK: 1 kalimat berita VIRAL terkini. Langsung ke inti.
-- Isi: BERITA TERKINI anime/manga. SPESIFIK: nama anime, studio, angka, tanggal. BUKAN fakta umum.
-- Contoh: "One Piece Film Red cetak rekor", "MAPPA rilis trailer baru", "Manga terlaris 2026", "Oshi no Ko season 2".
+- WAJIB: gunakan BERITA TERKINI di bawah ini sebagai sumber. JANGAN buat fakta umum/evergreen.
+- Berita tersedia:
+{news_context}
 - Akhiri: CTA subscribe 1 kalimat.
-- visual_query: nama anime/karakter SPESIFIK bahasa Inggris. Contoh: "One Piece Film Red", "Attack on Titan Final Season", "Jujutsu Kaisen", "Spirited Away", "Demon Slayer".
+- visual_query: nama anime/karakter SPESIFIK bahasa Inggris.
 
 Kembalikan ONLY JSON. Skema:
 {{"topic": "slug", "title": "Judul max 95 chars", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
     else:
-        return f"""You write viral YouTube Shorts scripts for a faceless educational facts channel.
+        return f"""You write viral YouTube Shorts scripts about latest anime/manga news. Today: {datetime.now().strftime('%B %d, %Y')}.
 
 Hard rules:
 - The script must run ~{target_seconds} seconds spoken at ~{target_words} words total.
-- Start with a strong 1-sentence HOOK that creates curiosity in <3 seconds.
-- Body: 4-6 surprising, accurate, verifiable facts.
+- Start with a strong 1-sentence HOOK about breaking anime news.
+- MUST use the CURRENT NEWS below as source. DO NOT write evergreen/generic facts.
+- Current news:
+{news_context}
 - End with a 1-sentence CTA.
-- Plain spoken English. No emojis.
-- Each scene's visual_query is 2-4 English nouns (e.g. "octopus swimming ocean").
+- Each scene's visual_query is 2-4 English nouns.
 
 Return ONLY valid JSON. Schema:
 {{"topic": "short slug", "title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "scenes": [{{"text": "spoken sentence", "visual_query": "nouns"}}]}}"""
@@ -87,6 +90,14 @@ def _extract_json(text: str) -> dict:
 def generate():
     lang = CONFIG.get("language", "en")
 
+    print("    fetching current anime news...")
+    t_news = time.time()
+    news_items = news_fetcher.fetch_headlines(lang=lang)
+    news_context = news_fetcher.format_news(news_items)
+    print(f"    got {len(news_items)} headlines in {time.time()-t_news:.1f}s")
+    for h in news_items[:5]:
+        print(f"      - {h['title']}")
+
     s = state.load()
     used = s.get("used_topics", [])
     used_str = ", ".join(used[-30:]) if used else "(none yet)"
@@ -96,14 +107,14 @@ def generate():
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Topik yang sudah pernah dibuat: {used_str}\n"
-            f"Buat SATU Short dengan topik yang BENAR-BENAR BARU. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
+            f"Buat SATU Short berdasarkan BERITA TERKINI di atas. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
         )
     else:
         user_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Previously used topics: {used_str}\n"
-            f"Generate ONE completely NEW Short. DO NOT use any of the previously used topics. Title and content must be original and not similar to what has been done before."
+            f"Generate ONE Short based on the CURRENT NEWS above. DO NOT use any previously used topics."
         )
 
     print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
@@ -113,7 +124,7 @@ def generate():
         max_tokens=2000,
         response_format={"type": "json_object"},
         messages=[
-            {"role": "system", "content": _system_prompt()},
+            {"role": "system", "content": _system_prompt(news_context)},
             {"role": "user", "content": user_msg},
         ],
     )
@@ -149,7 +160,7 @@ def generate():
             max_tokens=2000,
             response_format={"type": "json_object"},
             messages=[
-                {"role": "system", "content": _system_prompt()},
+                {"role": "system", "content": _system_prompt(news_context)},
                 {"role": "user", "content": user_msg},
                 {"role": "assistant", "content": f"{{...}} (only {wc} words)"},
                 {"role": "user", "content": shorter_msg},
