@@ -1,7 +1,6 @@
-name: Daily Rak Anime Video
+name: Rak Anime Video
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   generate:
