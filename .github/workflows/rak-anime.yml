@@ -28,15 +28,24 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python -m src.pipeline_hybrid
+      - name: Commit state.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -f state.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "state.json unchanged"
+          else
+            git commit -m "auto: update state.json"
+            git push
+          fi
+
       - name: Commit refreshed token
         run: |
           if git diff --quiet token_rak_anime.json 2>/dev/null; then
             echo "Token unchanged"
           else
-            git config user.name "github-actions"
-            git config user.email "actions@github.com"
             git add token_rak_anime.json
-            git add -f state.json 2>/dev/null || true
-            git commit -m "auto: refresh Rak Anime token [skip ci]"
+            git commit -m "auto: refresh Rak Anime token"
             git push
           fi
