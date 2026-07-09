@@ -57,6 +57,12 @@ Aturan:
 - Akhiri: CTA subscribe 1 kalimat.
 - visual_query: nama anime/karakter SPESIFIK bahasa Inggris.
 
+Aturan KHUSUS judul:
+- WAJIB spesifik: sebutkan NAMA ANIME, event, atau angkanya.
+- DILARANG: judul generik seperti "Anime Terbaru 2026", "Rekomendasi Anime", "Anime Wajib Tonton", "5 Anime Terbaik", "Anime Terbaru Bulan Ini".
+- Contoh judul bagus: "Demon Slayer Infinity Castle Rilis 28 Juli!", "Frieren Season 3 Dikonfirmasi Oktober 2027", "HiAnime Dibredel 7 Operator Ditangkap".
+- Judul harus bikin penasaran, bukan sekadar label.
+
 Kembalikan ONLY JSON. Skema:
 {{"topic": "slug", "title": "Judul max 95 chars", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
     else:
@@ -70,6 +76,11 @@ Hard rules:
 {news_context}
 - End with a 1-sentence CTA.
 - Each scene's visual_query is 2-4 English nouns.
+
+Title rules:
+- MUST name the specific anime/manga/event. NO generic titles.
+- BANNED: "New Anime 2026", "Best Anime", "Anime You Must Watch", "Top 10 Anime", "New Anime This Month".
+- Good examples: "Demon Slayer Infinity Castle Drops July 28", "Frieren Season 3 Confirmed for 2027", "HiAnime Shut Down - 7 Operators Arrested".
 
 Return ONLY valid JSON. Schema:
 {{"topic": "short slug", "title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "scenes": [{{"text": "spoken sentence", "visual_query": "nouns"}}]}}"""
@@ -141,6 +152,27 @@ def generate():
             s["visual_query"] = fallback
 
     data["full_text"] = " ".join(s["text"] for s in data["scenes"])
+
+    # Fix generic titles
+    title = data.get("title", "")
+    generic_patterns = [
+        r"^(anime|manga)\s+(terbaru|terbaik|wajib|viral|populer|recommended| baru)",
+        r"^(rekomendasi|recommendation)",
+        r"^(5|10|7|3|8)\s+(anime|manga|film|rekomendasi)",
+        r"^(anime|manga)\s+(terbaru|terbaik)\s+\d{4}",
+        r"^wajib (tonton|nonton|lihat)",
+        r"^baru di (tonton|nonton)",
+    ]
+    if any(re.search(p, title.lower()) for p in generic_patterns):
+        first_scene_text = data["scenes"][0]["text"] if data["scenes"] else ""
+        words = first_scene_text.split()
+        # Find specific anime name (proper nouns, capitalized)
+        anime_names = [w for w in words if w[0].isupper() and len(w) > 2][:3]
+        if anime_names:
+            specific = " ".join(anime_names)
+            if specific not in title:
+                data["title"] = f"{specific}: {title}"[:95]
+                print(f"    title fixed: \"{title}\" -> \"{data['title']}\"")
 
     s_cfg = CONFIG["script"]
     target_words = int(s_cfg["target_seconds"] * s_cfg["words_per_second"])
