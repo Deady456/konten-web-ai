@@ -98,6 +98,24 @@ def _extract_json(text: str) -> dict:
         raise
 
 
+def _is_duplicate_title(title: str, published: list) -> bool:
+    tl = title.strip().lower()
+    if not tl:
+        return False
+    for p in published:
+        pt = p.get("title", "").strip().lower()
+        if not pt:
+            continue
+        if tl == pt:
+            return True
+        twords, pwords = tl.split(), pt.split()
+        if len(twords) >= 3 and len(pwords) >= 3:
+            common = len(set(twords) & set(pwords))
+            if common >= min(len(twords), len(pwords)) * 0.8:
+                return True
+    return False
+
+
 def generate():
     lang = CONFIG.get("language", "en")
 
@@ -112,81 +130,34 @@ def generate():
     s = state.load()
     used = s.get("used_topics", [])
     used_str = ", ".join(used[-30:]) if used else "(none yet)"
+    published = s.get("published", [])
 
     if lang == "id":
-        user_msg = (
+        base_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Topik yang sudah pernah dibuat: {used_str}\n"
             f"Buat SATU Short berdasarkan BERITA TERKINI di atas. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
         )
     else:
-        user_msg = (
+        base_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Previously used topics: {used_str}\n"
             f"Generate ONE Short based on the CURRENT NEWS above. DO NOT use any previously used topics."
         )
 
-    print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
-    t0 = time.time()
-    resp = _call_llm(
-        model=LLM_MODEL,
-        max_tokens=2000,
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": _system_prompt(news_context)},
-            {"role": "user", "content": user_msg},
-        ],
-    )
-    raw = resp.choices[0].message.content
-    print(f"    LLM responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
-    data = _extract_json(raw)
-
-    # Validate each scene has visual_query
-    for i, s in enumerate(data["scenes"]):
-        if "visual_query" not in s or not s["visual_query"]:
-            words = re.findall(r"[a-zA-Z]{3,}", s.get("text", ""))
-            fallback = " ".join(words[-3:]) if len(words) >= 3 else "abstract background"
-            print(f"    scene {i}: missing visual_query, using \"{fallback}\"")
-            s["visual_query"] = fallback
-
-    data["full_text"] = " ".join(s["text"] for s in data["scenes"])
-
-    # Fix generic titles
-    title = data.get("title", "")
-    generic_patterns = [
-        r"^(anime|manga)\s+(terbaru|terbaik|wajib|viral|populer|recommended| baru)",
-        r"^(rekomendasi|recommendation)",
-        r"^(5|10|7|3|8)\s+(anime|manga|film|rekomendasi)",
-        r"^(anime|manga)\s+(terbaru|terbaik)\s+\d{4}",
-        r"^wajib (tonton|nonton|lihat)",
-        r"^baru di (tonton|nonton)",
-    ]
-    if any(re.search(p, title.lower()) for p in generic_patterns):
-        first_scene_text = data["scenes"][0]["text"] if data["scenes"] else ""
-        words = first_scene_text.split()
-        # Find specific anime name (proper nouns, capitalized)
-        anime_names = [w for w in words if w[0].isupper() and len(w) > 2][:3]
-        if anime_names:
-            specific = " ".join(anime_names)
-            if specific not in title:
-                data["title"] = f"{specific}: {title}"[:95]
-                print(f"    title fixed: \"{title}\" -> \"{data['title']}\"")
-
     s_cfg = CONFIG["script"]
     target_words = int(s_cfg["target_seconds"] * s_cfg["words_per_second"])
     min_words = int(target_words * 0.75)
-    wc = len(data["full_text"].split())
-    if wc < min_words:
-        print(f"    WARNING: script too short ({wc} words, need {min_words}), retrying...")
-        print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
+
+    for attempt in range(4):
+        user_msg = base_msg
+        if attempt > 0:
+            user_msg += "\n\nPERINGATAN: judul sebelumnya sudah ada. BUAT JUDUL LAIN yang benar-benar berbeda dan belum pernah dipublikasikan."
+
+        print(f"    calling {LLM_PROVIDER}/{LLM_MODEL} (attempt {attempt+1})...")
         t0 = time.time()
-        shorter_msg = (
-            f"SKRIP SEBELUMNYA TERLALU PENDEK: hanya {wc} kata, minimum {min_words} kata. "
-            f"Buat ulang dengan LEBIH PANJANG. Tambah detail berita, tambah scene, tambah kalimat per scene. "
-            f"JANGAN BUAT SKRIP PENDEK. Minimal {min_words} kata."
-        )
         resp = _call_llm(
             model=LLM_MODEL,
             max_tokens=2000,
@@ -194,21 +165,53 @@ def generate():
             messages=[
                 {"role": "system", "content": _system_prompt(news_context)},
                 {"role": "user", "content": user_msg},
-                {"role": "assistant", "content": f"{{...}} (only {wc} words)"},
-                {"role": "user", "content": shorter_msg},
             ],
         )
         raw = resp.choices[0].message.content
         print(f"    LLM responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
         data = _extract_json(raw)
-        for i, s in enumerate(data["scenes"]):
-            if "visual_query" not in s or not s["visual_query"]:
-                words = re.findall(r"[a-zA-Z]{3,}", s.get("text", ""))
+
+        for i, sc in enumerate(data["scenes"]):
+            if "visual_query" not in sc or not sc["visual_query"]:
+                words = re.findall(r"[a-zA-Z]{3,}", sc.get("text", ""))
                 fallback = " ".join(words[-3:]) if len(words) >= 3 else "abstract background"
-                s["visual_query"] = fallback
-        data["full_text"] = " ".join(s["text"] for s in data["scenes"])
+                print(f"    scene {i}: missing visual_query, using \"{fallback}\"")
+                sc["visual_query"] = fallback
+
+        data["full_text"] = " ".join(sc["text"] for sc in data["scenes"])
+
+        # Fix generic titles
+        title = data.get("title", "")
+        generic_patterns = [
+            r"^(anime|manga)\s+(terbaru|terbaik|wajib|viral|populer|recommended| baru)",
+            r"^(rekomendasi|recommendation)",
+            r"^(5|10|7|3|8)\s+(anime|manga|film|rekomendasi)",
+            r"^(anime|manga)\s+(terbaru|terbaik)\s+\d{4}",
+            r"^wajib (tonton|nonton|lihat)",
+            r"^baru di (tonton|nonton)",
+        ]
+        if any(re.search(p, title.lower()) for p in generic_patterns):
+            first_scene = data["scenes"][0]["text"] if data["scenes"] else ""
+            sw = first_scene.split()
+            anime_names = [w for w in sw if w[0].isupper() and len(w) > 2][:3]
+            if anime_names:
+                specific = " ".join(anime_names)
+                if specific not in title:
+                    data["title"] = f"{specific}: {title}"[:95]
+                    print(f"    title fixed: \"{title}\" -> \"{data['title']}\"")
+
         wc = len(data["full_text"].split())
         if wc < min_words:
-            print(f"    WARNING: retry masih pendek ({wc} words), lanjut aja")
-    
+            print(f"    WARNING: script too short ({wc} words, need {min_words}), retrying...")
+            continue
+
+        title = data.get("title", "")
+        if _is_duplicate_title(title, published):
+            print(f"    DUPLICATE: title already published, retrying...")
+            continue
+
+        print(f"    title: {data['title']}")
+        return data
+
+    print("    WARNING: could not generate unique/long enough script after 4 attempts, publishing anyway")
     return data
