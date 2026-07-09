@@ -8,7 +8,8 @@
     "oshi-no-ko-season-2",
     "jujutsu-kaisen-musim-ke-2",
     "attack-on-titan-the-final-season",
-    "studio-pierrot-rilis-trailer-baru"
+    "studio-pierrot-rilis-trailer-baru",
+    "solo-leveling-karma-cerita-asli"
   ],
   "published": [
     {
@@ -81,6 +82,14 @@
       "title": "Studio Pierrot Rilis Trailer Baru!",
       "path": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\opencode\\konten-web-ai\\output\\20260709_032147_studio-pierrot-rilis-trailer-baru\\final.mp4",
       "video_id": null,
+      "publish_at": null
+    },
+    {
+      "ts": "20260709_220152",
+      "topic": "solo-leveling-karma-cerita-asli",
+      "title": "Solo Leveling: Karma Ungkap Cerita Asli?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260709_220152_solo-leveling-karma-cerita-asli/final.mp4",
+      "video_id": "hER4gdvAXVg",
       "publish_at": null
     }
   ]
