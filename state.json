@@ -9,7 +9,8 @@
     "jujutsu-kaisen-musim-ke-2",
     "attack-on-titan-the-final-season",
     "studio-pierrot-rilis-trailer-baru",
-    "solo-leveling-karma-cerita-asli"
+    "solo-leveling-karma-cerita-asli",
+    "anime-jaadugar"
   ],
   "published": [
     {
@@ -90,6 +91,14 @@
       "title": "Solo Leveling: Karma Ungkap Cerita Asli?",
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260709_220152_solo-leveling-karma-cerita-asli/final.mp4",
       "video_id": "hER4gdvAXVg",
+      "publish_at": null
+    },
+    {
+      "ts": "20260710_030154",
+      "topic": "anime-jaadugar",
+      "title": "Jaadugar: A Witch in Mongolia",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260710_030154_anime-jaadugar/final.mp4",
+      "video_id": "Wv7I3YPZh90",
       "publish_at": null
     }
   ]
