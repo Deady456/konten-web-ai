@@ -13,7 +13,8 @@
     "anime-jaadugar",
     "anime-terkini-2026",
     "frieren-beyond-journeys-end-season-3",
-    "anime-festival-asia-2026"
+    "anime-festival-asia-2026",
+    "anime-jaadugar-azan"
   ],
   "published": [
     {
@@ -126,6 +127,14 @@
       "title": "Anime Festival Asia Rayakan Ulang Tahun ke-10 di Indonesia!",
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260710_220146_anime-festival-asia-2026/final.mp4",
       "video_id": "6fZtyKdI_rs",
+      "publish_at": null
+    },
+    {
+      "ts": "20260711_040141",
+      "topic": "anime-jaadugar-azan",
+      "title": "Jaadugar: Anime Bertema Islam!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260711_040141_anime-jaadugar-azan/final.mp4",
+      "video_id": "_EBJGYaiJuU",
       "publish_at": null
     }
   ]
