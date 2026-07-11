@@ -15,7 +15,8 @@
     "frieren-beyond-journeys-end-season-3",
     "anime-festival-asia-2026",
     "anime-jaadugar-azan",
-    "anime-jaadugar-terbaru-2026"
+    "anime-jaadugar-terbaru-2026",
+    "anime-solo-leveling-season-3"
   ],
   "published": [
     {
@@ -144,6 +145,14 @@
       "title": "Jaadugar: Anime Bertema Zaman Keemasan Islam",
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260711_100146_anime-jaadugar-terbaru-2026/final.mp4",
       "video_id": "V5Z7RF7hvS8",
+      "publish_at": null
+    },
+    {
+      "ts": "20260711_220224",
+      "topic": "anime-solo-leveling-season-3",
+      "title": "Solo Leveling S3 Rilis Juli 2026!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260711_220224_anime-solo-leveling-season-3/final.mp4",
+      "video_id": "R9WnH437QEM",
       "publish_at": null
     }
   ]
