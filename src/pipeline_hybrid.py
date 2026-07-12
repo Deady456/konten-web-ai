@@ -3,7 +3,7 @@ import random
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state
+from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state, music, branding
 from .config import CONFIG, OUTPUT_DIR
 
 def slug(s: str) -> str:
@@ -20,7 +20,7 @@ _AI_STYLES = [
 
 def run_once(publish_at: str | None = None,
              upload_to_youtube: bool = True) -> dict:
-    _log("1/7 Generating script with LLM")
+    _log("1/9 Generating script with LLM")
     data = script.generate()
     _log(f"    topic: {data['topic']} ({len(data['scenes'])} scenes)")
 
@@ -28,21 +28,21 @@ def run_once(publish_at: str | None = None,
     work = OUTPUT_DIR / f"{stamp}_{slug(data['topic'])}"
     work.mkdir(parents=True, exist_ok=True)
 
-    _log("2/7 Synthesizing voiceover with Edge TTS")
+    _log("2/9 Synthesizing voiceover")
     voice_mp3 = voice.synth(data["full_text"], work / "voice.mp3")
     _log(f"    voice saved ({voice_mp3.stat().st_size/1024:.0f} KB)")
 
-    _log("3/7 Transcribing for word-level captions (Faster-Whisper)")
+    _log("3/9 Transcribing for word-level captions (Faster-Whisper)")
     _log("    loading model (first run downloads)...")
     t0 = time.time()
-    words = captions.transcribe_words(voice_mp3)
+    words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
     vcfg = CONFIG.get("visuals", {})
     source = vcfg.get("source", "hybrid")
     mix = vcfg.get("hybrid_mix", 0.5)
 
-    _log(f"4/7 Fetching visuals (source={source}, mix={mix})")
+    _log(f"4/9 Fetching visuals (source={source}, mix={mix})")
 
     image_paths = []
     for i, scene in enumerate(data["scenes"]):
@@ -84,28 +84,48 @@ def run_once(publish_at: str | None = None,
         _log(f"      done in {time.time()-t1:.0f}s")
         image_paths.append(img_path)
 
-    _log("5/7 Writing caption file")
+    _log("5/9 Writing caption file")
     ass_path = captions.write_ass(words, work / "captions.ass",
                                   CONFIG["video"]["width"], CONFIG["video"]["height"])
 
-    _log("6/7 Assembling slideshow video with ffmpeg")
+    _log("6/9 Mixing background music")
+    from .assemble_ai import probe_duration
+    audio_dur = probe_duration(voice_mp3)
+    mixed_audio = work / "voice_mixed.aac"
+    music.mix_with_voice(voice_mp3, mixed_audio, audio_dur, data["scenes"])
+
+    _log("7/9 Assembling slideshow video with ffmpeg")
     t0 = time.time()
     final = assemble_ai.build(
         image_paths=image_paths,
-        voice_audio=voice_mp3,
+        voice_audio=mixed_audio,
         captions_ass=ass_path,
         words=words,
         scenes=data["scenes"],
-        out_path=work / "final.mp4",
+        out_path=work / "final_raw.mp4",
         work_dir=work / "ffmpeg",
     )
     dur = time.time() - t0
     sz = final.stat().st_size / (1024 * 1024)
-    _log(f"    final: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
+    _log(f"    raw video: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
+
+    _log("8/9 Applying branding")
+    branded = branding.apply_all(final, work / "branding")
+    if branded != final:
+        final_branded = work / "final.mp4"
+        branded.rename(final_branded)
+        final = final_branded
+    else:
+        final_branded = work / "final.mp4"
+        final.rename(final_branded)
+        final = final_branded
+
+    sz = final.stat().st_size / (1024 * 1024)
+    _log(f"    final: {final.name} ({sz:.0f} MB)")
 
     video_id = None
     if upload_to_youtube:
-        _log("7/7 Uploading to YouTube")
+        _log("9/9 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
@@ -114,6 +134,8 @@ def run_once(publish_at: str | None = None,
             publish_at=publish_at,
         )
         _log(f"    uploaded: https://youtube.com/shorts/{video_id}")
+    else:
+        _log("9/9 Upload skipped (--no-upload)")
 
     state.add_topic(data["topic"])
     state.add_published({
