@@ -16,7 +16,8 @@
     "anime-festival-asia-2026",
     "anime-jaadugar-azan",
     "anime-jaadugar-terbaru-2026",
-    "anime-solo-leveling-season-3"
+    "anime-solo-leveling-season-3",
+    "anime-festival-asia-2026"
   ],
   "published": [
     {
@@ -153,6 +154,14 @@
       "title": "Solo Leveling S3 Rilis Juli 2026!",
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260711_220224_anime-solo-leveling-season-3/final.mp4",
       "video_id": "R9WnH437QEM",
+      "publish_at": null
+    },
+    {
+      "ts": "20260712_092743",
+      "topic": "anime-festival-asia-2026",
+      "title": "Anime Festival Asia 2026 Hadir di Indonesia!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260712_092743_anime-festival-asia-2026/final.mp4",
+      "video_id": "NS3UyPZwQbk",
       "publish_at": null
     }
   ]
