@@ -17,7 +17,8 @@
     "anime-jaadugar-azan",
     "anime-jaadugar-terbaru-2026",
     "anime-solo-leveling-season-3",
-    "anime-festival-asia-2026"
+    "anime-festival-asia-2026",
+    "anime-berita-terkini-2026"
   ],
   "published": [
     {
@@ -163,6 +164,15 @@
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260712_092743_anime-festival-asia-2026/final.mp4",
       "video_id": "NS3UyPZwQbk",
       "publish_at": null
+    },
+    {
+      "ts": "20260713_065918",
+      "topic": "anime-berita-terkini-2026",
+      "title": "One Piece: Heroines Mengupas Sisi Manusia",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260713_065918_anime-berita-terkini-2026/final.mp4",
+      "video_id": "-6leRlZgTCE",
+      "publish_at": null
     }
-  ]
+  ],
+  "_voice_idx": 1
 }
