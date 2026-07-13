@@ -3,7 +3,7 @@ import random
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state, music, branding
+from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state, branding
 from .config import CONFIG, OUTPUT_DIR
 
 def slug(s: str) -> str:
@@ -88,17 +88,11 @@ def run_once(publish_at: str | None = None,
     ass_path = captions.write_ass(words, work / "captions.ass",
                                   CONFIG["video"]["width"], CONFIG["video"]["height"])
 
-    _log("6/9 Mixing background music")
-    from .assemble_ai import probe_duration
-    audio_dur = probe_duration(voice_mp3)
-    mixed_audio = work / "voice_mixed.aac"
-    music.mix_with_voice(voice_mp3, mixed_audio, audio_dur, data["scenes"])
-
-    _log("7/9 Assembling slideshow video with ffmpeg")
+    _log("6/9 Assembling slideshow video with ffmpeg")
     t0 = time.time()
     final = assemble_ai.build(
         image_paths=image_paths,
-        voice_audio=mixed_audio,
+        voice_audio=voice_mp3,
         captions_ass=ass_path,
         words=words,
         scenes=data["scenes"],
@@ -109,7 +103,7 @@ def run_once(publish_at: str | None = None,
     sz = final.stat().st_size / (1024 * 1024)
     _log(f"    raw video: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
 
-    _log("8/9 Applying branding")
+    _log("7/9 Applying branding")
     branded = branding.apply_all(final, work / "branding")
     if branded != final:
         final_branded = work / "final.mp4"
@@ -125,7 +119,7 @@ def run_once(publish_at: str | None = None,
 
     video_id = None
     if upload_to_youtube:
-        _log("9/9 Uploading to YouTube")
+        _log("8/9 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
@@ -135,7 +129,7 @@ def run_once(publish_at: str | None = None,
         )
         _log(f"    uploaded: https://youtube.com/shorts/{video_id}")
     else:
-        _log("9/9 Upload skipped (--no-upload)")
+        _log("8/9 Upload skipped (--no-upload)")
 
     state.add_topic(data["topic"])
     state.add_published({
