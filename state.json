@@ -18,7 +18,8 @@
     "anime-jaadugar-terbaru-2026",
     "anime-solo-leveling-season-3",
     "anime-festival-asia-2026",
-    "anime-berita-terkini-2026"
+    "anime-berita-terkini-2026",
+    "one-piece-heroines"
   ],
   "published": [
     {
@@ -172,7 +173,15 @@
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260713_065918_anime-berita-terkini-2026/final.mp4",
       "video_id": "-6leRlZgTCE",
       "publish_at": null
+    },
+    {
+      "ts": "20260713_220213",
+      "topic": "one-piece-heroines",
+      "title": "One Piece: Heroines Menjadi Sorotan!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260713_220213_one-piece-heroines/final.mp4",
+      "video_id": "oB0zHhZjnig",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 1
+  "_voice_idx": 2
 }
