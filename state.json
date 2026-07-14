@@ -19,7 +19,8 @@
     "anime-solo-leveling-season-3",
     "anime-festival-asia-2026",
     "anime-berita-terkini-2026",
-    "one-piece-heroines"
+    "one-piece-heroines",
+    "gachiakuta-sukses-besar"
   ],
   "published": [
     {
@@ -181,7 +182,15 @@
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260713_220213_one-piece-heroines/final.mp4",
       "video_id": "oB0zHhZjnig",
       "publish_at": null
+    },
+    {
+      "ts": "20260714_060217",
+      "topic": "gachiakuta-sukses-besar",
+      "title": "GACHIakuta Pecahkan Rekor!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260714_060217_gachiakuta-sukses-besar/final.mp4",
+      "video_id": "MusOMQBJkMs",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 2
+  "_voice_idx": 3
 }
