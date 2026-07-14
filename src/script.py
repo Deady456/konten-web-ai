@@ -9,6 +9,31 @@ from . import state, news_fetcher
 _key_idx = 0
 _client = OpenAI(api_key=LLM_API_KEYS[_key_idx], base_url=LLM_BASE_URL)
 
+# ============================================================
+# Format-specific prompts
+# ============================================================
+
+FORMAT_PROMPTS = {
+    "news_breakdown": (
+        "Format: NEWS BREAKDOWN - Analisis berita terkini secara mendalam. "
+        "Jelaskan 5W1H (apa, siapa, kapan, di mana, mengapa, bagaimana). "
+        "Tambahkan dampak dan reaksi komunitas."
+    ),
+    "list": (
+        "Format: LIST - Berikan fakta-fakta dalam format daftar numerik (1., 2., 3., dst). "
+        "Setiap fakta harus singkat, memukau, dan berbeda satu sama lain."
+    ),
+    "story": (
+        "Format: STORY - Ceritakan fakta sebagai mini story/kisah pendek yang engaging. "
+        "Buat seolah-olah menceritakan sebuah petualangan atau drama."
+    ),
+    "deep_dive": (
+        "Format: DEEP DIVE - Analisis mendalam satu topik spesifik. "
+        "Jelaskan sejarah, fakta tersembunyi, dan mengapa topik ini menarik."
+    ),
+}
+
+
 def _call_llm(model, max_tokens, response_format, messages, retries=5):
     global _key_idx, _client
     for attempt in range(retries):
@@ -37,10 +62,15 @@ def _call_llm(model, max_tokens, response_format, messages, retries=5):
             else:
                 raise
 
-def _system_prompt(news_context: str = ""):
+
+def _system_prompt(news_context: str = "", content_format: str = ""):
     s = CONFIG["script"]
     lang = CONFIG.get("language", "en")
     target_words = int(s["target_seconds"] * s["words_per_second"])
+
+    format_instruction = ""
+    if content_format and content_format in FORMAT_PROMPTS:
+        format_instruction = f"\n\n{FORMAT_PROMPTS[content_format]}"
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
@@ -57,11 +87,22 @@ Aturan:
 - Akhiri: CTA subscribe 1 kalimat.
 - visual_query: nama anime/karakter SPESIFIK bahasa Inggris.
 
+VARIASI TOPIK - Pilih topik yang BERAGAM. Jangan selalu berita yang sama. Variasikan antara:
+- Review/premiere anime baru
+- Fakta unik anime/manga
+- Sejarah anime/manga
+- Behind-the-scenes (studio, voice actor, production)
+- Rekor penjualan/prestasi
+- Drama/kontroversi industry
+- Rekomendasi analitis
+- Kolaborasi/brand anime
+JANGAN ulangi topik yang sudah ada di used_topics. Pilih yang BENAR-BENAR BERBEDA.
+
 Aturan KHUSUS judul:
 - WAJIB spesifik: sebutkan NAMA ANIME, event, atau angkanya.
 - DILARANG: judul generik seperti "Anime Terbaru 2026", "Rekomendasi Anime", "Anime Wajib Tonton", "5 Anime Terbaik", "Anime Terbaru Bulan Ini".
 - Contoh judul bagus: "Demon Slayer Infinity Castle Rilis 28 Juli!", "Frieren Season 3 Dikonfirmasi Oktober 2027", "HiAnime Dibredel 7 Operator Ditangkap".
-- Judul harus bikin penasaran, bukan sekadar label.
+- Judul harus bikin penasaran, bukan sekadar label.{format_instruction}
 
 Kembalikan ONLY JSON. Skema:
 {{"topic": "slug", "title": "Judul max 95 chars", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
@@ -69,7 +110,7 @@ Kembalikan ONLY JSON. Skema:
         return f"""You write viral YouTube Shorts scripts about latest anime/manga news. Today: {datetime.now().strftime('%B %d, %Y')}.
 
 Hard rules:
-- The script must run ~{target_seconds} seconds spoken at ~{target_words} words total.
+- The script must run ~{s['target_seconds']} seconds spoken at ~{target_words} words total.
 - Start with a strong 1-sentence HOOK about breaking anime news.
 - MUST use the CURRENT NEWS below as source. DO NOT write evergreen/generic facts.
 - Current news:
@@ -77,10 +118,22 @@ Hard rules:
 - End with a 1-sentence CTA.
 - Each scene's visual_query is 2-4 English nouns.
 
+TOPIC VARIETY - Choose DIVERSE topics. Don't always cover the same type. Vary between:
+- Anime reviews/premieres
+- Unique anime/manga facts
+- Anime/manga history
+- Behind-the-scenes (studios, voice actors, production)
+- Sales records/achievements
+- Industry drama/controversies
+- Analytical recommendations
+- Anime brand collaborations
+DO NOT repeat topics from used_topics. Pick something COMPLETELY DIFFERENT.
+
 Title rules:
 - MUST name the specific anime/manga/event. NO generic titles.
 - BANNED: "New Anime 2026", "Best Anime", "Anime You Must Watch", "Top 10 Anime", "New Anime This Month".
 - Good examples: "Demon Slayer Infinity Castle Drops July 28", "Frieren Season 3 Confirmed for 2027", "HiAnime Shut Down - 7 Operators Arrested".
+{format_instruction}
 
 Return ONLY valid JSON. Schema:
 {{"topic": "short slug", "title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "scenes": [{{"text": "spoken sentence", "visual_query": "nouns"}}]}}"""
@@ -116,7 +169,27 @@ def _is_duplicate_title(title: str, published: list) -> bool:
     return False
 
 
-def generate():
+def _is_duplicate_topic(topic: str, used_topics: list) -> bool:
+    """Check if topic slug overlaps with any previously used topic."""
+    topic_lower = topic.lower().strip()
+    if not topic_lower:
+        return False
+    for used in used_topics:
+        used_lower = used.lower().strip()
+        # Exact match
+        if topic_lower == used_lower:
+            return True
+        # Word overlap check (e.g. "solo-leveling-season-3" vs "solo-leveling-karma")
+        t_words = set(topic_lower.split("-"))
+        u_words = set(used_lower.split("-"))
+        if len(t_words) >= 2 and len(u_words) >= 2:
+            common = len(t_words & u_words)
+            if common >= min(len(t_words), len(u_words)) * 0.6:
+                return True
+    return False
+
+
+def generate(content_format: str = None) -> dict:
     lang = CONFIG.get("language", "en")
 
     print("    fetching current anime news...")
@@ -132,19 +205,29 @@ def generate():
     used_str = ", ".join(used[-30:]) if used else "(none yet)"
     published = s.get("published", [])
 
+    format_desc = ""
+    if content_format and content_format in FORMAT_PROMPTS:
+        format_desc = f"\nFormat: {FORMAT_PROMPTS[content_format]}"
+
     if lang == "id":
         base_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Topik yang sudah pernah dibuat: {used_str}\n"
-            f"Buat SATU Short berdasarkan BERITA TERKINI di atas. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
+            f"Buat SATU Short berdasarkan BERITA TERKINI di atas. "
+            f"DILARANG menggunakan topik yang sudah pernah dibuat. "
+            f"Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada. "
+            f"Topik harus BERAGAM - jangan selalu berita yang sama.{format_desc}"
         )
     else:
         base_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
             f"Previously used topics: {used_str}\n"
-            f"Generate ONE Short based on the CURRENT NEWS above. DO NOT use any previously used topics."
+            f"Generate ONE Short based on the CURRENT NEWS above. "
+            f"DO NOT use any previously used topics. "
+            f"Title and content must be original and not similar to what has been done before. "
+            f"Topics must be DIVERSE - don't always cover the same type.{format_desc}"
         )
 
     s_cfg = CONFIG["script"]
@@ -154,16 +237,16 @@ def generate():
     for attempt in range(4):
         user_msg = base_msg
         if attempt > 0:
-            user_msg += "\n\nPERINGATAN: judul sebelumnya sudah ada. BUAT JUDUL LAIN yang benar-benar berbeda dan belum pernah dipublikasikan."
+            user_msg += "\n\nPERINGATAN: topik/judul sebelumnya sudah ada. BUAT YANG BENAR-BENAR BERBEDA dan belum pernah dipublikasikan."
 
-        print(f"    calling {LLM_PROVIDER}/{LLM_MODEL} (attempt {attempt+1})...")
+        print(f"    calling {LLM_PROVIDER}/{LLM_MODEL} (attempt {attempt+1}, format: {content_format or 'default'})...")
         t0 = time.time()
         resp = _call_llm(
             model=LLM_MODEL,
             max_tokens=2000,
             response_format={"type": "json_object"},
             messages=[
-                {"role": "system", "content": _system_prompt(news_context)},
+                {"role": "system", "content": _system_prompt(news_context, content_format or "")},
                 {"role": "user", "content": user_msg},
             ],
         )
@@ -207,9 +290,15 @@ def generate():
 
         title = data.get("title", "")
         if _is_duplicate_title(title, published):
-            print(f"    DUPLICATE: title already published, retrying...")
+            print(f"    DUPLICATE TITLE: already published, retrying...")
             continue
 
+        topic = data.get("topic", "")
+        if _is_duplicate_topic(topic, used):
+            print(f"    DUPLICATE TOPIC: '{topic}' already used, retrying...")
+            continue
+
+        data["format"] = content_format
         print(f"    title: {data['title']}")
         return data
 

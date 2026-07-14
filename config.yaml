@@ -7,6 +7,11 @@ script:
   target_seconds: 55
   words_per_second: 2.3
 
+content_variation:
+  enabled: true
+  formats: ["news_breakdown", "list", "story", "deep_dive"]
+  min_format_switch: 3
+
 voice:
   provider: elevenlabs
   elevenlabs_model: eleven_multilingual_v2
@@ -43,7 +48,7 @@ video:
 visuals:
   # Hybrid visual strategy: web scraping + AI generation
   source: hybrid  # "web", "ai", or "hybrid" (random mix)
-  hybrid_mix: 0.5  # 50% web, 50% AI (0.0 = all AI, 1.0 = all web)
+  hybrid_mix: 0.3  # 30% web, 70% AI (0.0 = all AI, 1.0 = all web)
 
 upload:
   privacy: "public"

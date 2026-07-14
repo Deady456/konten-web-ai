@@ -20,8 +20,19 @@ _AI_STYLES = [
 
 def run_once(publish_at: str | None = None,
              upload_to_youtube: bool = True) -> dict:
+    content_cfg = CONFIG.get("content_variation", {})
+    if content_cfg.get("enabled", False):
+        formats = content_cfg.get("formats", ["list"])
+        s = state.load()
+        format_idx = s.get("_format_idx", 0)
+        selected_format = formats[format_idx % len(formats)]
+        state.update({"_format_idx": format_idx + 1})
+        _log(f"0/9 Content format: {selected_format}")
+    else:
+        selected_format = None
+
     _log("1/9 Generating script with LLM")
-    data = script.generate()
+    data = script.generate(content_format=selected_format)
     _log(f"    topic: {data['topic']} ({len(data['scenes'])} scenes)")
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -135,6 +146,7 @@ def run_once(publish_at: str | None = None,
     state.add_published({
         "ts": stamp, "topic": data["topic"], "title": data["title"],
         "path": str(final), "video_id": video_id, "publish_at": publish_at,
+        "format": selected_format, "voice": data.get("_voice_name", "unknown"),
     })
     return {"video_id": video_id, "path": str(final), "topic": data["topic"]}
 
