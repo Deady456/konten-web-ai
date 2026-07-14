@@ -20,7 +20,8 @@
     "anime-festival-asia-2026",
     "anime-berita-terkini-2026",
     "one-piece-heroines",
-    "gachiakuta-sukses-besar"
+    "gachiakuta-sukses-besar",
+    "ghost-of-tsushima-anime"
   ],
   "published": [
     {
@@ -190,7 +191,18 @@
       "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260714_060217_gachiakuta-sukses-besar/final.mp4",
       "video_id": "MusOMQBJkMs",
       "publish_at": null
+    },
+    {
+      "ts": "20260714_220201",
+      "topic": "ghost-of-tsushima-anime",
+      "title": "Ghost of Tsushima Resmi Jadi Anime!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260714_220201_ghost-of-tsushima-anime/final.mp4",
+      "video_id": "z_qlO5KGqME",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 3
+  "_voice_idx": 4,
+  "_format_idx": 1
 }
