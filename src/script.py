@@ -105,7 +105,7 @@ Aturan KHUSUS judul:
 - Judul harus bikin penasaran, bukan sekadar label.{format_instruction}
 
 Kembalikan ONLY JSON. Skema:
-{{"topic": "slug", "title": "Judul max 95 chars", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
+{{"topic": "slug", "title": "Judul max 95 chars", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat + 5-8 hashtag", "tags": ["10-15 tag"], "scenes": [{{"text": "kalimat narasi", "visual_query": "nama anime spesifik"}}]}}"""
     else:
         return f"""You write viral YouTube Shorts scripts about latest anime/manga news. Today: {datetime.now().strftime('%B %d, %Y')}.
 
@@ -136,7 +136,7 @@ Title rules:
 {format_instruction}
 
 Return ONLY valid JSON. Schema:
-{{"topic": "short slug", "title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "scenes": [{{"text": "spoken sentence", "visual_query": "nouns"}}]}}"""
+{{"topic": "short slug", "title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "thumbnail_text": "Very short text (3-5 words, ALL CAPS) to display large on screen for the first 3 seconds as a hook/thumbnail", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "scenes": [{{"text": "spoken sentence", "visual_query": "nouns"}}]}}"""
 
 
 def _extract_json(text: str) -> dict:
@@ -253,6 +253,11 @@ def generate(content_format: str = None) -> dict:
         raw = resp.choices[0].message.content
         print(f"    LLM responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
         data = _extract_json(raw)
+
+        hook_text = data.get("thumbnail_text", "").strip()
+        if hook_text and data.get("scenes"):
+            first_vq = data["scenes"][0].get("visual_query", "abstract background")
+            data["scenes"].insert(0, {"text": hook_text, "visual_query": first_vq})
 
         for i, sc in enumerate(data["scenes"]):
             if "visual_query" not in sc or not sc["visual_query"]:
