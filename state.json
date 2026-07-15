@@ -21,7 +21,8 @@
     "anime-berita-terkini-2026",
     "one-piece-heroines",
     "gachiakuta-sukses-besar",
-    "ghost-of-tsushima-anime"
+    "ghost-of-tsushima-anime",
+    "kolaborasi-brand-anime"
   ],
   "published": [
     {
@@ -201,8 +202,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260715_060311",
+      "topic": "kolaborasi-brand-anime",
+      "title": "Disney x anime: Kolaborasi Besar!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260715_060311_kolaborasi-brand-anime/final.mp4",
+      "video_id": "AtJ0FJfD1Us",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 4,
-  "_format_idx": 1
+  "_voice_idx": 5,
+  "_format_idx": 2
 }
