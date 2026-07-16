@@ -96,7 +96,14 @@ def run_once(publish_at: str | None = None,
         image_paths.append(img_path)
 
     _log("5/9 Writing caption file")
-    ass_path = captions.write_ass(words, work / "captions.ass",
+    hook_text = data.get("thumbnail_text", data.get("title", ""))
+    hook_cfg = CONFIG.get("hook_text", {})
+    if hook_text and hook_cfg.get("enabled", False):
+        captions_words = words[len(hook_text.split()):]
+    else:
+        captions_words = words
+
+    ass_path = captions.write_ass(captions_words, work / "captions.ass",
                                   CONFIG["video"]["width"], CONFIG["video"]["height"])
 
     _log("6/9 Assembling slideshow video with ffmpeg")
@@ -109,6 +116,8 @@ def run_once(publish_at: str | None = None,
         scenes=data["scenes"],
         out_path=work / "final_raw.mp4",
         work_dir=work / "ffmpeg",
+    
+        hook_text=data.get("thumbnail_text", data.get("title", "")),
     )
     dur = time.time() - t0
     sz = final.stat().st_size / (1024 * 1024)
