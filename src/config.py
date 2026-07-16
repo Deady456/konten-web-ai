@@ -21,9 +21,10 @@ STATE_FILE = ROOT / "state.json"
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 if LLM_PROVIDER == "gemini":
-    LLM_API_KEY = os.environ["GEMINI_API_KEY"]
+    LLM_API_KEY = GEMINI_API_KEY
     LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
 elif LLM_PROVIDER == "groq":

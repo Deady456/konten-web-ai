@@ -181,20 +181,67 @@ def _apply_hook_text(img_path: Path, hook_text: str, width: int, height: int):
     except Exception as e:
         print(f"Failed to apply hook text: {e}")
 
+from .config import GEMINI_API_KEY
+import json
+import base64
+
+def generate_imagen(prompt: str, out_path: Path, width=1080, height=1920) -> bool:
+    if not GEMINI_API_KEY:
+        return False
+        
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={GEMINI_API_KEY}"
+    ratio = "9:16" if height > width else ("16:9" if width > height else "1:1")
+    
+    payload = {
+        "instances": [
+            {
+                "prompt": prompt
+            }
+        ],
+        "parameters": {
+            "sampleCount": 1,
+            "aspectRatio": ratio
+        }
+    }
+    
+    try:
+        resp = requests.post(url, headers={"Content-Type": "application/json"}, data=json.dumps(payload), timeout=60)
+        if resp.status_code == 200:
+            result = resp.json()
+            if 'predictions' in result and len(result['predictions']) > 0:
+                base64_image = result['predictions'][0]['bytesBase64Encoded']
+                out_path.write_bytes(base64.b64decode(base64_image))
+                return True
+        else:
+            print(f"Imagen API failed: {resp.status_code} - {resp.text}")
+    except Exception as e:
+        print(f"Imagen API error: {e}")
+        
+    return False
+
 def generate(prompt: str, out_path: Path, width=1080, height=1920, hook_text: str = None) -> Path:
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    url = f"{POLLINATIONS_URL}{requests.utils.quote(prompt)}?width={width}&height={height}&nologo=true"
-    for attempt in range(3):
-        try:
-            resp = requests.get(url, timeout=60)
-            if resp.status_code == 200 and len(resp.content) > 1000:
-                out_path.write_bytes(resp.content)
-                if hook_text:
-                    _apply_hook_text(out_path, hook_text, width, height)
-                return out_path
-        except requests.RequestException:
-            pass
-    _generate_fallback(prompt, out_path, width, height)
+    
+    # Try Imagen 3 first
+    success = generate_imagen(prompt, out_path, width, height)
+    
+    if not success:
+        # Fallback to Pollinations AI
+        url = f"{POLLINATIONS_URL}{requests.utils.quote(prompt)}?width={width}&height={height}&nologo=true"
+        for attempt in range(3):
+            try:
+                resp = requests.get(url, timeout=60)
+                if resp.status_code == 200 and len(resp.content) > 1000:
+                    out_path.write_bytes(resp.content)
+                    success = True
+                    break
+            except requests.RequestException:
+                pass
+                
+    if not success:
+        _generate_fallback(prompt, out_path, width, height)
+        
     if hook_text:
         _apply_hook_text(out_path, hook_text, width, height)
+        
     return out_path
