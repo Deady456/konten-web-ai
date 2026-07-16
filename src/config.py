@@ -31,6 +31,7 @@ GEMINI_API_KEY = GEMINI_API_KEYS[0]
 
 if LLM_PROVIDER == "gemini":
     LLM_API_KEY = GEMINI_API_KEY
+    LLM_API_KEYS = GEMINI_API_KEYS
     LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
 elif LLM_PROVIDER == "groq":
