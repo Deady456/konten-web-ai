@@ -21,7 +21,13 @@ STATE_FILE = ROOT / "state.json"
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+_gkeys = []
+for k, v in os.environ.items():
+    if k.startswith("GEMINI_API_KEY") and v.strip():
+        _gkeys.extend([x.strip() for x in re.split(r'[,
+]+', v) if x.strip()])
+GEMINI_API_KEYS = _gkeys if _gkeys else [""]
+GEMINI_API_KEY = GEMINI_API_KEYS[0]
 
 if LLM_PROVIDER == "gemini":
     LLM_API_KEY = GEMINI_API_KEY

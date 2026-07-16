@@ -181,42 +181,34 @@ def _apply_hook_text(img_path: Path, hook_text: str, width: int, height: int):
     except Exception as e:
         print(f"Failed to apply hook text: {e}")
 
-from .config import GEMINI_API_KEY
+from .config import GEMINI_API_KEYS
 import json
 import base64
 
 def generate_imagen(prompt: str, out_path: Path, width=1080, height=1920) -> bool:
-    if not GEMINI_API_KEY:
-        return False
-        
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={GEMINI_API_KEY}"
     ratio = "9:16" if height > width else ("16:9" if width > height else "1:1")
     
     payload = {
-        "instances": [
-            {
-                "prompt": prompt
-            }
-        ],
-        "parameters": {
-            "sampleCount": 1,
-            "aspectRatio": ratio
-        }
+        "instances": [{"prompt": prompt}],
+        "parameters": {"sampleCount": 1, "aspectRatio": ratio}
     }
     
-    try:
-        resp = requests.post(url, headers={"Content-Type": "application/json"}, data=json.dumps(payload), timeout=60)
-        if resp.status_code == 200:
-            result = resp.json()
-            if 'predictions' in result and len(result['predictions']) > 0:
-                base64_image = result['predictions'][0]['bytesBase64Encoded']
-                out_path.write_bytes(base64.b64decode(base64_image))
-                return True
-        else:
-            print(f"Imagen API failed: {resp.status_code} - {resp.text}")
-    except Exception as e:
-        print(f"Imagen API error: {e}")
-        
+    for idx, key in enumerate(GEMINI_API_KEYS):
+        if not key: continue
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={key}"
+        try:
+            resp = requests.post(url, headers={"Content-Type": "application/json"}, data=json.dumps(payload), timeout=60)
+            if resp.status_code == 200:
+                result = resp.json()
+                if 'predictions' in result and len(result['predictions']) > 0:
+                    base64_image = result['predictions'][0]['bytesBase64Encoded']
+                    out_path.write_bytes(base64.b64decode(base64_image))
+                    return True
+            else:
+                print(f"Imagen API failed on key {idx+1}: {resp.status_code} - {resp.text}")
+        except Exception as e:
+            print(f"Imagen API error on key {idx+1}: {e}")
+            
     return False
 
 def generate(prompt: str, out_path: Path, width=1080, height=1920, hook_text: str = None) -> Path:
