@@ -22,7 +22,8 @@
     "one-piece-heroines",
     "gachiakuta-sukses-besar",
     "ghost-of-tsushima-anime",
-    "kolaborasi-brand-anime"
+    "kolaborasi-brand-anime",
+    "incubase-studio-powers"
   ],
   "published": [
     {
@@ -212,8 +213,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260716_103632",
+      "topic": "incubase-studio-powers",
+      "title": "INCUBASE Studio Powers",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260716_103632_incubase-studio-powers/final.mp4",
+      "video_id": "VHQQx__ofs8",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 5,
-  "_format_idx": 2
+  "_voice_idx": 6,
+  "_format_idx": 3
 }
