@@ -24,8 +24,7 @@ LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
 _gkeys = []
 for k, v in os.environ.items():
     if k.startswith("GEMINI_API_KEY") and v.strip():
-        _gkeys.extend([x.strip() for x in re.split(r'[,
-]+', v) if x.strip()])
+        _gkeys.extend([x.strip() for x in re.split(r'[,\\n]+', v) if x.strip()])
 GEMINI_API_KEYS = _gkeys if _gkeys else [""]
 GEMINI_API_KEY = GEMINI_API_KEYS[0]
 
@@ -38,7 +37,6 @@ elif LLM_PROVIDER == "groq":
     _keys = []
     for k, v in os.environ.items():
         if k.startswith("GROQ_API_KEY") and v.strip():
-            _keys.extend([x.strip() for x in re.split(r'[,\n]+', v) if x.strip()])
     LLM_API_KEYS = _keys if _keys else ["dummy"]
     LLM_API_KEY = LLM_API_KEYS[0]
     LLM_BASE_URL = "https://api.groq.com/openai/v1"
