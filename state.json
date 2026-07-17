@@ -23,7 +23,8 @@
     "gachiakuta-sukses-besar",
     "ghost-of-tsushima-anime",
     "kolaborasi-brand-anime",
-    "incubase-studio-powers"
+    "incubase-studio-powers",
+    "mushoku-tensei-kontroversi"
   ],
   "published": [
     {
@@ -223,8 +224,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260717_091407",
+      "topic": "mushoku-tensei-kontroversi",
+      "title": "Mushoku Tensei Tuai Kontroversi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260717_091407_mushoku-tensei-kontroversi/final.mp4",
+      "video_id": "4p9YxUrrgSw",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 6,
-  "_format_idx": 3
+  "_voice_idx": 7,
+  "_format_idx": 4
 }
