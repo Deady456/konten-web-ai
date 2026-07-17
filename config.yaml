@@ -3,7 +3,7 @@ audience: "penggemar anime Indonesia yang up-to-date dengan berita dan trend ter
 language: id
 
 script:
-  model: llama-3.3-70b-versatile
+  model: gemini-1.5-pro
   target_seconds: 55
   words_per_second: 2.3
 
