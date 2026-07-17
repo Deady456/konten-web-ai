@@ -21,7 +21,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 STATE_FILE = ROOT / "state.json"
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini")
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
 _gkeys = []
 for k, v in os.environ.items():
     if k.startswith("GEMINI_API_KEY") and v.strip():
