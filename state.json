@@ -24,7 +24,8 @@
     "ghost-of-tsushima-anime",
     "kolaborasi-brand-anime",
     "incubase-studio-powers",
-    "mushoku-tensei-kontroversi"
+    "mushoku-tensei-kontroversi",
+    "ai-anime-produksi-netflix-manga-news"
   ],
   "published": [
     {
@@ -234,8 +235,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260717_175658",
+      "topic": "ai-anime-produksi-netflix-manga-news",
+      "title": "Skandal AI Ancam Demon Slayer? Netflix Kehilangan Anime Fantasi!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260717_175658_ai-anime-produksi-netflix-manga-news/final.mp4",
+      "video_id": "gW9auW5DeI4",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 7,
-  "_format_idx": 4
+  "_voice_idx": 8,
+  "_format_idx": 5
 }
