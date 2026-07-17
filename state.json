@@ -25,7 +25,8 @@
     "kolaborasi-brand-anime",
     "incubase-studio-powers",
     "mushoku-tensei-kontroversi",
-    "ai-anime-produksi-netflix-manga-news"
+    "ai-anime-produksi-netflix-manga-news",
+    "solo-leveling-sakamoto-days-update"
   ],
   "published": [
     {
@@ -245,8 +246,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260717_183809",
+      "topic": "solo-leveling-sakamoto-days-update",
+      "title": "Solo Leveling Jembatan ke S3, Sakamoto Days Tamat, & Naruto Live Action Shippuden?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260717_183809_solo-leveling-sakamoto-days-update/final.mp4",
+      "video_id": "P9s91BltvFE",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 8,
-  "_format_idx": 5
+  "_voice_idx": 9,
+  "_format_idx": 6
 }
