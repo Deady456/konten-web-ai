@@ -3,9 +3,14 @@ audience: "penggemar anime Indonesia yang up-to-date dengan berita dan trend ter
 language: id
 
 script:
-  model: llama-3.3-70b-versatile
+  model: gemini-1.5-pro
   target_seconds: 55
   words_per_second: 2.3
+
+content_variation:
+  enabled: true
+  formats: ["news_breakdown", "list", "story", "deep_dive"]
+  min_format_switch: 3
 
 voice:
   provider: elevenlabs
@@ -14,21 +19,21 @@ voice:
     enabled: true
     voices:
       - edge_id: "id-ID-ArdiNeural"
-        elevenlabs_id: "21m00Tcm4TlvDq8ikWAM"
-        name: "Ardi"
+        elevenlabs_id: "VR6AewLTigWG4xSOukaG"
+        name: "Arnold"
         gender: "male"
       - edge_id: "id-ID-JakaNeural"
-        elevenlabs_id: "IKne3meq5aSn9XLyUdCD"
+        elevenlabs_id: "ErXwobaYiN019PkySvjV"
         name: "Jaka"
         gender: "male"
     strategy: "round_robin"
   voice: id-ID-ArdiNeural
-  elevenlabs_voice_id: 21m00Tcm4TlvDq8ikWAM
+  elevenlabs_voice_id: VR6AewLTigWG4xSOukaG
 
 captions:
   whisper_model: base
   font: "Anton"
-  font_size: 90
+  font_size: 65
   primary_color: "&H00FFFFFF"
   outline_color: "&H00000000"
   outline: 6
@@ -43,7 +48,7 @@ video:
 visuals:
   # Hybrid visual strategy: web scraping + AI generation
   source: hybrid  # "web", "ai", or "hybrid" (random mix)
-  hybrid_mix: 0.5  # 50% web, 50% AI (0.0 = all AI, 1.0 = all web)
+  hybrid_mix: 0.3  # 30% web, 70% AI (0.0 = all AI, 1.0 = all web)
 
 upload:
   privacy: "public"
@@ -54,19 +59,6 @@ upload:
 
 
 
-music:
-  enabled: true
-  source: "local"
-  local_dir: "assets/music"
-  volume: 0.03
-  fade_in: 2.0
-  fade_out: 3.0
-  mood_mapping:
-    list: "upbeat"
-    story: "cinematic"
-    comparison: "neutral"
-    myth_busting: "suspense"
-    neutral: "neutral"
 branding:
   enabled: true
   intro:
@@ -84,30 +76,12 @@ branding:
     position: "center"
     opacity: 0.6
     size: 300
-  comment_box:
-    enabled: true
-    position: "bottom"
-    delay_seconds: 1.5
-    font: "Anton"
-    font_size: 26
-    font_color: "black"
-    box_color: "white@0.9"
-    box_radius: 20
-    margin: 40
-    comments:
-      - "Keren banget! Ga nyangka gitu"
-      - "Wajib tahu nih buat semua orang!"
-      - "Fakta yang jarang diketahui orang"
-      - "Ternyata begini ya, mantap!"
-      - "Share ke temen yang belum tau!"
-      - "Baru tau gw, ternyata begitu"
-      - "Wah, ga sangka bisa begitu!"
-      - "Beneran? Cekidot guys!"
-      - "Info penting nih, jangan skip!"
-      - "Setuju gak sama fakta ini?"
-
-comments:
-  model: llama-3.1-8b-instant
-  poll_interval_minutes: 180
-  auto_reply: true
-  delete_spam: true
+hook_text:
+  enabled: true
+  font: "Anton"
+  font_size: 80
+  color: "white"
+  outline_color: "&H00000000"
+  outline: 4
+  position: "center"
+  duration: 3

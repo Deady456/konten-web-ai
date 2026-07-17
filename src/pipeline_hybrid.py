@@ -3,7 +3,7 @@ import random
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state
+from . import script, voice, captions, visuals_web, visuals_ai, assemble_ai, upload, state, branding
 from .config import CONFIG, OUTPUT_DIR
 
 def slug(s: str) -> str:
@@ -20,29 +20,40 @@ _AI_STYLES = [
 
 def run_once(publish_at: str | None = None,
              upload_to_youtube: bool = True) -> dict:
-    _log("1/7 Generating script with LLM")
-    data = script.generate()
+    content_cfg = CONFIG.get("content_variation", {})
+    if content_cfg.get("enabled", False):
+        formats = content_cfg.get("formats", ["list"])
+        s = state.load()
+        format_idx = s.get("_format_idx", 0)
+        selected_format = formats[format_idx % len(formats)]
+        state.update({"_format_idx": format_idx + 1})
+        _log(f"0/9 Content format: {selected_format}")
+    else:
+        selected_format = None
+
+    _log("1/9 Generating script with LLM")
+    data = script.generate(content_format=selected_format)
     _log(f"    topic: {data['topic']} ({len(data['scenes'])} scenes)")
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     work = OUTPUT_DIR / f"{stamp}_{slug(data['topic'])}"
     work.mkdir(parents=True, exist_ok=True)
 
-    _log("2/7 Synthesizing voiceover with Edge TTS")
+    _log("2/9 Synthesizing voiceover")
     voice_mp3 = voice.synth(data["full_text"], work / "voice.mp3")
     _log(f"    voice saved ({voice_mp3.stat().st_size/1024:.0f} KB)")
 
-    _log("3/7 Transcribing for word-level captions (Faster-Whisper)")
+    _log("3/9 Transcribing for word-level captions (Faster-Whisper)")
     _log("    loading model (first run downloads)...")
     t0 = time.time()
-    words = captions.transcribe_words(voice_mp3)
+    words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
     vcfg = CONFIG.get("visuals", {})
     source = vcfg.get("source", "hybrid")
     mix = vcfg.get("hybrid_mix", 0.5)
 
-    _log(f"4/7 Fetching visuals (source={source}, mix={mix})")
+    _log(f"4/9 Fetching visuals (source={source}, mix={mix})")
 
     image_paths = []
     for i, scene in enumerate(data["scenes"]):
@@ -84,11 +95,18 @@ def run_once(publish_at: str | None = None,
         _log(f"      done in {time.time()-t1:.0f}s")
         image_paths.append(img_path)
 
-    _log("5/7 Writing caption file")
-    ass_path = captions.write_ass(words, work / "captions.ass",
+    _log("5/9 Writing caption file")
+    hook_text = data.get("thumbnail_text", data.get("title", ""))
+    hook_cfg = CONFIG.get("hook_text", {})
+    if hook_text and hook_cfg.get("enabled", False):
+        captions_words = words[len(hook_text.split()):]
+    else:
+        captions_words = words
+
+    ass_path = captions.write_ass(captions_words, work / "captions.ass",
                                   CONFIG["video"]["width"], CONFIG["video"]["height"])
 
-    _log("6/7 Assembling slideshow video with ffmpeg")
+    _log("6/9 Assembling slideshow video with ffmpeg")
     t0 = time.time()
     final = assemble_ai.build(
         image_paths=image_paths,
@@ -96,16 +114,32 @@ def run_once(publish_at: str | None = None,
         captions_ass=ass_path,
         words=words,
         scenes=data["scenes"],
-        out_path=work / "final.mp4",
+        out_path=work / "final_raw.mp4",
         work_dir=work / "ffmpeg",
+    
+        hook_text=data.get("thumbnail_text", data.get("title", "")),
     )
     dur = time.time() - t0
     sz = final.stat().st_size / (1024 * 1024)
-    _log(f"    final: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
+    _log(f"    raw video: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
+
+    _log("7/9 Applying branding")
+    branded = branding.apply_all(final, work / "branding")
+    if branded != final:
+        final_branded = work / "final.mp4"
+        branded.rename(final_branded)
+        final = final_branded
+    else:
+        final_branded = work / "final.mp4"
+        final.rename(final_branded)
+        final = final_branded
+
+    sz = final.stat().st_size / (1024 * 1024)
+    _log(f"    final: {final.name} ({sz:.0f} MB)")
 
     video_id = None
     if upload_to_youtube:
-        _log("7/7 Uploading to YouTube")
+        _log("8/9 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
@@ -114,11 +148,14 @@ def run_once(publish_at: str | None = None,
             publish_at=publish_at,
         )
         _log(f"    uploaded: https://youtube.com/shorts/{video_id}")
+    else:
+        _log("8/9 Upload skipped (--no-upload)")
 
     state.add_topic(data["topic"])
     state.add_published({
         "ts": stamp, "topic": data["topic"], "title": data["title"],
         "path": str(final), "video_id": video_id, "publish_at": publish_at,
+        "format": selected_format, "voice": data.get("_voice_name", "unknown"),
     })
     return {"video_id": video_id, "path": str(final), "topic": data["topic"]}
 

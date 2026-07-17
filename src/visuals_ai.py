@@ -1,6 +1,6 @@
-import requests, random
+import requests, random, os
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 POLLINATIONS_URL = "https://image.pollinations.ai/prompt/"
 COLORS = [
@@ -50,11 +50,14 @@ def _generate_fallback(prompt: str, out_path: Path, width=1080, height=1920):
 
     try:
         font = ImageFont.truetype("arialbd.ttf", 64)
+        font2 = ImageFont.truetype("arial.ttf", 32)
     except (IOError, OSError):
         try:
             font = ImageFont.truetype("DejaVuSans-Bold.ttf", 64)
+            font2 = ImageFont.truetype("DejaVuSans.ttf", 32)
         except (IOError, OSError):
             font = ImageFont.load_default()
+            font2 = font
 
     words = prompt.split()
     lines = []
@@ -82,33 +85,155 @@ def _generate_fallback(prompt: str, out_path: Path, width=1080, height=1920):
 
     img.save(out_path, quality=92)
 
-def _ensure_portrait(img_path: Path, target_w=1080, target_h=1920):
-    img = Image.open(img_path).convert("RGB")
-    w, h = img.size
-    if w <= h * 1.1:
-        return
+def draw_text_with_outline(draw, x, y, text, font, text_color, outline_color, shadow_color):
+    shadow_offset = 15
+    draw.text((x + shadow_offset, y + shadow_offset), text, font=font, fill=shadow_color)
+    
+    stroke_width = 8
+    for adj_x in range(-stroke_width, stroke_width + 1, 2):
+        for adj_y in range(-stroke_width, stroke_width + 1, 2):
+            draw.text((x + adj_x, y + adj_y), text, font=font, fill=outline_color)
+            
+    draw.text((x, y), text, font=font, fill=text_color)
 
-    bg = img.resize((target_w, target_h), Image.LANCZOS)
-    bg = bg.filter(ImageFilter.GaussianBlur(radius=30))
+def _apply_hook_text(img_path: Path, hook_text: str, width: int, height: int):
+    try:
+        img = Image.open(img_path).convert("RGBA")
+        img = img.resize((width, height), Image.Resampling.LANCZOS)
+        draw = ImageDraw.Draw(img)
+        
+        # Load Bevan font exclusively
+        cwd = os.getcwd()
+        font_paths = [
+            os.path.join(cwd, "Bevan.ttf")
+        ]
+        
+        # Try to find an existing font
+        chosen_font = None
+        random.shuffle(font_paths)
+        for fp in font_paths:
+            if os.path.exists(fp):
+                try:
+                    chosen_font = ImageFont.truetype(fp, 85)
+                    break
+                except:
+                    pass
+        if not chosen_font:
+            try:
+                chosen_font = ImageFont.truetype("C:\\Windows\\Fonts\\arialbd.ttf", 85)
+            except:
+                chosen_font = ImageFont.load_default()
+                
+        colors = [
+            (255, 255, 0, 255),   # Yellow
+            (0, 255, 255, 255),   # Cyan
+            (255, 100, 100, 255), # Light Red/Pink
+            (100, 255, 100, 255), # Light Green
+            (255, 255, 255, 255), # White
+            (255, 150, 0, 255)    # Orange
+        ]
+        random_color = random.choice(colors)
+        
+        words = hook_text.split()
+        lines = []
+        current_line = []
+        max_width = 800
+        
+        for word in words:
+            test_line = " ".join(current_line + [word])
+            tw = draw.textlength(test_line, font=chosen_font) if hasattr(draw, "textlength") else chosen_font.getsize(test_line)[0]
+            if tw > max_width:
+                if current_line:
+                    lines.append(" ".join(current_line))
+                    current_line = [word]
+                else:
+                    lines.append(word)
+                    current_line = []
+            else:
+                current_line.append(word)
+                
+        if current_line:
+            lines.append(" ".join(current_line))
+            
+        y = int(height * 0.2)
+        line_spacing = 45
+        
+        for line in lines:
+            tw = draw.textlength(line, font=chosen_font) if hasattr(draw, "textlength") else chosen_font.getsize(line)[0]
+            x = (width - tw) // 2
+            
+            if hasattr(draw, "textbbox"):
+                bbox = draw.textbbox((0, 0), line, font=chosen_font)
+                line_height = bbox[3] - bbox[1]
+            else:
+                line_height = chosen_font.getsize(line)[1]
+                
+            draw_text_with_outline(
+                draw, x, y, line, chosen_font, 
+                text_color=random_color,
+                outline_color=(0, 0, 0, 255),
+                shadow_color=(0, 0, 0, 150)
+            )
+            y += line_height + line_spacing
+            
+        img = img.convert("RGB")
+        img.save(img_path, quality=95)
+    except Exception as e:
+        print(f"Failed to apply hook text: {e}")
 
-    img.thumbnail((target_w, int(target_h * 0.9)), Image.LANCZOS)
-    x = (target_w - img.width) // 2
-    y = (target_h - img.height) // 2
-    bg.paste(img, (x, y))
-    bg.save(img_path, quality=92)
+from .config import GEMINI_API_KEYS
+import json
+import base64
 
-def generate(prompt: str, out_path: Path, width=1080, height=1920) -> Path:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    portrait_prompt = f"{prompt}, portrait, vertical composition, anime style"
-    url = f"{POLLINATIONS_URL}{requests.utils.quote(portrait_prompt)}?width={width}&height={height}&nologo=true"
-    for attempt in range(3):
+def generate_imagen(prompt: str, out_path: Path, width=1080, height=1920) -> bool:
+    ratio = "9:16" if height > width else ("16:9" if width > height else "1:1")
+    
+    payload = {
+        "instances": [{"prompt": prompt}],
+        "parameters": {"sampleCount": 1, "aspectRatio": ratio}
+    }
+    
+    for idx, key in enumerate(GEMINI_API_KEYS):
+        if not key: continue
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key={key}"
         try:
-            resp = requests.get(url, timeout=60)
-            if resp.status_code == 200 and len(resp.content) > 1000:
-                out_path.write_bytes(resp.content)
-                _ensure_portrait(out_path, width, height)
-                return out_path
-        except requests.RequestException:
-            pass
-    _generate_fallback(prompt, out_path, width, height)
+            resp = requests.post(url, headers={"Content-Type": "application/json"}, data=json.dumps(payload), timeout=60)
+            if resp.status_code == 200:
+                result = resp.json()
+                if 'predictions' in result and len(result['predictions']) > 0:
+                    base64_image = result['predictions'][0]['bytesBase64Encoded']
+                    out_path.write_bytes(base64.b64decode(base64_image))
+                    return True
+            else:
+                print(f"Imagen API failed on key {idx+1}: {resp.status_code} - {resp.text}")
+        except Exception as e:
+            print(f"Imagen API error on key {idx+1}: {e}")
+            
+    return False
+
+def generate(prompt: str, out_path: Path, width=1080, height=1920, hook_text: str = None) -> Path:
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Try Imagen 3 first
+    success = generate_imagen(prompt, out_path, width, height)
+    
+    if not success:
+        # Fallback to Pollinations AI
+        url = f"{POLLINATIONS_URL}{requests.utils.quote(prompt)}?width={width}&height={height}&nologo=true"
+        for attempt in range(3):
+            try:
+                resp = requests.get(url, timeout=60)
+                if resp.status_code == 200 and len(resp.content) > 1000:
+                    out_path.write_bytes(resp.content)
+                    success = True
+                    break
+            except requests.RequestException:
+                pass
+                
+    if not success:
+        _generate_fallback(prompt, out_path, width, height)
+        
+    if hook_text:
+        _apply_hook_text(out_path, hook_text, width, height)
+        
     return out_path
