@@ -26,7 +26,8 @@
     "incubase-studio-powers",
     "mushoku-tensei-kontroversi",
     "ai-anime-produksi-netflix-manga-news",
-    "solo-leveling-sakamoto-days-update"
+    "solo-leveling-sakamoto-days-update",
+    "ekonomi-anime-global"
   ],
   "published": [
     {
@@ -256,8 +257,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260718_170837",
+      "topic": "ekonomi-anime-global",
+      "title": "TERBONGKAR! Mengapa Industri Anime Global Melonjak Drastis & Mencapai Miliaran Dolar!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260718_170837_ekonomi-anime-global/final.mp4",
+      "video_id": "nDGXPKDedJo",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 9,
-  "_format_idx": 6
+  "_voice_idx": 10,
+  "_format_idx": 7
 }
