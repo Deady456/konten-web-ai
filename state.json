@@ -27,7 +27,8 @@
     "mushoku-tensei-kontroversi",
     "ai-anime-produksi-netflix-manga-news",
     "solo-leveling-sakamoto-days-update",
-    "ekonomi-anime-global"
+    "ekonomi-anime-global",
+    "penemuan-terbaru-teleskop-james-webb"
   ],
   "published": [
     {
@@ -267,8 +268,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260718_235108",
+      "topic": "penemuan-terbaru-teleskop-james-webb",
+      "title": "Rahasia Tersembunyi Alam Semesta: Penemuan Mengagumkan dari Teleskop James Webb!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260718_235108_penemuan-terbaru-teleskop-james-webb/final.mp4",
+      "video_id": "DGa950_WgOk",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 10,
-  "_format_idx": 7
+  "_voice_idx": 11,
+  "_format_idx": 8
 }
