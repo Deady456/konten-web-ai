@@ -1,5 +1,5 @@
-niche: "berita dan trend terkini anime & manga dunia (rilis anime baru, manga terbaru, adaptasi live-action, kolaborasi brand, rekor penjualan, pengumuman studio, berita voice actor, teknologi animasi, fenomena viral anime)"
-audience: "penggemar anime Indonesia yang up-to-date dengan berita dan trend terbaru dunia anime & manga"
+niche: "galaxy, antariksa, dan jagat raya (tata surya, planet, bintang, lubang hitam, nebula, galaksi, roket, misi luar angkasa, fenomena kosmik, eksplorasi NASA/ESA, teknologi antariksa, kehidupan di luar bumi)"
+audience: "penggemar sains Indonesia yang tertarik dengan antariksa, astronomi, dan penemuan kosmik terbaru"
 language: id
 
 script:
@@ -54,8 +54,8 @@ upload:
   privacy: "public"
   category_id: "27"
   made_for_kids: false
-  channel: "animewebai"
-  default_tags: ["fakta anime", "anime unik", "manga", "fakta manga", "anime facts", "rekomendasi anime", "anime Indonesia", "kultur Jepang", "anime viral", "fakta karakter"]
+  channel: "galaxywebai"
+  default_tags: ["fakta antariksa", "galaxy", "tata surya", "planet", "bintang", "lubang hitam", "nebula", "roket", "NASA", "eksplorasi luar angkasa", "astronomi", "fakta luar angkasa"]
 
 
 
