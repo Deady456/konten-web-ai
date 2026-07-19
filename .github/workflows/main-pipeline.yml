@@ -65,7 +65,7 @@ jobs:
                       f.write(f'{k}=\"{v_escaped}\"\n')
           "
 
-      - name: Run hybrid pipeline
+      - name: Run pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
