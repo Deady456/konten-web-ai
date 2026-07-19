@@ -70,7 +70,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           ELEVENLABS_API_KEYS: ${{ secrets.ELEVENLABS_API_KEYS }}
-        run: python -m src.pipeline_hybrid
+        run: python -m src.pipeline
 
       - name: Commit state.json
         run: |
