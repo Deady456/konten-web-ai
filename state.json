@@ -29,7 +29,8 @@
     "solo-leveling-sakamoto-days-update",
     "ekonomi-anime-global",
     "penemuan-terbaru-teleskop-james-webb",
-    "tabrakan-galaksi-bima-sakti-andromeda"
+    "tabrakan-galaksi-bima-sakti-andromeda",
+    "misteri-lubang-hitam"
   ],
   "published": [
     {
@@ -289,8 +290,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260719_083358",
+      "topic": "misteri-lubang-hitam",
+      "title": "5 Fakta Mengejutkan Lubang Hitam: Rahasia Alam Semesta Paling Misterius Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260719_083358_misteri-lubang-hitam/final.mp4",
+      "video_id": "79vJmFExblQ",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 12,
-  "_format_idx": 9
+  "_voice_idx": 13,
+  "_format_idx": 10
 }
