@@ -28,7 +28,8 @@
     "ai-anime-produksi-netflix-manga-news",
     "solo-leveling-sakamoto-days-update",
     "ekonomi-anime-global",
-    "penemuan-terbaru-teleskop-james-webb"
+    "penemuan-terbaru-teleskop-james-webb",
+    "tabrakan-galaksi-bima-sakti-andromeda"
   ],
   "published": [
     {
@@ -278,8 +279,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260719_001849",
+      "topic": "tabrakan-galaksi-bima-sakti-andromeda",
+      "title": "Tabrakan Kosmik Raksasa: Nasib Bima Sakti dan Andromeda dalam Miliaran Tahun ke Depan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260719_001849_tabrakan-galaksi-bima-sakti-andromeda/final.mp4",
+      "video_id": "-aOZwmxDfsc",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 11,
-  "_format_idx": 8
+  "_voice_idx": 12,
+  "_format_idx": 9
 }
