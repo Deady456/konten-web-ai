@@ -46,9 +46,10 @@ video:
   fps: 30
 
 visuals:
-  # Hybrid visual strategy: web scraping + AI generation
-  source: hybrid  # "web", "ai", or "hybrid" (random mix)
-  hybrid_mix: 0.3  # 30% web, 70% AI (0.0 = all AI, 1.0 = all web)
+  # Visual source: pexels only (web scraper disabled). Falls back to
+  # Pollinations AI image when Pexels has no results.
+  source: pexels  # "web", "ai", "pexels", or "hybrid"
+  hybrid_mix: 0.0
 
 upload:
   privacy: "public"
