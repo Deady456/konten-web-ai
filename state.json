@@ -30,7 +30,8 @@
     "ekonomi-anime-global",
     "penemuan-terbaru-teleskop-james-webb",
     "tabrakan-galaksi-bima-sakti-andromeda",
-    "misteri-lubang-hitam"
+    "misteri-lubang-hitam",
+    "planet-pengembara-tanpa-bintang"
   ],
   "published": [
     {
@@ -300,8 +301,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_083126",
+      "topic": "planet-pengembara-tanpa-bintang",
+      "title": "Menyingkap Misteri Planet Pengembara: Dunia Gelap Tanpa Bintang, Mungkinkah Ada Kehidupan?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260720_083126_planet-pengembara-tanpa-bintang/final.mp4",
+      "video_id": "VlK6tDHhSmM",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 13,
-  "_format_idx": 10
+  "_voice_idx": 14,
+  "_format_idx": 11
 }
