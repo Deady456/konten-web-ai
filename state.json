@@ -31,7 +31,8 @@
     "penemuan-terbaru-teleskop-james-webb",
     "tabrakan-galaksi-bima-sakti-andromeda",
     "misteri-lubang-hitam",
-    "planet-pengembara-tanpa-bintang"
+    "planet-pengembara-tanpa-bintang",
+    "pencarian-kehidupan-eksoplanet"
   ],
   "published": [
     {
@@ -311,8 +312,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_085531",
+      "topic": "pencarian-kehidupan-eksoplanet",
+      "title": "Terungkap! Bagaimana Ilmuwan Mencari Kehidupan di Planet Selain Bumi?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260720_085531_pencarian-kehidupan-eksoplanet/final.mp4",
+      "video_id": "ZMn6TqF8WRo",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 14,
-  "_format_idx": 11
+  "_voice_idx": 15,
+  "_format_idx": 12
 }
