@@ -33,7 +33,8 @@
     "misteri-lubang-hitam",
     "planet-pengembara-tanpa-bintang",
     "pencarian-kehidupan-eksoplanet",
-    "materi-gelap-dan-energi-gelap"
+    "materi-gelap-dan-energi-gelap",
+    "lensa-gravitasi-kosmik"
   ],
   "published": [
     {
@@ -333,8 +334,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_164641",
+      "topic": "lensa-gravitasi-kosmik",
+      "title": "Menguak Rahasia Lensa Gravitasi: Cara Alam Membelokkan Cahaya Antarbintang!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260720_164641_lensa-gravitasi-kosmik/final.mp4",
+      "video_id": "t_utUUX7kbs",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 16,
-  "_format_idx": 13
+  "_voice_idx": 17,
+  "_format_idx": 14
 }
