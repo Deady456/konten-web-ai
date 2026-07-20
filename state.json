@@ -34,7 +34,8 @@
     "planet-pengembara-tanpa-bintang",
     "pencarian-kehidupan-eksoplanet",
     "materi-gelap-dan-energi-gelap",
-    "lensa-gravitasi-kosmik"
+    "lensa-gravitasi-kosmik",
+    "bintang-neutron-dan-magnetar"
   ],
   "published": [
     {
@@ -344,8 +345,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_232254",
+      "topic": "bintang-neutron-dan-magnetar",
+      "title": "Objek Paling Ekstrem di Alam Semesta: Kisah Bintang Neutron dan Magnetar yang Mencengangkan!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260720_232254_bintang-neutron-dan-magnetar/final.mp4",
+      "video_id": "e3F01ZJlyVY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 17,
-  "_format_idx": 14
+  "_voice_idx": 18,
+  "_format_idx": 15
 }
