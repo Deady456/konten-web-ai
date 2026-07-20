@@ -32,7 +32,8 @@
     "tabrakan-galaksi-bima-sakti-andromeda",
     "misteri-lubang-hitam",
     "planet-pengembara-tanpa-bintang",
-    "pencarian-kehidupan-eksoplanet"
+    "pencarian-kehidupan-eksoplanet",
+    "materi-gelap-dan-energi-gelap"
   ],
   "published": [
     {
@@ -322,8 +323,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_091402",
+      "topic": "materi-gelap-dan-energi-gelap",
+      "title": "Misteri Terbesar Alam Semesta: Materi Gelap dan Energi Gelap, Apa Peran Keduanya?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260720_091402_materi-gelap-dan-energi-gelap/final.mp4",
+      "video_id": "o5vCJ6F9Zgc",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 15,
-  "_format_idx": 12
+  "_voice_idx": 16,
+  "_format_idx": 13
 }
