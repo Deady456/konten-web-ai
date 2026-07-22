@@ -36,7 +36,8 @@
     "materi-gelap-dan-energi-gelap",
     "lensa-gravitasi-kosmik",
     "bintang-neutron-dan-magnetar",
-    "era-fajar-kosmik"
+    "era-fajar-kosmik",
+    "ekspansi-percepatan-alam-semesta-dan-takdirnya"
   ],
   "published": [
     {
@@ -366,8 +367,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_150313",
+      "topic": "ekspansi-percepatan-alam-semesta-dan-takdirnya",
+      "title": "Misteri Terbesar Kosmos: Mengapa Alam Semesta Terus Memuai Semakin Cepat dan Apa Takdirnya?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260722_150313_ekspansi-percepatan-alam-semesta-dan-takdirnya/final.mp4",
+      "video_id": "XjCht7mpWtY",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 19,
-  "_format_idx": 16
+  "_voice_idx": 20,
+  "_format_idx": 17
 }
