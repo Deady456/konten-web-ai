@@ -37,7 +37,8 @@
     "lensa-gravitasi-kosmik",
     "bintang-neutron-dan-magnetar",
     "era-fajar-kosmik",
-    "ekspansi-percepatan-alam-semesta-dan-takdirnya"
+    "ekspansi-percepatan-alam-semesta-dan-takdirnya",
+    "superklaster-galaksi-struktur-terbesar"
   ],
   "published": [
     {
@@ -377,8 +378,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_230151",
+      "topic": "superklaster-galaksi-struktur-terbesar",
+      "title": "Menguak Misteri Struktur Terbesar di Alam Semesta: Fakta-fakta Superklaster Galaksi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260722_230151_superklaster-galaksi-struktur-terbesar/final.mp4",
+      "video_id": "GGsTZqBSKqk",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 20,
-  "_format_idx": 17
+  "_voice_idx": 21,
+  "_format_idx": 18
 }
