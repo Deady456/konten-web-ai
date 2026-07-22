@@ -35,7 +35,8 @@
     "pencarian-kehidupan-eksoplanet",
     "materi-gelap-dan-energi-gelap",
     "lensa-gravitasi-kosmik",
-    "bintang-neutron-dan-magnetar"
+    "bintang-neutron-dan-magnetar",
+    "era-fajar-kosmik"
   ],
   "published": [
     {
@@ -355,8 +356,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_084454",
+      "topic": "era-fajar-kosmik",
+      "title": "Fajar Kosmik: Rahasia Penciptaan Bintang dan Galaksi Pertama Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260722_084454_era-fajar-kosmik/final.mp4",
+      "video_id": "AUEiTFDV24c",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 18,
-  "_format_idx": 15
+  "_voice_idx": 19,
+  "_format_idx": 16
 }
