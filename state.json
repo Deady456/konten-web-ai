@@ -38,7 +38,8 @@
     "bintang-neutron-dan-magnetar",
     "era-fajar-kosmik",
     "ekspansi-percepatan-alam-semesta-dan-takdirnya",
-    "superklaster-galaksi-struktur-terbesar"
+    "superklaster-galaksi-struktur-terbesar",
+    "misi-parker-solar-probe-menyentuh-matahari"
   ],
   "published": [
     {
@@ -388,8 +389,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260723_091337",
+      "topic": "misi-parker-solar-probe-menyentuh-matahari",
+      "title": "Petualangan Gila Menembus Matahari: Misi Parker Solar Probe NASA!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260723_091337_misi-parker-solar-probe-menyentuh-matahari/final.mp4",
+      "video_id": "-F9Qbnn8CFQ",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 21,
-  "_format_idx": 18
+  "_voice_idx": 22,
+  "_format_idx": 19
 }
