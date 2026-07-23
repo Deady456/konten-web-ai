@@ -40,7 +40,8 @@
     "ekspansi-percepatan-alam-semesta-dan-takdirnya",
     "superklaster-galaksi-struktur-terbesar",
     "misi-parker-solar-probe-menyentuh-matahari",
-    "misi-dragonfly-nasa-titan-saturnus"
+    "misi-dragonfly-nasa-titan-saturnus",
+    "hujan-berlian-uranus-neptunus"
   ],
   "published": [
     {
@@ -410,8 +411,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260723_230142",
+      "topic": "hujan-berlian-uranus-neptunus",
+      "title": "Ternyata di Planet Ini Terjadi Hujan Berlian Jutaan Karat!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260723_230142_hujan-berlian-uranus-neptunus/final.mp4",
+      "video_id": "T5xAcX9SoBE",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 23,
-  "_format_idx": 20
+  "_voice_idx": 24,
+  "_format_idx": 21
 }
