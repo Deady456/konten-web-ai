@@ -3,7 +3,7 @@ audience: "penggemar sains Indonesia yang tertarik dengan antariksa, astronomi, 
 language: id
 
 script:
-  model: gemini-1.5-flash-latest
+  model: gemini-flash-latest
   target_seconds: 80
   words_per_second: 2.3
 

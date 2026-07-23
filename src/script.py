@@ -64,8 +64,6 @@ def _call_llm(model, max_tokens, response_format, messages, retries=5):
                 
         # Fix model name just in case it has models/ prefix
         actual_model = model.replace("models/", "")
-        if actual_model == "gemini-2.5-flash":
-            actual_model = "gemini-1.5-flash-latest"
         
         # Try different API keys on rate limit
         for attempt in range(retries):
