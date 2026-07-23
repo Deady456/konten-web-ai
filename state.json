@@ -39,7 +39,8 @@
     "era-fajar-kosmik",
     "ekspansi-percepatan-alam-semesta-dan-takdirnya",
     "superklaster-galaksi-struktur-terbesar",
-    "misi-parker-solar-probe-menyentuh-matahari"
+    "misi-parker-solar-probe-menyentuh-matahari",
+    "misi-dragonfly-nasa-titan-saturnus"
   ],
   "published": [
     {
@@ -399,8 +400,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260723_150313",
+      "topic": "misi-dragonfly-nasa-titan-saturnus",
+      "title": "NASA Kirim Drone ke Titan: Bulan Saturnus yang Memiliki Lautan Metana!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260723_150313_misi-dragonfly-nasa-titan-saturnus/final.mp4",
+      "video_id": "5rSjtBoT57Q",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 22,
-  "_format_idx": 19
+  "_voice_idx": 23,
+  "_format_idx": 20
 }
