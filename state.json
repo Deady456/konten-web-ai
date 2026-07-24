@@ -41,7 +41,8 @@
     "superklaster-galaksi-struktur-terbesar",
     "misi-parker-solar-probe-menyentuh-matahari",
     "misi-dragonfly-nasa-titan-saturnus",
-    "hujan-berlian-uranus-neptunus"
+    "hujan-berlian-uranus-neptunus",
+    "fakta-kilatan-sinar-gamma-kosmik"
   ],
   "published": [
     {
@@ -421,8 +422,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_070145",
+      "topic": "fakta-kilatan-sinar-gamma-kosmik",
+      "title": "Misteri Kilatan Sinar Gamma: Ledakan Paling Mematikan di Alam Semesta!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260724_070145_fakta-kilatan-sinar-gamma-kosmik/final.mp4",
+      "video_id": "EY0M9eE73Pg",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 24,
-  "_format_idx": 21
+  "_voice_idx": 25,
+  "_format_idx": 22
 }
