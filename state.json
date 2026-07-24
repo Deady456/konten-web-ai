@@ -43,7 +43,8 @@
     "misi-dragonfly-nasa-titan-saturnus",
     "hujan-berlian-uranus-neptunus",
     "fakta-kilatan-sinar-gamma-kosmik",
-    "misi-europa-clipper-samudra-jupiter"
+    "misi-europa-clipper-samudra-jupiter",
+    "olympus-mons-gunung-raksasa-mars"
   ],
   "published": [
     {
@@ -443,8 +444,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_230221",
+      "topic": "olympus-mons-gunung-raksasa-mars",
+      "title": "Gunung Berapi Raksasa di Mars Ini Tiga Kali Lebih Tinggi dari Everest!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260724_230221_olympus-mons-gunung-raksasa-mars/final.mp4",
+      "video_id": "eJz9V7LtjWw",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 26,
-  "_format_idx": 23
+  "_voice_idx": 27,
+  "_format_idx": 24
 }
