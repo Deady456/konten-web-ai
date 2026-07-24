@@ -42,7 +42,8 @@
     "misi-parker-solar-probe-menyentuh-matahari",
     "misi-dragonfly-nasa-titan-saturnus",
     "hujan-berlian-uranus-neptunus",
-    "fakta-kilatan-sinar-gamma-kosmik"
+    "fakta-kilatan-sinar-gamma-kosmik",
+    "misi-europa-clipper-samudra-jupiter"
   ],
   "published": [
     {
@@ -432,8 +433,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_150153",
+      "topic": "misi-europa-clipper-samudra-jupiter",
+      "title": "Menembus Es Europa: Petualangan Mencari Samudra Kehidupan di Bulan Jupiter",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260724_150153_misi-europa-clipper-samudra-jupiter/final.mp4",
+      "video_id": "vSKQEOOTv9k",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 25,
-  "_format_idx": 22
+  "_voice_idx": 26,
+  "_format_idx": 23
 }
