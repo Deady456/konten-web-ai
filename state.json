@@ -46,7 +46,8 @@
     "misi-europa-clipper-samudra-jupiter",
     "olympus-mons-gunung-raksasa-mars",
     "misteri-penarik-agung-great-attractor",
-    "misteri-sinyal-fast-radio-bursts"
+    "misteri-sinyal-fast-radio-bursts",
+    "petualangan-voyager-1-ruang-antarbintang"
   ],
   "published": [
     {
@@ -476,8 +477,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_230134",
+      "topic": "petualangan-voyager-1-ruang-antarbintang",
+      "title": "Petualangan Terjauh Manusia: Pengembaraan Abadi Voyager 1 di Ruang Antarbintang",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260725_230134_petualangan-voyager-1-ruang-antarbintang/final.mp4",
+      "video_id": "vLhXsWXNoOs",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 29,
-  "_format_idx": 26
+  "_voice_idx": 30,
+  "_format_idx": 27
 }
