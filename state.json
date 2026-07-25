@@ -44,7 +44,8 @@
     "hujan-berlian-uranus-neptunus",
     "fakta-kilatan-sinar-gamma-kosmik",
     "misi-europa-clipper-samudra-jupiter",
-    "olympus-mons-gunung-raksasa-mars"
+    "olympus-mons-gunung-raksasa-mars",
+    "misteri-penarik-agung-great-attractor"
   ],
   "published": [
     {
@@ -454,8 +455,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_070146",
+      "topic": "misteri-penarik-agung-great-attractor",
+      "title": "Misteri Penarik Agung: Monster Gravitasi yang Sedot Galaksi Bima Sakti!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260725_070146_misteri-penarik-agung-great-attractor/final.mp4",
+      "video_id": "WoJRgLRmZx8",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 27,
-  "_format_idx": 24
+  "_voice_idx": 28,
+  "_format_idx": 25
 }
