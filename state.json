@@ -45,7 +45,8 @@
     "fakta-kilatan-sinar-gamma-kosmik",
     "misi-europa-clipper-samudra-jupiter",
     "olympus-mons-gunung-raksasa-mars",
-    "misteri-penarik-agung-great-attractor"
+    "misteri-penarik-agung-great-attractor",
+    "misteri-sinyal-fast-radio-bursts"
   ],
   "published": [
     {
@@ -465,8 +466,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_150131",
+      "topic": "misteri-sinyal-fast-radio-bursts",
+      "title": "7 Fakta Sinyal Radio Misterius Luar Angkasa yang Membingungkan Astronom",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260725_150131_misteri-sinyal-fast-radio-bursts/final.mp4",
+      "video_id": "XzgBf31FgF8",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 28,
-  "_format_idx": 25
+  "_voice_idx": 29,
+  "_format_idx": 26
 }
