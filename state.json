@@ -49,7 +49,8 @@
     "misteri-sinyal-fast-radio-bursts",
     "petualangan-voyager-1-ruang-antarbintang",
     "bintang-methuselah-tertua-di-alam-semesta",
-    "awan-alkohol-sagittarius-b2"
+    "awan-alkohol-sagittarius-b2",
+    "bintang-stephenson-2-18-terbesar"
   ],
   "published": [
     {
@@ -509,8 +510,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_230154",
+      "topic": "bintang-stephenson-2-18-terbesar",
+      "title": "Bintang Terbesar di Alam Semesta yang Bisa Menelan 8 Juta Matahari!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260726_230154_bintang-stephenson-2-18-terbesar/final.mp4",
+      "video_id": "W9eYvGm5biM",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 32,
-  "_format_idx": 29
+  "_voice_idx": 33,
+  "_format_idx": 30
 }
