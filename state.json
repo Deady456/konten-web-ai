@@ -48,7 +48,8 @@
     "misteri-penarik-agung-great-attractor",
     "misteri-sinyal-fast-radio-bursts",
     "petualangan-voyager-1-ruang-antarbintang",
-    "bintang-methuselah-tertua-di-alam-semesta"
+    "bintang-methuselah-tertua-di-alam-semesta",
+    "awan-alkohol-sagittarius-b2"
   ],
   "published": [
     {
@@ -498,8 +499,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_150139",
+      "topic": "awan-alkohol-sagittarius-b2",
+      "title": "Awan Raksasa di Luar Angkasa Ini Berisi Alkohol dan Beraroma Raspberry!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260726_150139_awan-alkohol-sagittarius-b2/final.mp4",
+      "video_id": "OLsS4IaSOFg",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 31,
-  "_format_idx": 28
+  "_voice_idx": 32,
+  "_format_idx": 29
 }
