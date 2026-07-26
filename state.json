@@ -47,7 +47,8 @@
     "olympus-mons-gunung-raksasa-mars",
     "misteri-penarik-agung-great-attractor",
     "misteri-sinyal-fast-radio-bursts",
-    "petualangan-voyager-1-ruang-antarbintang"
+    "petualangan-voyager-1-ruang-antarbintang",
+    "bintang-methuselah-tertua-di-alam-semesta"
   ],
   "published": [
     {
@@ -487,8 +488,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_070156",
+      "topic": "bintang-methuselah-tertua-di-alam-semesta",
+      "title": "Misteri Bintang Methuselah: Bintang yang Lebih Tua dari Alam Semesta?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260726_070156_bintang-methuselah-tertua-di-alam-semesta/final.mp4",
+      "video_id": "gnhTwHy0Zlo",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 30,
-  "_format_idx": 27
+  "_voice_idx": 31,
+  "_format_idx": 28
 }
