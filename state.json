@@ -51,7 +51,8 @@
     "bintang-methuselah-tertua-di-alam-semesta",
     "awan-alkohol-sagittarius-b2",
     "bintang-stephenson-2-18-terbesar",
-    "misteri-planet-hd-189733b-hujan-kaca"
+    "misteri-planet-hd-189733b-hujan-kaca",
+    "asal-usul-emas-kilonova-bintang-neutron"
   ],
   "published": [
     {
@@ -531,8 +532,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_150156",
+      "topic": "asal-usul-emas-kilonova-bintang-neutron",
+      "title": "Dari Mana Emas di Bumi Berasal? Rahasia Ledakan Kilonova Antariksa!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260727_150156_asal-usul-emas-kilonova-bintang-neutron/final.mp4",
+      "video_id": "8cQ0vscgA0o",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 34,
-  "_format_idx": 31
+  "_voice_idx": 35,
+  "_format_idx": 32
 }
