@@ -52,7 +52,8 @@
     "awan-alkohol-sagittarius-b2",
     "bintang-stephenson-2-18-terbesar",
     "misteri-planet-hd-189733b-hujan-kaca",
-    "asal-usul-emas-kilonova-bintang-neutron"
+    "asal-usul-emas-kilonova-bintang-neutron",
+    "bintang-thorne-zytkow-bintang-dalam-bintang"
   ],
   "published": [
     {
@@ -542,8 +543,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_230203",
+      "topic": "bintang-thorne-zytkow-bintang-dalam-bintang",
+      "title": "Misteri Bintang Thorne-\u017bytkow: Ketika Bintang Memakan Bintang Lain dari Dalam!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260727_230203_bintang-thorne-zytkow-bintang-dalam-bintang/final.mp4",
+      "video_id": "R_NYKXzTf74",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 35,
-  "_format_idx": 32
+  "_voice_idx": 36,
+  "_format_idx": 33
 }
