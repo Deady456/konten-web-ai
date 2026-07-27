@@ -50,7 +50,8 @@
     "petualangan-voyager-1-ruang-antarbintang",
     "bintang-methuselah-tertua-di-alam-semesta",
     "awan-alkohol-sagittarius-b2",
-    "bintang-stephenson-2-18-terbesar"
+    "bintang-stephenson-2-18-terbesar",
+    "misteri-planet-hd-189733b-hujan-kaca"
   ],
   "published": [
     {
@@ -520,8 +521,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_070140",
+      "topic": "misteri-planet-hd-189733b-hujan-kaca",
+      "title": "Menjelajahi Planet Biru Paling Mengerikan dengan Hujan Kaca Menyamping",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260727_070140_misteri-planet-hd-189733b-hujan-kaca/final.mp4",
+      "video_id": "j0piBRQuX9c",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 33,
-  "_format_idx": 30
+  "_voice_idx": 34,
+  "_format_idx": 31
 }
