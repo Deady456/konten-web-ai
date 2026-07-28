@@ -55,7 +55,8 @@
     "asal-usul-emas-kilonova-bintang-neutron",
     "bintang-thorne-zytkow-bintang-dalam-bintang",
     "fakta-planet-wasp-76b-hujan-besi",
-    "kehampaan-bootes-misteri-ruang-hampa-kosmik"
+    "kehampaan-bootes-misteri-ruang-hampa-kosmik",
+    "planet-gliese-436b-es-terbakar"
   ],
   "published": [
     {
@@ -575,8 +576,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_230130",
+      "topic": "planet-gliese-436b-es-terbakar",
+      "title": "Misteri Planet Gliese 436b: Planet Es Terbakar yang Menantang Hukum Fisika",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260728_230130_planet-gliese-436b-es-terbakar/final.mp4",
+      "video_id": "mCNJPOPaYOo",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 38,
-  "_format_idx": 35
+  "_voice_idx": 39,
+  "_format_idx": 36
 }
