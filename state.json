@@ -54,7 +54,8 @@
     "misteri-planet-hd-189733b-hujan-kaca",
     "asal-usul-emas-kilonova-bintang-neutron",
     "bintang-thorne-zytkow-bintang-dalam-bintang",
-    "fakta-planet-wasp-76b-hujan-besi"
+    "fakta-planet-wasp-76b-hujan-besi",
+    "kehampaan-bootes-misteri-ruang-hampa-kosmik"
   ],
   "published": [
     {
@@ -564,8 +565,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_150210",
+      "topic": "kehampaan-bootes-misteri-ruang-hampa-kosmik",
+      "title": "Menembus Kehampaan Bo\u00f6tes: Petualangan ke Tempat Tersepi di Alam Semesta",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260728_150210_kehampaan-bootes-misteri-ruang-hampa-kosmik/final.mp4",
+      "video_id": "AkrGGBhkP7Q",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 37,
-  "_format_idx": 34
+  "_voice_idx": 38,
+  "_format_idx": 35
 }
