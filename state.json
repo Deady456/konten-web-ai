@@ -53,7 +53,8 @@
     "bintang-stephenson-2-18-terbesar",
     "misteri-planet-hd-189733b-hujan-kaca",
     "asal-usul-emas-kilonova-bintang-neutron",
-    "bintang-thorne-zytkow-bintang-dalam-bintang"
+    "bintang-thorne-zytkow-bintang-dalam-bintang",
+    "fakta-planet-wasp-76b-hujan-besi"
   ],
   "published": [
     {
@@ -553,8 +554,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_070143",
+      "topic": "fakta-planet-wasp-76b-hujan-besi",
+      "title": "5 Fakta Mengerikan WASP-76b: Planet Asing Tempat Besi Mendidih dan Hujan Logam!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260728_070143_fakta-planet-wasp-76b-hujan-besi/final.mp4",
+      "video_id": "Us8qZwRxmh0",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 36,
-  "_format_idx": 33
+  "_voice_idx": 37,
+  "_format_idx": 34
 }
