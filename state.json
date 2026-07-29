@@ -56,7 +56,8 @@
     "bintang-thorne-zytkow-bintang-dalam-bintang",
     "fakta-planet-wasp-76b-hujan-besi",
     "kehampaan-bootes-misteri-ruang-hampa-kosmik",
-    "planet-gliese-436b-es-terbakar"
+    "planet-gliese-436b-es-terbakar",
+    "bintang-kristal-intan-bpm-37093"
   ],
   "published": [
     {
@@ -586,8 +587,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_070148",
+      "topic": "bintang-kristal-intan-bpm-37093",
+      "title": "Misteri BPM 37093: Bintang Mati Yang Berubah Menjadi Intan Raksasa di Antariksa!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260729_070148_bintang-kristal-intan-bpm-37093/final.mp4",
+      "video_id": "HiVV_l4o1wU",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 39,
-  "_format_idx": 36
+  "_voice_idx": 40,
+  "_format_idx": 37
 }
