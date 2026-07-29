@@ -57,7 +57,8 @@
     "fakta-planet-wasp-76b-hujan-besi",
     "kehampaan-bootes-misteri-ruang-hampa-kosmik",
     "planet-gliese-436b-es-terbakar",
-    "bintang-kristal-intan-bpm-37093"
+    "bintang-kristal-intan-bpm-37093",
+    "planet-j1407b-super-saturnus"
   ],
   "published": [
     {
@@ -597,8 +598,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_150154",
+      "topic": "planet-j1407b-super-saturnus",
+      "title": "Planet Ini Punya Cincin 200 Kali Lebih Besar Dari Saturnus!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260729_150154_planet-j1407b-super-saturnus/final.mp4",
+      "video_id": "6MZGrY-68q0",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 40,
-  "_format_idx": 37
+  "_voice_idx": 41,
+  "_format_idx": 38
 }
