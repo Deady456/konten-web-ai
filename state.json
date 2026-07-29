@@ -58,7 +58,8 @@
     "kehampaan-bootes-misteri-ruang-hampa-kosmik",
     "planet-gliese-436b-es-terbakar",
     "bintang-kristal-intan-bpm-37093",
-    "planet-j1407b-super-saturnus"
+    "planet-j1407b-super-saturnus",
+    "misi-nasa-psyche-asteroid-logam-raksasa"
   ],
   "published": [
     {
@@ -608,8 +609,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_230210",
+      "topic": "misi-nasa-psyche-asteroid-logam-raksasa",
+      "title": "Petualangan ke Asteroid Logam Murni Bernilai Ribuan Kuadriliun Dolar!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260729_230210_misi-nasa-psyche-asteroid-logam-raksasa/final.mp4",
+      "video_id": "tL8FsCBSKuU",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 41,
-  "_format_idx": 38
+  "_voice_idx": 42,
+  "_format_idx": 39
 }
