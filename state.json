@@ -61,7 +61,8 @@
     "planet-j1407b-super-saturnus",
     "misi-nasa-psyche-asteroid-logam-raksasa",
     "misi-dart-nasa-pertahanan-planet",
-    "ton-618-lubang-hitam-terbesar"
+    "ton-618-lubang-hitam-terbesar",
+    "misteri-planet-kelana-rogue-planets"
   ],
   "published": [
     {
@@ -641,8 +642,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260730_230143",
+      "topic": "misteri-planet-kelana-rogue-planets",
+      "title": "Triliunan Planet Gelap Melayang Tanpa Bintang! Misteri Planet Kelana Kosmik",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260730_230143_misteri-planet-kelana-rogue-planets/final.mp4",
+      "video_id": "fJWvQ_u3vNU",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 44,
-  "_format_idx": 41
+  "_voice_idx": 45,
+  "_format_idx": 42
 }
