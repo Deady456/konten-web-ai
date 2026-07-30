@@ -60,7 +60,8 @@
     "bintang-kristal-intan-bpm-37093",
     "planet-j1407b-super-saturnus",
     "misi-nasa-psyche-asteroid-logam-raksasa",
-    "misi-dart-nasa-pertahanan-planet"
+    "misi-dart-nasa-pertahanan-planet",
+    "ton-618-lubang-hitam-terbesar"
   ],
   "published": [
     {
@@ -630,8 +631,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260730_150152",
+      "topic": "ton-618-lubang-hitam-terbesar",
+      "title": "Mengenal TON 618: Monster Lubang Hitam Terbesar di Seluruh Alam Semesta",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260730_150152_ton-618-lubang-hitam-terbesar/final.mp4",
+      "video_id": "88p2ObwaRoE",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 43,
-  "_format_idx": 40
+  "_voice_idx": 44,
+  "_format_idx": 41
 }
