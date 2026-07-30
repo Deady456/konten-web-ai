@@ -59,7 +59,8 @@
     "planet-gliese-436b-es-terbakar",
     "bintang-kristal-intan-bpm-37093",
     "planet-j1407b-super-saturnus",
-    "misi-nasa-psyche-asteroid-logam-raksasa"
+    "misi-nasa-psyche-asteroid-logam-raksasa",
+    "misi-dart-nasa-pertahanan-planet"
   ],
   "published": [
     {
@@ -619,8 +620,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260730_070214",
+      "topic": "misi-dart-nasa-pertahanan-planet",
+      "title": "Sengaja Ditabrakkan! Cara NASA Menyelamatkan Bumi dari Asteroid",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260730_070214_misi-dart-nasa-pertahanan-planet/final.mp4",
+      "video_id": "TIclpcNOHdo",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 42,
-  "_format_idx": 39
+  "_voice_idx": 43,
+  "_format_idx": 40
 }
