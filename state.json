@@ -62,7 +62,8 @@
     "misi-nasa-psyche-asteroid-logam-raksasa",
     "misi-dart-nasa-pertahanan-planet",
     "ton-618-lubang-hitam-terbesar",
-    "misteri-planet-kelana-rogue-planets"
+    "misteri-planet-kelana-rogue-planets",
+    "misi-cassini-semburan-es-enceladus"
   ],
   "published": [
     {
@@ -652,8 +653,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_070141",
+      "topic": "misi-cassini-semburan-es-enceladus",
+      "title": "Misi Nekat Cassini: Menembus Samudra Es Enceladus Pencari Kehidupan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260731_070141_misi-cassini-semburan-es-enceladus/final.mp4",
+      "video_id": "brm0QCNQw98",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 45,
-  "_format_idx": 42
+  "_voice_idx": 46,
+  "_format_idx": 43
 }
