@@ -64,7 +64,8 @@
     "ton-618-lubang-hitam-terbesar",
     "misteri-planet-kelana-rogue-planets",
     "misi-cassini-semburan-es-enceladus",
-    "planet-k2-18b-potensi-kehidupan"
+    "planet-k2-18b-potensi-kehidupan",
+    "misteri-oumuamua-pengunjung-antarbintang"
   ],
   "published": [
     {
@@ -674,8 +675,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_230159",
+      "topic": "misteri-oumuamua-pengunjung-antarbintang",
+      "title": "Misteri Oumuamua: Pengunjung Antarbintang Pertama yang Membingungkan NASA",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260731_230159_misteri-oumuamua-pengunjung-antarbintang/final.mp4",
+      "video_id": "n4YdOY_VRHY",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 47,
-  "_format_idx": 44
+  "_voice_idx": 48,
+  "_format_idx": 45
 }
