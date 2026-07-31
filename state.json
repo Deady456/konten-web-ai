@@ -63,7 +63,8 @@
     "misi-dart-nasa-pertahanan-planet",
     "ton-618-lubang-hitam-terbesar",
     "misteri-planet-kelana-rogue-planets",
-    "misi-cassini-semburan-es-enceladus"
+    "misi-cassini-semburan-es-enceladus",
+    "planet-k2-18b-potensi-kehidupan"
   ],
   "published": [
     {
@@ -663,8 +664,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_150202",
+      "topic": "planet-k2-18b-potensi-kehidupan",
+      "title": "Ditemukan Planet K2-18b Punya Samudra dan Potensi Jejak Kehidupan!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260731_150202_planet-k2-18b-potensi-kehidupan/final.mp4",
+      "video_id": "ixQ5dRb4WDY",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 46,
-  "_format_idx": 43
+  "_voice_idx": 47,
+  "_format_idx": 44
 }
