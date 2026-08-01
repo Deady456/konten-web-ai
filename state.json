@@ -67,7 +67,8 @@
     "planet-k2-18b-potensi-kehidupan",
     "misteri-oumuamua-pengunjung-antarbintang",
     "fakta-bintang-neutron-objek-terpadat",
-    "ledakan-magnetar-sgr-1806-20"
+    "ledakan-magnetar-sgr-1806-20",
+    "reservoir-air-raksasa-apm-08279"
   ],
   "published": [
     {
@@ -707,8 +708,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260801_230146",
+      "topic": "reservoir-air-raksasa-apm-08279",
+      "title": "Misteri Lautan Melayang Terbesar di Alam Semesta yang Mencapai Triliunan Kali Air Bumi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260801_230146_reservoir-air-raksasa-apm-08279/final.mp4",
+      "video_id": "6fx1AWvU7HI",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 50,
-  "_format_idx": 47
+  "_voice_idx": 51,
+  "_format_idx": 48
 }
