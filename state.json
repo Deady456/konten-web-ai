@@ -65,7 +65,8 @@
     "misteri-planet-kelana-rogue-planets",
     "misi-cassini-semburan-es-enceladus",
     "planet-k2-18b-potensi-kehidupan",
-    "misteri-oumuamua-pengunjung-antarbintang"
+    "misteri-oumuamua-pengunjung-antarbintang",
+    "fakta-bintang-neutron-objek-terpadat"
   ],
   "published": [
     {
@@ -685,8 +686,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260801_070201",
+      "topic": "fakta-bintang-neutron-objek-terpadat",
+      "title": "4 Fakta Bintang Neutron: Benda Terpadat dan Paling Ekstrem di Alam Semesta!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260801_070201_fakta-bintang-neutron-objek-terpadat/final.mp4",
+      "video_id": "h-fT7LlEV1E",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 48,
-  "_format_idx": 45
+  "_voice_idx": 49,
+  "_format_idx": 46
 }
