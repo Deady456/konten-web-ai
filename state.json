@@ -68,7 +68,8 @@
     "misteri-oumuamua-pengunjung-antarbintang",
     "fakta-bintang-neutron-objek-terpadat",
     "ledakan-magnetar-sgr-1806-20",
-    "reservoir-air-raksasa-apm-08279"
+    "reservoir-air-raksasa-apm-08279",
+    "planet-tergelap-tres-2b"
   ],
   "published": [
     {
@@ -718,8 +719,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_070143",
+      "topic": "planet-tergelap-tres-2b",
+      "title": "Misteri TrES-2b: Planet Tergelap di Alam Semesta yang Lebih Hitam dari Arang",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260802_070143_planet-tergelap-tres-2b/final.mp4",
+      "video_id": "V7WJVBq96GU",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 51,
-  "_format_idx": 48
+  "_voice_idx": 52,
+  "_format_idx": 49
 }
