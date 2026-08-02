@@ -70,7 +70,8 @@
     "ledakan-magnetar-sgr-1806-20",
     "reservoir-air-raksasa-apm-08279",
     "planet-tergelap-tres-2b",
-    "misi-parker-solar-probe-nasa-matahari"
+    "misi-parker-solar-probe-nasa-matahari",
+    "misi-venera-menerjang-neraka-venus"
   ],
   "published": [
     {
@@ -740,8 +741,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_230152",
+      "topic": "misi-venera-menerjang-neraka-venus",
+      "title": "Petualangan Nekad Mendarat di Venus Planet Paling Mematikan di Tata Surya",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260802_230152_misi-venera-menerjang-neraka-venus/final.mp4",
+      "video_id": "Bm5V4nYcz1Q",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 53,
-  "_format_idx": 50
+  "_voice_idx": 54,
+  "_format_idx": 51
 }
