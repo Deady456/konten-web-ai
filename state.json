@@ -69,7 +69,8 @@
     "fakta-bintang-neutron-objek-terpadat",
     "ledakan-magnetar-sgr-1806-20",
     "reservoir-air-raksasa-apm-08279",
-    "planet-tergelap-tres-2b"
+    "planet-tergelap-tres-2b",
+    "misi-parker-solar-probe-nasa-matahari"
   ],
   "published": [
     {
@@ -729,8 +730,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_150147",
+      "topic": "misi-parker-solar-probe-nasa-matahari",
+      "title": "Matahari Berhasil Disentuh! Fakta Misi Parker Solar Probe NASA",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260802_150147_misi-parker-solar-probe-nasa-matahari/final.mp4",
+      "video_id": "qmAFA4NkW_Q",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 52,
-  "_format_idx": 49
+  "_voice_idx": 53,
+  "_format_idx": 50
 }
