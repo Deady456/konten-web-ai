@@ -71,7 +71,8 @@
     "reservoir-air-raksasa-apm-08279",
     "planet-tergelap-tres-2b",
     "misi-parker-solar-probe-nasa-matahari",
-    "misi-venera-menerjang-neraka-venus"
+    "misi-venera-menerjang-neraka-venus",
+    "misteri-objek-hoag-galaksi-cincin-sempurna"
   ],
   "published": [
     {
@@ -751,8 +752,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260803_070153",
+      "topic": "misteri-objek-hoag-galaksi-cincin-sempurna",
+      "title": "Misteri Objek Hoag: Galaksi Cincin Sempurna Teraneh di Alam Semesta!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260803_070153_misteri-objek-hoag-galaksi-cincin-sempurna/final.mp4",
+      "video_id": "JMFcpKx5jVI",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 54,
-  "_format_idx": 51
+  "_voice_idx": 55,
+  "_format_idx": 52
 }
