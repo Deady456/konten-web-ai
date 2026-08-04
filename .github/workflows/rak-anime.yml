@@ -82,14 +82,3 @@ jobs:
             git commit -m "auto: update state.json"
             git push
           fi
-
-
-      - name: Commit refreshed token
-        run: |
-          if git diff --quiet token_rak_anime.json 2>/dev/null; then
-            echo "Token unchanged"
-          else
-            git add token_rak_anime.json
-            git commit -m "auto: refresh Rak Anime token"
-            git push
-          fi

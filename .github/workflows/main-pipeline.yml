@@ -83,13 +83,3 @@ jobs:
             git commit -m "auto: update state.json"
             git push
           fi
-
-      - name: Commit refreshed token
-        run: |
-          if git diff --quiet token_animewebai.json 2>/dev/null; then
-            echo "Token unchanged"
-          else
-            git add token_animewebai.json
-            git commit -m "auto: refresh YouTube token"
-            git push
-          fi
