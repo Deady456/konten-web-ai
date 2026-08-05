@@ -72,7 +72,8 @@
     "planet-tergelap-tres-2b",
     "misi-parker-solar-probe-nasa-matahari",
     "misi-venera-menerjang-neraka-venus",
-    "misteri-objek-hoag-galaksi-cincin-sempurna"
+    "misteri-objek-hoag-galaksi-cincin-sempurna",
+    "tembok-besar-hercules-corona-borealis-struktur-terbesar"
   ],
   "published": [
     {
@@ -762,8 +763,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260805_082754",
+      "topic": "tembok-besar-hercules-corona-borealis-struktur-terbesar",
+      "title": "Struktur Terbesar di Alam Semesta yang Melanggar Hukum Fisika!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260805_082754_tembok-besar-hercules-corona-borealis-struktur-terbesar/final.mp4",
+      "video_id": "yTrUzLjYEzQ",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 55,
-  "_format_idx": 52
+  "_voice_idx": 56,
+  "_format_idx": 53
 }
