@@ -73,7 +73,8 @@
     "misi-parker-solar-probe-nasa-matahari",
     "misi-venera-menerjang-neraka-venus",
     "misteri-objek-hoag-galaksi-cincin-sempurna",
-    "tembok-besar-hercules-corona-borealis-struktur-terbesar"
+    "tembok-besar-hercules-corona-borealis-struktur-terbesar",
+    "fakta-bulan-titan-saturnus"
   ],
   "published": [
     {
@@ -773,8 +774,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260806_123427",
+      "topic": "fakta-bulan-titan-saturnus",
+      "title": "Mengenal Titan: Dunia Lain di Tata Surya yang Punya Lautan Metana dan Hujan Asam",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260806_123427_fakta-bulan-titan-saturnus/final.mp4",
+      "video_id": "XA-nxYVBi_k",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 56,
-  "_format_idx": 53
+  "_voice_idx": 57,
+  "_format_idx": 54
 }
