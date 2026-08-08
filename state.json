@@ -1,6 +1,7 @@
 {
   "used_topics": [
-    "phoenix-a-lubang-hitam-terbesar"
+    "phoenix-a-lubang-hitam-terbesar",
+    "bintang-neutron-objek-terpadat"
   ],
   "published": [
     {
@@ -12,8 +13,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260808_093117",
+      "topic": "bintang-neutron-objek-terpadat",
+      "title": "Misteri Bintang Neutron: Objek Paling Padat dan Mengerikan di Alam Semesta",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260808_093117_bintang-neutron-objek-terpadat/final.mp4",
+      "video_id": "B0jOxBDj9eE",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 1,
-  "_voice_idx": 1
+  "_format_idx": 2,
+  "_voice_idx": 2
 }
