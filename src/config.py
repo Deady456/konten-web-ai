@@ -59,6 +59,16 @@ elif LLM_PROVIDER == "nvidia":
     LLM_API_KEY = LLM_API_KEYS[0]
     LLM_BASE_URL = "https://integrate.api.nvidia.com/v1"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "meta/llama-3.3-70b-instruct")
+elif LLM_PROVIDER == "openrouter":
+    _orkeys = []
+    for k, v in os.environ.items():
+        if k.startswith("OPENROUTER_API_KEY") and v.strip():
+            _orkeys.extend([x.strip().strip('"').strip("'") for x in re.split(r',|\n|\\n', v) if x.strip()])
+    OPENROUTER_API_KEYS = _orkeys if _orkeys else [""]
+    LLM_API_KEYS = OPENROUTER_API_KEYS
+    LLM_API_KEY = LLM_API_KEYS[0]
+    LLM_BASE_URL = "https://openrouter.ai/api/v1"
+    LLM_MODEL = CONFIG.get("script", {}).get("model", "meta-llama/llama-3.3-70b-instruct")
 elif LLM_PROVIDER == "groq":
     LLM_API_KEYS = GROQ_API_KEYS
     LLM_API_KEY = LLM_API_KEYS[0]
