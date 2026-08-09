@@ -29,7 +29,7 @@ PEXELS_API_KEYS = _pexels_keys if _pexels_keys else ["dummy_key"]
 _nvkeys = []
 for k, v in os.environ.items():
     if k.startswith("NVIDIA_API_KEY") and v.strip():
-        _nvkeys.extend([x.strip().strip('"').strip(''') for x in re.split(r',|\n|\\n', v) if x.strip()])
+        _nvkeys.extend([x.strip().strip('"').strip("'") for x in re.split(r',|\n|\\n', v) if x.strip()])
 NVIDIA_API_KEYS = _nvkeys if _nvkeys else ["dummy"]
 
 import random
