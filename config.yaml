@@ -3,7 +3,7 @@ audience: "penggemar sains Indonesia yang tertarik dengan antariksa, astronomi, 
 language: id
 
 script:
-  model: meta/llama-3.3-70b-instruct
+  model: nvidia/nemotron-3-super-120b-a12b
   target_seconds: 80
   words_per_second: 2.3
 

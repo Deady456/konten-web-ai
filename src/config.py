@@ -35,7 +35,7 @@ NVIDIA_API_KEYS = _nvkeys if _nvkeys else ["dummy"]
 import random
 random.shuffle(PEXELS_API_KEYS)
 _cfg_model = CONFIG.get("script", {}).get("model", "")
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "nvidia" if ("nvidia" in _cfg_model.lower() or "meta/" in _cfg_model.lower() or "llama" in _cfg_model.lower()) else ("gemini" if "gemini" in _cfg_model.lower() else "groq"))
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "nvidia" if ("nvidia" in _cfg_model.lower() or "meta/" in _cfg_model.lower() or "llama" in _cfg_model.lower() or "nemotron" in _cfg_model.lower() or "step" in _cfg_model.lower()) else ("gemini" if "gemini" in _cfg_model.lower() else "groq"))
 _gkeys = []
 for k, v in os.environ.items():
     if k.startswith("GEMINI_API_KEY") and v.strip():
