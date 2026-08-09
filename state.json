@@ -1,7 +1,8 @@
 {
   "used_topics": [
     "phoenix-a-lubang-hitam-terbesar",
-    "bintang-neutron-objek-terpadat"
+    "bintang-neutron-objek-terpadat",
+    "supernova-1054-dan-matahari-crab"
   ],
   "published": [
     {
@@ -23,8 +24,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260809_122543",
+      "topic": "supernova-1054-dan-matahari-crab",
+      "title": "Supernova 1054: Cahaya Bintang yang Melampaui Bulan selama 23 Hari",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260809_122543_supernova-1054-dan-matahari-crab/final.mp4",
+      "video_id": "p9x8zY46T4M",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 2,
-  "_voice_idx": 2
+  "_format_idx": 3,
+  "_voice_idx": 3
 }
