@@ -3,7 +3,7 @@ audience: "penggemar sains Indonesia yang tertarik dengan antariksa, astronomi, 
 language: id
 
 script:
-  model: gemini-flash-latest
+  model: meta/llama-3.3-70b-instruct
   target_seconds: 80
   words_per_second: 2.3
 
@@ -14,7 +14,7 @@ content_variation:
 
 voice:
   provider: elevenlabs
-  elevenlabs_model: eleven_multilingual_v2
+  elevenlabs_model: meta/llama-3.3-70b-instruct
   variety:
     enabled: true
     voices:
@@ -31,7 +31,7 @@ voice:
   elevenlabs_voice_id: VR6AewLTigWG4xSOukaG
 
 captions:
-  whisper_model: base
+  whisper_model: meta/llama-3.3-70b-instruct
   font: "Anton"
   font_size: 90
   primary_color: "&H0000FFFF"

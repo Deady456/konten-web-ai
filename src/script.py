@@ -164,7 +164,7 @@ def _call_llm(model, max_tokens, response_format, messages, retries=5):
                         break
             _key_idx += 1
             if _key_idx >= len(LLM_API_KEYS):
-                raise Exception("All Groq API keys exhausted")
+                raise Exception(f"All API keys exhausted for {LLM_PROVIDER}")
             print(f"  Switching to next Groq key {_key_idx+1}/{len(LLM_API_KEYS)}")
 
 

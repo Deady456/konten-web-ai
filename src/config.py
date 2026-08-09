@@ -26,10 +26,16 @@ for k, v in os.environ.items():
         import re
         _pexels_keys.extend([x.strip().strip('\"').strip('\'') for x in re.split(r',|\n|\\n', v) if x.strip()])
 PEXELS_API_KEYS = _pexels_keys if _pexels_keys else ["dummy_key"]
+_nvkeys = []
+for k, v in os.environ.items():
+    if k.startswith("NVIDIA_API_KEY") and v.strip():
+        _nvkeys.extend([x.strip().strip('"').strip(''') for x in re.split(r',|\n|\\n', v) if x.strip()])
+NVIDIA_API_KEYS = _nvkeys if _nvkeys else ["dummy"]
+
 import random
 random.shuffle(PEXELS_API_KEYS)
 _cfg_model = CONFIG.get("script", {}).get("model", "")
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini" if "gemini" in _cfg_model.lower() else "groq")
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "nvidia" if ("nvidia" in _cfg_model.lower() or "meta/" in _cfg_model.lower() or "llama" in _cfg_model.lower()) else ("gemini" if "gemini" in _cfg_model.lower() else "groq"))
 _gkeys = []
 for k, v in os.environ.items():
     if k.startswith("GEMINI_API_KEY") and v.strip():
@@ -48,6 +54,11 @@ if LLM_PROVIDER == "gemini":
     LLM_API_KEYS = GEMINI_API_KEYS
     LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
+elif LLM_PROVIDER == "nvidia":
+    LLM_API_KEYS = NVIDIA_API_KEYS
+    LLM_API_KEY = LLM_API_KEYS[0]
+    LLM_BASE_URL = "https://integrate.api.nvidia.com/v1"
+    LLM_MODEL = CONFIG.get("script", {}).get("model", "meta/llama-3.3-70b-instruct")
 elif LLM_PROVIDER == "groq":
     LLM_API_KEYS = GROQ_API_KEYS
     LLM_API_KEY = LLM_API_KEYS[0]
