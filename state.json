@@ -2,7 +2,8 @@
   "used_topics": [
     "phoenix-a-lubang-hitam-terbesar",
     "bintang-neutron-objek-terpadat",
-    "supernova-1054-dan-matahari-crab"
+    "supernova-1054-dan-matahari-crab",
+    "eksplorasi-kuiper-belt"
   ],
   "published": [
     {
@@ -34,8 +35,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260810_031518",
+      "topic": "eksplorasi-kuiper-belt",
+      "title": "Mengungkap Misteri Kuiper Belt, Wilayah Misterius di Ujung Tata Surya",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260810_031518_eksplorasi-kuiper-belt/final.mp4",
+      "video_id": "FB0esyHAaKs",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 3,
-  "_voice_idx": 3
+  "_format_idx": 4,
+  "_voice_idx": 4
 }
