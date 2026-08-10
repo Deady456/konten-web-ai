@@ -3,7 +3,8 @@
     "phoenix-a-lubang-hitam-terbesar",
     "bintang-neutron-objek-terpadat",
     "supernova-1054-dan-matahari-crab",
-    "eksplorasi-kuiper-belt"
+    "eksplorasi-kuiper-belt",
+    "eksplorasi-eksoplanet"
   ],
   "published": [
     {
@@ -45,8 +46,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260810_223522",
+      "topic": "eksplorasi-eksoplanet",
+      "title": "Mengenal Proxima b, Eksoplanet Terdekat Dengan Bumi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260810_223522_eksplorasi-eksoplanet/final.mp4",
+      "video_id": "5BLwM28vGZc",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 4,
-  "_voice_idx": 4
+  "_format_idx": 5,
+  "_voice_idx": 5
 }
