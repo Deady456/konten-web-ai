@@ -4,7 +4,8 @@
     "bintang-neutron-objek-terpadat",
     "supernova-1054-dan-matahari-crab",
     "eksplorasi-kuiper-belt",
-    "eksplorasi-eksoplanet"
+    "eksplorasi-eksoplanet",
+    "teknologi-antarruang"
   ],
   "published": [
     {
@@ -56,8 +57,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260811_070453",
+      "topic": "teknologi-antarruang",
+      "title": "Mengenal Teknologi Antarruang Masa Depan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260811_070453_teknologi-antarruang/final.mp4",
+      "video_id": "cHSibrl-TUc",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 5,
-  "_voice_idx": 5
+  "_format_idx": 6,
+  "_voice_idx": 6
 }
