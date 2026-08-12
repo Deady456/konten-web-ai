@@ -5,7 +5,8 @@
     "supernova-1054-dan-matahari-crab",
     "eksplorasi-kuiper-belt",
     "eksplorasi-eksoplanet",
-    "teknologi-antarruang"
+    "teknologi-antarruang",
+    "fast-radio-bursts"
   ],
   "published": [
     {
@@ -67,8 +68,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260812_162001",
+      "topic": "fast-radio-bursts",
+      "title": "Misteri Sinyal Radio dari Luar Angkasa",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260812_162001_fast-radio-bursts/final.mp4",
+      "video_id": "zYw1HEHyD0g",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 6,
-  "_voice_idx": 6
+  "_format_idx": 7,
+  "_voice_idx": 7
 }
