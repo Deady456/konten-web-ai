@@ -6,7 +6,8 @@
     "eksplorasi-kuiper-belt",
     "eksplorasi-eksoplanet",
     "teknologi-antarruang",
-    "fast-radio-bursts"
+    "fast-radio-bursts",
+    "astronomi-inframerah"
   ],
   "published": [
     {
@@ -78,8 +79,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260813_004851",
+      "topic": "astronomi-inframerah",
+      "title": "Mengungkap Rahasia Alam Semesta dengan Astronomi Inframerah",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260813_004851_astronomi-inframerah/final.mp4",
+      "video_id": "UEohznO8TmE",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 7,
-  "_voice_idx": 7
+  "_format_idx": 8,
+  "_voice_idx": 8
 }
