@@ -7,7 +7,8 @@
     "eksplorasi-eksoplanet",
     "teknologi-antarruang",
     "fast-radio-bursts",
-    "astronomi-inframerah"
+    "astronomi-inframerah",
+    "galaksi-kolisi"
   ],
   "published": [
     {
@@ -89,8 +90,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260813_124653",
+      "topic": "galaksi-kolisi",
+      "title": "Kolisi Galaksi: Akhir Tata Surya Kita?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260813_124653_galaksi-kolisi/final.mp4",
+      "video_id": "h_Y762l8RLQ",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 8,
-  "_voice_idx": 8
+  "_format_idx": 9,
+  "_voice_idx": 9
 }
