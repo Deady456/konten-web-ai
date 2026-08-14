@@ -8,7 +8,8 @@
     "teknologi-antarruang",
     "fast-radio-bursts",
     "astronomi-inframerah",
-    "galaksi-kolisi"
+    "galaksi-kolisi",
+    "misi-ke-mars-2025"
   ],
   "published": [
     {
@@ -100,8 +101,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260814_004627",
+      "topic": "misi-ke-mars-2025",
+      "title": "Misi 2025: Mengungkap Rahasia Mars!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260814_004627_misi-ke-mars-2025/final.mp4",
+      "video_id": "dyViQHyhbwI",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 9,
-  "_voice_idx": 9
+  "_format_idx": 10,
+  "_voice_idx": 10
 }
