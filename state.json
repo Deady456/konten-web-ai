@@ -9,7 +9,8 @@
     "fast-radio-bursts",
     "astronomi-inframerah",
     "galaksi-kolisi",
-    "misi-ke-mars-2025"
+    "misi-ke-mars-2025",
+    "eksplorasi-galaksi-andromeda"
   ],
   "published": [
     {
@@ -111,8 +112,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260814_124630",
+      "topic": "eksplorasi-galaksi-andromeda",
+      "title": "Mengungkap Rahasia Galaksi Andromeda",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260814_124630_eksplorasi-galaksi-andromeda/final.mp4",
+      "video_id": "lT77DCIt4eY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 10,
-  "_voice_idx": 10
+  "_format_idx": 11,
+  "_voice_idx": 11
 }
