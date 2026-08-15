@@ -11,7 +11,8 @@
     "galaksi-kolisi",
     "misi-ke-mars-2025",
     "eksplorasi-galaksi-andromeda",
-    "misi-parker-solar-probe"
+    "misi-parker-solar-probe",
+    "teleskop-james-webb"
   ],
   "published": [
     {
@@ -133,8 +134,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260815_124756",
+      "topic": "teleskop-james-webb",
+      "title": "Mengungkap Rahasia Alam Semesta dengan Teleskop James Webb",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260815_124756_teleskop-james-webb/final.mp4",
+      "video_id": "CfKyT6TUO-c",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 12,
-  "_voice_idx": 12
+  "_format_idx": 13,
+  "_voice_idx": 13
 }
