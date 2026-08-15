@@ -10,7 +10,8 @@
     "astronomi-inframerah",
     "galaksi-kolisi",
     "misi-ke-mars-2025",
-    "eksplorasi-galaksi-andromeda"
+    "eksplorasi-galaksi-andromeda",
+    "misi-parker-solar-probe"
   ],
   "published": [
     {
@@ -122,8 +123,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260815_004626",
+      "topic": "misi-parker-solar-probe",
+      "title": "Mengintip Matahari Dengan Misi Parker Solar Probe",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260815_004626_misi-parker-solar-probe/final.mp4",
+      "video_id": "QHpvplA4hLs",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 11,
-  "_voice_idx": 11
+  "_format_idx": 12,
+  "_voice_idx": 12
 }
