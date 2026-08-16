@@ -12,7 +12,8 @@
     "misi-ke-mars-2025",
     "eksplorasi-galaksi-andromeda",
     "misi-parker-solar-probe",
-    "teleskop-james-webb"
+    "teleskop-james-webb",
+    "black-hole-binary"
   ],
   "published": [
     {
@@ -144,8 +145,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260816_004636",
+      "topic": "black-hole-binary",
+      "title": "5 Fakta Menarik Tentang Lubang Hitam Biner",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260816_004636_black-hole-binary/final.mp4",
+      "video_id": "UJkqCR9r3R8",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 13,
-  "_voice_idx": 13
+  "_format_idx": 14,
+  "_voice_idx": 14
 }
