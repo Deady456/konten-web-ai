@@ -13,7 +13,8 @@
     "eksplorasi-galaksi-andromeda",
     "misi-parker-solar-probe",
     "teleskop-james-webb",
-    "black-hole-binary"
+    "black-hole-binary",
+    "galaksi-aktif-blazars"
   ],
   "published": [
     {
@@ -155,8 +156,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260816_124627",
+      "topic": "galaksi-aktif-blazars",
+      "title": "Mengungkap Blazars: Galaksi Aktif Yang Menghancurkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260816_124627_galaksi-aktif-blazars/final.mp4",
+      "video_id": "iJVsQ9RsjpA",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 14,
-  "_voice_idx": 14
+  "_format_idx": 15,
+  "_voice_idx": 15
 }
