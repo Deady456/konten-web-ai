@@ -15,7 +15,8 @@
     "teleskop-james-webb",
     "black-hole-binary",
     "galaksi-aktif-blazars",
-    "lucy-misi-trojan-asteroid"
+    "lucy-misi-trojan-asteroid",
+    "helix-nebula-bintang-muda"
   ],
   "published": [
     {
@@ -177,8 +178,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260817_124731",
+      "topic": "helix-nebula-bintang-muda",
+      "title": "Rahasia Nebula Helix: Bintang Muda Terbaru yang Ditemukan JWST",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260817_124731_helix-nebula-bintang-muda/final.mp4",
+      "video_id": "k0jvgkYluSw",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 16,
-  "_voice_idx": 16
+  "_format_idx": 17,
+  "_voice_idx": 17
 }
