@@ -14,7 +14,8 @@
     "misi-parker-solar-probe",
     "teleskop-james-webb",
     "black-hole-binary",
-    "galaksi-aktif-blazars"
+    "galaksi-aktif-blazars",
+    "lucy-misi-trojan-asteroid"
   ],
   "published": [
     {
@@ -166,8 +167,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260817_004748",
+      "topic": "lucy-misi-trojan-asteroid",
+      "title": "Misi Lucy: Menyingkap Rahasia Asteroid Trojan Jupiter yang Belum Pernah Dijelajahi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260817_004748_lucy-misi-trojan-asteroid/final.mp4",
+      "video_id": "GMScO4v5stU",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 15,
-  "_voice_idx": 15
+  "_format_idx": 16,
+  "_voice_idx": 16
 }
