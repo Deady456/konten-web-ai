@@ -16,7 +16,8 @@
     "black-hole-binary",
     "galaksi-aktif-blazars",
     "lucy-misi-trojan-asteroid",
-    "helix-nebula-bintang-muda"
+    "helix-nebula-bintang-muda",
+    "artemis-i-misi-pertama-bulan-era-baru"
   ],
   "published": [
     {
@@ -188,8 +189,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260818_124802",
+      "topic": "artemis-i-misi-pertama-bulan-era-baru",
+      "title": "Artemis I: Misi Pertama NASA Kembali ke Bulan di Era Baru, Fakta Menarik & Data Eksklusif",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260818_124802_artemis-i-misi-pertama-bulan-era-baru/final.mp4",
+      "video_id": "zl6ge9J3SMo",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 17,
-  "_voice_idx": 17
+  "_format_idx": 18,
+  "_voice_idx": 18
 }
