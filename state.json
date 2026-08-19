@@ -18,7 +18,8 @@
     "lucy-misi-trojan-asteroid",
     "helix-nebula-bintang-muda",
     "artemis-i-misi-pertama-bulan-era-baru",
-    "misteri-pembunuhan-akseyna-ui"
+    "misteri-pembunuhan-akseyna-ui",
+    "misteri-pembunuhan-wartawan-udin"
   ],
   "published": [
     {
@@ -210,8 +211,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260819_124954",
+      "topic": "misteri-pembunuhan-wartawan-udin",
+      "title": "Misteri Kelam Pembunuhan Wartawan Udin yang Tak Pernah Terungkap Sejak Seribu Sembilan Ratus Sembilan Puluh Enam",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260819_124954_misteri-pembunuhan-wartawan-udin/final.mp4",
+      "video_id": "kd1txgxP5-k",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 19,
-  "_voice_idx": 19
+  "_format_idx": 20,
+  "_voice_idx": 20
 }
