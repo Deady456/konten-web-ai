@@ -17,7 +17,8 @@
     "galaksi-aktif-blazars",
     "lucy-misi-trojan-asteroid",
     "helix-nebula-bintang-muda",
-    "artemis-i-misi-pertama-bulan-era-baru"
+    "artemis-i-misi-pertama-bulan-era-baru",
+    "misteri-pembunuhan-akseyna-ui"
   ],
   "published": [
     {
@@ -199,8 +200,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260819_055925",
+      "topic": "misteri-pembunuhan-akseyna-ui",
+      "title": "Misteri Pembunuhan Akseyna di Danau UI yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260819_055925_misteri-pembunuhan-akseyna-ui/final.mp4",
+      "video_id": "qj_Tdr1ritY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 18,
-  "_voice_idx": 18
+  "_format_idx": 19,
+  "_voice_idx": 19
 }
