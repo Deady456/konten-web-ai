@@ -20,7 +20,8 @@
     "artemis-i-misi-pertama-bulan-era-baru",
     "misteri-pembunuhan-akseyna-ui",
     "misteri-pembunuhan-wartawan-udin",
-    "misteri-pembunuhan-marsinah"
+    "misteri-pembunuhan-marsinah",
+    "misteri-kematian-yodi-prabowo"
   ],
   "published": [
     {
@@ -232,8 +233,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260820_124724",
+      "topic": "misteri-kematian-yodi-prabowo",
+      "title": "MISTERI KEMATIAN YODI PRABOWO: BUNUH DIRI ATAU PEMBUNUHAN RAPI?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260820_124724_misteri-kematian-yodi-prabowo/final.mp4",
+      "video_id": "29sE2AQf1js",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 21,
-  "_voice_idx": 21
+  "_format_idx": 22,
+  "_voice_idx": 22
 }
