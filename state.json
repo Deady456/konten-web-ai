@@ -19,7 +19,8 @@
     "helix-nebula-bintang-muda",
     "artemis-i-misi-pertama-bulan-era-baru",
     "misteri-pembunuhan-akseyna-ui",
-    "misteri-pembunuhan-wartawan-udin"
+    "misteri-pembunuhan-wartawan-udin",
+    "misteri-pembunuhan-marsinah"
   ],
   "published": [
     {
@@ -221,8 +222,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260820_004713",
+      "topic": "misteri-pembunuhan-marsinah",
+      "title": "Misteri Pembunuhan Marsinah seribu sembilan ratus sembilan puluh tiga: Kasus Kelam Kriminal yang Tak Terpecahkan!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260820_004713_misteri-pembunuhan-marsinah/final.mp4",
+      "video_id": "OGYX9x63dEE",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 20,
-  "_voice_idx": 20
+  "_format_idx": 21,
+  "_voice_idx": 21
 }
