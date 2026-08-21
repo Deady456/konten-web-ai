@@ -22,7 +22,8 @@
     "misteri-pembunuhan-wartawan-udin",
     "misteri-pembunuhan-marsinah",
     "misteri-kematian-yodi-prabowo",
-    "misteri-pembunuhan-noven-bogor"
+    "misteri-pembunuhan-noven-bogor",
+    "misteri-hilangnya-tiga-bocah-langkat"
   ],
   "published": [
     {
@@ -254,8 +255,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260821_124703",
+      "topic": "misteri-hilangnya-tiga-bocah-langkat",
+      "title": "Misteri Tiga Bocah Hilang Tanpa Jejak di Langkat Sumatera Utara!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260821_124703_misteri-hilangnya-tiga-bocah-langkat/final.mp4",
+      "video_id": "v6MYKZogVK4",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 24,
-  "_voice_idx": 23
+  "_format_idx": 25,
+  "_voice_idx": 24
 }
