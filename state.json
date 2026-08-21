@@ -21,7 +21,8 @@
     "misteri-pembunuhan-akseyna-ui",
     "misteri-pembunuhan-wartawan-udin",
     "misteri-pembunuhan-marsinah",
-    "misteri-kematian-yodi-prabowo"
+    "misteri-kematian-yodi-prabowo",
+    "misteri-pembunuhan-noven-bogor"
   ],
   "published": [
     {
@@ -243,8 +244,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260821_004802",
+      "topic": "misteri-pembunuhan-noven-bogor",
+      "title": "Misteri Wajah Pelaku Terekam CCTV Tapi Tak Pernah Tertangkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260821_004802_misteri-pembunuhan-noven-bogor/final.mp4",
+      "video_id": "2X0rblN3OkY",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 22,
-  "_voice_idx": 22
+  "_format_idx": 24,
+  "_voice_idx": 23
 }
