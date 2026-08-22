@@ -23,7 +23,8 @@
     "misteri-pembunuhan-marsinah",
     "misteri-kematian-yodi-prabowo",
     "misteri-pembunuhan-noven-bogor",
-    "misteri-hilangnya-tiga-bocah-langkat"
+    "misteri-hilangnya-tiga-bocah-langkat",
+    "misteri-pembunuhan-ibu-anak-subang"
   ],
   "published": [
     {
@@ -265,8 +266,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260822_004643",
+      "topic": "misteri-pembunuhan-ibu-anak-subang",
+      "title": "Misteri Kematian Ibu Dan Anak Di Subang Yang Mengguncang Indonesia",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260822_004643_misteri-pembunuhan-ibu-anak-subang/final.mp4",
+      "video_id": "f8NJydvh5C8",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 25,
-  "_voice_idx": 24
+  "_format_idx": 26,
+  "_voice_idx": 25
 }
