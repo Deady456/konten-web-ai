@@ -24,7 +24,8 @@
     "misteri-kematian-yodi-prabowo",
     "misteri-pembunuhan-noven-bogor",
     "misteri-hilangnya-tiga-bocah-langkat",
-    "misteri-pembunuhan-ibu-anak-subang"
+    "misteri-pembunuhan-ibu-anak-subang",
+    "misteri-pembunuhan-ditje-sukardi"
   ],
   "published": [
     {
@@ -276,8 +277,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260823_183931",
+      "topic": "misteri-pembunuhan-ditje-sukardi",
+      "title": "MISTERI PEMBUNUHAN DITJE SUKARDI: SKANDAL CRIMES TERGELAP YANG TAK TERJAWAB",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260823_183931_misteri-pembunuhan-ditje-sukardi/final.mp4",
+      "video_id": "BOnpeJoWOHU",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 26,
-  "_voice_idx": 25
+  "_format_idx": 27,
+  "_voice_idx": 26
 }
