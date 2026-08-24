@@ -25,7 +25,8 @@
     "misteri-pembunuhan-noven-bogor",
     "misteri-hilangnya-tiga-bocah-langkat",
     "misteri-pembunuhan-ibu-anak-subang",
-    "misteri-pembunuhan-ditje-sukardi"
+    "misteri-pembunuhan-ditje-sukardi",
+    "misteri-pembunuhan-iwan-boedi-semarang"
   ],
   "published": [
     {
@@ -287,8 +288,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260824_004649",
+      "topic": "misteri-pembunuhan-iwan-boedi-semarang",
+      "title": "Misteri Pembunuhan Saksi Kunci Korupsi Semarang: Siapa Dalang Dibaliknya?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260824_004649_misteri-pembunuhan-iwan-boedi-semarang/final.mp4",
+      "video_id": "DNLrOWOxoxQ",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 27,
-  "_voice_idx": 26
+  "_format_idx": 28,
+  "_voice_idx": 27
 }
