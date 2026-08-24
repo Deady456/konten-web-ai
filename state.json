@@ -26,7 +26,8 @@
     "misteri-hilangnya-tiga-bocah-langkat",
     "misteri-pembunuhan-ibu-anak-subang",
     "misteri-pembunuhan-ditje-sukardi",
-    "misteri-pembunuhan-iwan-boedi-semarang"
+    "misteri-pembunuhan-iwan-boedi-semarang",
+    "misteri-pembunuhan-setiabudi-tiga-belas"
   ],
   "published": [
     {
@@ -298,8 +299,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260824_124701",
+      "topic": "misteri-pembunuhan-setiabudi-tiga-belas",
+      "title": "Misteri Setiabudi Tiga Belas: Kasus Mutil4si Paling Kelam Indonesia yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260824_124701_misteri-pembunuhan-setiabudi-tiga-belas/final.mp4",
+      "video_id": "xnNZMoAHwyg",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 28,
-  "_voice_idx": 27
+  "_format_idx": 29,
+  "_voice_idx": 28
 }
