@@ -28,7 +28,8 @@
     "misteri-pembunuhan-ditje-sukardi",
     "misteri-pembunuhan-iwan-boedi-semarang",
     "misteri-pembunuhan-setiabudi-tiga-belas",
-    "misteri-pembunuhan-gita-gartina"
+    "misteri-pembunuhan-gita-gartina",
+    "misteri-pembunuhan-tari-arianti"
   ],
   "published": [
     {
@@ -320,8 +321,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260825_124643",
+      "topic": "misteri-pembunuhan-tari-arianti",
+      "title": "Misteri Terbunuhnya Dokter Cantik di Bandung! Tr4gedi Orang Terdekat?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260825_124643_misteri-pembunuhan-tari-arianti/final.mp4",
+      "video_id": "p6todJWXayM",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 30,
-  "_voice_idx": 29
+  "_format_idx": 31,
+  "_voice_idx": 30
 }
