@@ -27,7 +27,8 @@
     "misteri-pembunuhan-ibu-anak-subang",
     "misteri-pembunuhan-ditje-sukardi",
     "misteri-pembunuhan-iwan-boedi-semarang",
-    "misteri-pembunuhan-setiabudi-tiga-belas"
+    "misteri-pembunuhan-setiabudi-tiga-belas",
+    "misteri-pembunuhan-gita-gartina"
   ],
   "published": [
     {
@@ -309,8 +310,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260825_004649",
+      "topic": "misteri-pembunuhan-gita-gartina",
+      "title": "Terkuak! Misteri Kematian Model Cantik Gita Gartina yang Membingungkan Polisi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260825_004649_misteri-pembunuhan-gita-gartina/final.mp4",
+      "video_id": "zPyVS1dBg0Q",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 29,
-  "_voice_idx": 28
+  "_format_idx": 30,
+  "_voice_idx": 29
 }
