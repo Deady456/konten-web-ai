@@ -30,7 +30,8 @@
     "misteri-pembunuhan-setiabudi-tiga-belas",
     "misteri-pembunuhan-gita-gartina",
     "misteri-pembunuhan-tari-arianti",
-    "misteri-pembunuhan-dian-milenia-batam"
+    "misteri-pembunuhan-dian-milenia-batam",
+    "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang"
   ],
   "published": [
     {
@@ -342,8 +343,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260826_125403",
+      "topic": "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang",
+      "title": "Misteri Mayat Bertato Burung Hantu di Lembang yang Tak Pernah Terkuak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260826_125403_misteri-pembunuhan-mayat-bertato-burung-hantu-lembang/final.mp4",
+      "video_id": "EmVj_8zpSS4",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 32,
-  "_voice_idx": 31
+  "_format_idx": 34,
+  "_voice_idx": 32
 }
