@@ -29,7 +29,8 @@
     "misteri-pembunuhan-iwan-boedi-semarang",
     "misteri-pembunuhan-setiabudi-tiga-belas",
     "misteri-pembunuhan-gita-gartina",
-    "misteri-pembunuhan-tari-arianti"
+    "misteri-pembunuhan-tari-arianti",
+    "misteri-pembunuhan-dian-milenia-batam"
   ],
   "published": [
     {
@@ -331,8 +332,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260826_004729",
+      "topic": "misteri-pembunuhan-dian-milenia-batam",
+      "title": "Misteri Pembunuhan Siswi SMA di Hutan Ladi Batam yang Belum Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260826_004729_misteri-pembunuhan-dian-milenia-batam/final.mp4",
+      "video_id": "qkj0Vgd0SY4",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 31,
-  "_voice_idx": 30
+  "_format_idx": 32,
+  "_voice_idx": 31
 }
