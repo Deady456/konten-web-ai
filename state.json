@@ -31,7 +31,8 @@
     "misteri-pembunuhan-gita-gartina",
     "misteri-pembunuhan-tari-arianti",
     "misteri-pembunuhan-dian-milenia-batam",
-    "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang"
+    "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang",
+    "misteri-kematian-mahira-dinabila-medan"
   ],
   "published": [
     {
@@ -353,8 +354,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260827_095239",
+      "topic": "misteri-kematian-mahira-dinabila-medan",
+      "title": "Misteri Kematian Mahasiswi USU Mahira Dinabila yang Penuh Kejanggalan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260827_095239_misteri-kematian-mahira-dinabila-medan/final.mp4",
+      "video_id": "fsH8BYhwfhY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 34,
-  "_voice_idx": 32
+  "_format_idx": 35,
+  "_voice_idx": 33
 }
