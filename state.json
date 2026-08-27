@@ -32,7 +32,8 @@
     "misteri-pembunuhan-tari-arianti",
     "misteri-pembunuhan-dian-milenia-batam",
     "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang",
-    "misteri-kematian-mahira-dinabila-medan"
+    "misteri-kematian-mahira-dinabila-medan",
+    "misteri-kematian-dokter-mawartih-nabire"
   ],
   "published": [
     {
@@ -364,8 +365,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260827_124738",
+      "topic": "misteri-kematian-dokter-mawartih-nabire",
+      "title": "Misteri Kematian Dokter Spesialis di Rumah Dinas Nabire Yang Mengguncang Publik",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260827_124738_misteri-kematian-dokter-mawartih-nabire/final.mp4",
+      "video_id": "RyQc_V8XC28",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 35,
-  "_voice_idx": 33
+  "_format_idx": 36,
+  "_voice_idx": 34
 }
