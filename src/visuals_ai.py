@@ -251,9 +251,57 @@ def _generate_stability_ai(prompt: str, out_path, width=1080, height=1920):
             
     return False
 
+
+from .config import NINEROUTER_URL, NINEROUTER_API_KEYS
+import base64
+import json
+
+def generate_9router_image(prompt: str, out_path: Path, model: str = "ag/gemini-3.1-flash-image", width=1080, height=1920) -> bool:
+    """Generate image using 9Router AWS endpoint"""
+    url = f"{NINEROUTER_URL}/v1/images/generations"
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "size": f"{width}x{height}" if width == height else "1024x1024"
+    }
+    for key in NINEROUTER_API_KEYS:
+        try:
+            req = requests.post(
+                url,
+                json=payload,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {key}"
+                },
+                timeout=60
+            )
+            if req.status_code == 200:
+                res = req.json()
+                if "data" in res and len(res["data"]) > 0:
+                    item = res["data"][0]
+                    if "b64_json" in item and item["b64_json"]:
+                        out_path.write_bytes(base64.b64decode(item["b64_json"]))
+                        return True
+                    elif "url" in item and item["url"]:
+                        r_img = requests.get(item["url"], timeout=30)
+                        if r_img.status_code == 200:
+                            out_path.write_bytes(r_img.content)
+                            return True
+            else:
+                print(f"  9Router Image error ({req.status_code}): {req.text}")
+        except Exception as e:
+            print(f"  9Router Image exception: {e}")
+    return False
+
 def generate(prompt: str, out_path, width=1080, height=1920, hook_text: str = None):
     import requests
     out_path.parent.mkdir(parents=True, exist_ok=True)
+    # 1. Primary: 9Router AWS Image Generation
+    print("  Generating image via 9Router AWS...")
+    if generate_9router_image(prompt, out_path, model="ag/gemini-3.1-flash-image", width=width, height=height):
+        if hook_text:
+            _apply_hook_text(out_path, hook_text, width, height)
+        return out_path
     url = f"{POLLINATIONS_URL}{requests.utils.quote(prompt)}?width={width}&height={height}&nologo=true"
     
     success = False
