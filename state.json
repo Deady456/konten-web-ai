@@ -33,7 +33,8 @@
     "misteri-pembunuhan-dian-milenia-batam",
     "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang",
     "misteri-kematian-mahira-dinabila-medan",
-    "misteri-kematian-dokter-mawartih-nabire"
+    "misteri-kematian-dokter-mawartih-nabire",
+    "misteri-kematian-sekeluarga-kalideres"
   ],
   "published": [
     {
@@ -375,8 +376,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260828_004728",
+      "topic": "misteri-kematian-sekeluarga-kalideres",
+      "title": "Misteri Kalideres: Mengapa Satu Keluarga M3n1ngg4l Mengering di Rumah Terkunci?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260828_004728_misteri-kematian-sekeluarga-kalideres/final.mp4",
+      "video_id": "4oyIQ0Xw0VU",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 36,
-  "_voice_idx": 34
+  "_format_idx": 37,
+  "_voice_idx": 35
 }
