@@ -34,7 +34,8 @@
     "misteri-pembunuhan-mayat-bertato-burung-hantu-lembang",
     "misteri-kematian-mahira-dinabila-medan",
     "misteri-kematian-dokter-mawartih-nabire",
-    "misteri-kematian-sekeluarga-kalideres"
+    "misteri-kematian-sekeluarga-kalideres",
+    "misteri-pembunuhan-pengusaha-salon-kuningan"
   ],
   "published": [
     {
@@ -386,8 +387,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260828_125542",
+      "topic": "misteri-pembunuhan-pengusaha-salon-kuningan",
+      "title": "Misteri Pembunuhan Pengusaha Salon Kuningan Dalam Kamar Terkunci",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260828_125542_misteri-pembunuhan-pengusaha-salon-kuningan/final.mp4",
+      "video_id": "LluAzkRk304",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 37,
-  "_voice_idx": 35
+  "_format_idx": 38,
+  "_voice_idx": 36
 }
