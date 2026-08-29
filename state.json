@@ -36,7 +36,8 @@
     "misteri-kematian-dokter-mawartih-nabire",
     "misteri-kematian-sekeluarga-kalideres",
     "misteri-pembunuhan-pengusaha-salon-kuningan",
-    "misteri-pembunuhan-mahasiswi-esa-unggul"
+    "misteri-pembunuhan-mahasiswi-esa-unggul",
+    "misteri-kasus-sum-kuning-yogyakarta"
   ],
   "published": [
     {
@@ -408,8 +409,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260829_125018",
+      "topic": "misteri-kasus-sum-kuning-yogyakarta",
+      "title": "Misteri Kasus Sum Kuning: Skandal Kelam Yogyakarta Yang Tak Pernah Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260829_125018_misteri-kasus-sum-kuning-yogyakarta/final.mp4",
+      "video_id": "voAMnTuo2g0",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 39,
-  "_voice_idx": 37
+  "_format_idx": 40,
+  "_voice_idx": 38
 }
