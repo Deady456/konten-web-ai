@@ -38,7 +38,8 @@
     "misteri-pembunuhan-pengusaha-salon-kuningan",
     "misteri-pembunuhan-mahasiswi-esa-unggul",
     "misteri-kasus-sum-kuning-yogyakarta",
-    "misteri-pembunuhan-model-kekey-bandung"
+    "misteri-pembunuhan-model-kekey-bandung",
+    "misteri-pembunuhan-sisca-yofie-bandung"
   ],
   "published": [
     {
@@ -430,8 +431,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260830_125020",
+      "topic": "misteri-pembunuhan-sisca-yofie-bandung",
+      "title": "Misteri Terseretnya Sisca Yofie: Tr4gedi Kelam Bandung yang Masih Penuh Tanda Tanya",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260830_125020_misteri-pembunuhan-sisca-yofie-bandung/final.mp4",
+      "video_id": "-8kgkwxSIkU",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 41,
-  "_voice_idx": 39
+  "_format_idx": 43,
+  "_voice_idx": 40
 }
