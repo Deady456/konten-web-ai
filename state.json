@@ -37,7 +37,8 @@
     "misteri-kematian-sekeluarga-kalideres",
     "misteri-pembunuhan-pengusaha-salon-kuningan",
     "misteri-pembunuhan-mahasiswi-esa-unggul",
-    "misteri-kasus-sum-kuning-yogyakarta"
+    "misteri-kasus-sum-kuning-yogyakarta",
+    "misteri-pembunuhan-model-kekey-bandung"
   ],
   "published": [
     {
@@ -419,8 +420,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260830_004709",
+      "topic": "misteri-pembunuhan-model-kekey-bandung",
+      "title": "Misteri Pembunuhan Model Cantik Bandung yang Tak Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260830_004709_misteri-pembunuhan-model-kekey-bandung/final.mp4",
+      "video_id": "hlzUp4FfTBY",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 40,
-  "_voice_idx": 38
+  "_format_idx": 41,
+  "_voice_idx": 39
 }
