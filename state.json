@@ -39,7 +39,8 @@
     "misteri-pembunuhan-mahasiswi-esa-unggul",
     "misteri-kasus-sum-kuning-yogyakarta",
     "misteri-pembunuhan-model-kekey-bandung",
-    "misteri-pembunuhan-sisca-yofie-bandung"
+    "misteri-pembunuhan-sisca-yofie-bandung",
+    "misteri-kematian-munir-said-thalib"
   ],
   "published": [
     {
@@ -441,8 +442,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260831_004658",
+      "topic": "misteri-kematian-munir-said-thalib",
+      "title": "Misteri Pembunuhan Munir: Siapa Dalang Utama Racun Arsenik Pesawat Garuda?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260831_004658_misteri-kematian-munir-said-thalib/final.mp4",
+      "video_id": "uu0_hnGPWIE",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 43,
-  "_voice_idx": 40
+  "_format_idx": 44,
+  "_voice_idx": 41
 }
