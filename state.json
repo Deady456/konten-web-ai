@@ -40,7 +40,8 @@
     "misteri-kasus-sum-kuning-yogyakarta",
     "misteri-pembunuhan-model-kekey-bandung",
     "misteri-pembunuhan-sisca-yofie-bandung",
-    "misteri-kematian-munir-said-thalib"
+    "misteri-kematian-munir-said-thalib",
+    "misteri-kematian-david-hartanto-singapura"
   ],
   "published": [
     {
@@ -452,8 +453,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260831_124659",
+      "topic": "misteri-kematian-david-hartanto-singapura",
+      "title": "MISTERI KEMATIAN JENIUS INDONESIA DI SINGAPURA: BUNUH DIRI ATAU DIBUNUH?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260831_124659_misteri-kematian-david-hartanto-singapura/final.mp4",
+      "video_id": "FLQbIGtewQw",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 44,
-  "_voice_idx": 41
+  "_format_idx": 45,
+  "_voice_idx": 42
 }
