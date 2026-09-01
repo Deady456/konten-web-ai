@@ -42,7 +42,8 @@
     "misteri-pembunuhan-sisca-yofie-bandung",
     "misteri-kematian-munir-said-thalib",
     "misteri-kematian-david-hartanto-singapura",
-    "misteri-kematian-balita-samarinda"
+    "misteri-kematian-balita-samarinda",
+    "misteri-pembunuhan-ika-rahmawati-semarang"
   ],
   "published": [
     {
@@ -474,8 +475,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260901_124747",
+      "topic": "misteri-pembunuhan-ika-rahmawati-semarang",
+      "title": "Misteri Pembunuhan Mahasiswi Semarang Yang Tak Pernah Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260901_124747_misteri-pembunuhan-ika-rahmawati-semarang/final.mp4",
+      "video_id": "r1IXg4XYhU4",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 46,
-  "_voice_idx": 43
+  "_format_idx": 47,
+  "_voice_idx": 44
 }
