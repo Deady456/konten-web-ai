@@ -1,5 +1,81 @@
 import re
 
+ALGOSPEAK_MAP = {
+    r'\bm4t1\b': 'mati',
+    r'\bm4ti\b': 'mati',
+    r'\bmat1\b': 'mati',
+    r'\bny4w4\b': 'nyawa',
+    r'\bny4wa\b': 'nyawa',
+    r'\btr4g3d1\b': 'tragedi',
+    r'\btr4gedi\b': 'tragedi',
+    r'\btrag3di\b': 'tragedi',
+    r'\bt3rs4ngk4\b': 'tersangka',
+    r'\bt3rsangka\b': 'tersangka',
+    r'\bters4ngk4\b': 'tersangka',
+    r'\bt3w4s\b': 'tewas',
+    r'\btew4s\b': 'tewas',
+    r'\bt3was\b': 'tewas',
+    r'\bk0rb4n\b': 'korban',
+    r'\bk0rban\b': 'korban',
+    r'\bkorb4n\b': 'korban',
+    r'\bp3l4ku\b': 'pelaku',
+    r'\bp3laku\b': 'pelaku',
+    r'\bpel4ku\b': 'pelaku',
+    r'\bd1bvnuh\b': 'dibunuh',
+    r'\bd1bunuh\b': 'dibunuh',
+    r'\bdibvnuh\b': 'dibunuh',
+    r'\bm3mbvnuh\b': 'membunuh',
+    r'\bm3mbunuh\b': 'membunuh',
+    r'\bmembvnuh\b': 'membunuh',
+    r'\bp3mbvnuhan\b': 'pembunuhan',
+    r'\bp3mbunuhan\b': 'pembunuhan',
+    r'\bpembvnuhan\b': 'pembunuhan',
+    r'\bbvnuh\b': 'bunuh',
+    r'\bbwnuh\b': 'bunuh',
+    r'\bmut1l4s1\b': 'mutilasi',
+    r'\bmut1lasi\b': 'mutilasi',
+    r'\bmutil4si\b': 'mutilasi',
+    r'\bd4r4h\b': 'darah',
+    r'\bd4rah\b': 'darah',
+    r'\br4cun\b': 'racun',
+    r'\brac1n\b': 'racun',
+    r'\bj4s4d\b': 'jasad',
+    r'\bj4sad\b': 'jasad',
+    r'\bm4y4t\b': 'mayat',
+    r'\bm4yat\b': 'mayat',
+    r'\bk3j4h4t4n\b': 'kejahatan',
+    r'\bk3jahatan\b': 'kejahatan',
+    r'\b0t4psi\b': 'otopsi',
+    r'\b4ut0ps1\b': 'autopsi',
+    r'\baut0psi\b': 'autopsi',
+    r'\bautops1\b': 'autopsi',
+    r'\bp0l1s1\b': 'polisi',
+    r'\bp0lisi\b': 'polisi',
+    r'\bpol1si\b': 'polisi',
+}
+
+
+def clean_algospeak(text: str) -> str:
+    """Convert any leetspeak/algospeak censored words back to standard Indonesian for TTS."""
+    if not isinstance(text, str):
+        return text
+
+    for pattern, replacement in ALGOSPEAK_MAP.items():
+        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+
+    def _fix_word(match):
+        w = match.group(0)
+        if re.match(r'^ke-\d+$', w, re.IGNORECASE):
+            return w
+        if re.search(r'[a-zA-Z]', w) and re.search(r'\d', w):
+            sub_map = {'0': 'o', '1': 'i', '3': 'e', '4': 'a', '5': 's', '7': 't', '8': 'b'}
+            return ''.join(sub_map.get(ch, ch) for ch in w)
+        return w
+
+    text = re.sub(r'\b[a-zA-Z0-9_-]+\b', _fix_word, text)
+    return text
+
+
 def num_to_words_id(n: int) -> str:
     if n == 0:
         return 'nol'
@@ -138,7 +214,7 @@ def _speed_up(audio_path: Path, rate: float = 1.15):
 
 
 def synth(text: str, out_path: Path) -> Path:
-    text = replace_numbers_id(text)
+    text = replace_numbers_id(clean_algospeak(text))
     v = _get_voice_config()
     voice_name = v.get("_voice_name", v["voice"])
     print(f"    voice: {voice_name}, {len(text)} chars")

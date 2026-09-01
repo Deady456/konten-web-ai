@@ -1,4 +1,88 @@
 
+import json
+import re
+import time
+from datetime import datetime
+from openai import OpenAI, RateLimitError
+from .config import LLM_API_KEYS, GROQ_API_KEYS, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG
+from . import state
+
+ALGOSPEAK_MAP = {
+    r'\bm4t1\b': 'mati',
+    r'\bm4ti\b': 'mati',
+    r'\bmat1\b': 'mati',
+    r'\bny4w4\b': 'nyawa',
+    r'\bny4wa\b': 'nyawa',
+    r'\btr4g3d1\b': 'tragedi',
+    r'\btr4gedi\b': 'tragedi',
+    r'\btrag3di\b': 'tragedi',
+    r'\bt3rs4ngk4\b': 'tersangka',
+    r'\bt3rsangka\b': 'tersangka',
+    r'\bters4ngk4\b': 'tersangka',
+    r'\bt3w4s\b': 'tewas',
+    r'\btew4s\b': 'tewas',
+    r'\bt3was\b': 'tewas',
+    r'\bk0rb4n\b': 'korban',
+    r'\bk0rban\b': 'korban',
+    r'\bkorb4n\b': 'korban',
+    r'\bp3l4ku\b': 'pelaku',
+    r'\bp3laku\b': 'pelaku',
+    r'\bpel4ku\b': 'pelaku',
+    r'\bd1bvnuh\b': 'dibunuh',
+    r'\bd1bunuh\b': 'dibunuh',
+    r'\bdibvnuh\b': 'dibunuh',
+    r'\bm3mbvnuh\b': 'membunuh',
+    r'\bm3mbunuh\b': 'membunuh',
+    r'\bmembvnuh\b': 'membunuh',
+    r'\bp3mbvnuhan\b': 'pembunuhan',
+    r'\bp3mbunuhan\b': 'pembunuhan',
+    r'\bpembvnuhan\b': 'pembunuhan',
+    r'\bbvnuh\b': 'bunuh',
+    r'\bbwnuh\b': 'bunuh',
+    r'\bmut1l4s1\b': 'mutilasi',
+    r'\bmut1lasi\b': 'mutilasi',
+    r'\bmutil4si\b': 'mutilasi',
+    r'\bd4r4h\b': 'darah',
+    r'\bd4rah\b': 'darah',
+    r'\br4cun\b': 'racun',
+    r'\brac1n\b': 'racun',
+    r'\bj4s4d\b': 'jasad',
+    r'\bj4sad\b': 'jasad',
+    r'\bm4y4t\b': 'mayat',
+    r'\bm4yat\b': 'mayat',
+    r'\bk3j4h4t4n\b': 'kejahatan',
+    r'\bk3jahatan\b': 'kejahatan',
+    r'\b0t4psi\b': 'otopsi',
+    r'\b4ut0ps1\b': 'autopsi',
+    r'\baut0psi\b': 'autopsi',
+    r'\bautops1\b': 'autopsi',
+    r'\bp0l1s1\b': 'polisi',
+    r'\bp0lisi\b': 'polisi',
+    r'\bpol1si\b': 'polisi',
+}
+
+
+def clean_algospeak(text: str) -> str:
+    """Convert any leetspeak/algospeak censored words back to standard Indonesian for TTS."""
+    if not isinstance(text, str):
+        return text
+
+    for pattern, replacement in ALGOSPEAK_MAP.items():
+        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
+
+    def _fix_word(match):
+        w = match.group(0)
+        if re.match(r'^ke-\d+$', w, re.IGNORECASE):
+            return w
+        if re.search(r'[a-zA-Z]', w) and re.search(r'\d', w):
+            sub_map = {'0': 'o', '1': 'i', '3': 'e', '4': 'a', '5': 's', '7': 't', '8': 'b'}
+            return ''.join(sub_map.get(ch, ch) for ch in w)
+        return w
+
+    text = re.sub(r'\b[a-zA-Z0-9_-]+\b', _fix_word, text)
+    return text
+
+
 def num_to_words_id(n: int) -> str:
     if n == 0:
         return 'nol'
@@ -39,15 +123,6 @@ def replace_numbers_id(text: str) -> str:
     # 5. Standalone integers
     text = re.sub(r'\b(\d+)\b', lambda m: num_to_words_id(int(m.group(1))), text)
     return text
-
-
-import json
-import re
-import time
-from datetime import datetime
-from openai import OpenAI, RateLimitError
-from .config import LLM_API_KEYS, GROQ_API_KEYS, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG
-from . import state
 
 _key_idx = 0
 _client = OpenAI(api_key=LLM_API_KEYS[_key_idx], base_url=LLM_BASE_URL)
@@ -213,7 +288,8 @@ Aturan:
 - Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
 - RAHASIA RETENSI (SEAMLESS INFINITY LOOP): Kalimat terakhir pada scene penutup WAJIB dibuat menggantung atau menyatu mulus kembali ke kalimat HOOK pertama di scene 1 (retensi >100%).
 - Mulai dengan HOOK 1 kalimat yang menegangkan dan bikin penasaran dalam <3 detik, gaya narator investigasi kriminal. Jangan pakai "Halo guys", "Hai", atau perkenalan.
-- Isi: Kisah nyata kejahatan, alur kasus kriminal lokal Indonesia, investigasi kepolisian, sidang pengadilan, atau misteri kriminal terkenal yang SANGAT AKURAT dan nyata di Indonesia. Gunakan sensor algospeak cerdas jika ada kata sensitif (contoh: "mengh1langkan ny4wa", "tr4gedi", "t3rsangka").
+- Isi: Kisah nyata kejahatan, alur kasus kriminal lokal Indonesia, investigasi kepolisian, sidang pengadilan, atau misteri kriminal terkenal yang SANGAT AKURAT dan nyata di Indonesia.
+- DILARANG KERAS menggunakan plesetan kata, kata yang disensor angka, atau leetspeak/algospeak (DILARANG menulis kata seperti "m4t1", "ny4wa", "tr4gedi", "t3rsangka", "k0rb4n", "d1bvnuh", dsb). WAJIB menggunakan kosa kata bahasa Indonesia baku, natural, dan jelas (seperti "meninggal dunia", "kehilangan nyawa", "tragedi", "tersangka", "korban", "tewas", "pembunuhan") agar suara narator Text-to-Speech (Edge TTS / ElevenLabs) dapat melafalkannya dengan lancar, wajar, dan sempurna tanpa mengeja angka per huruf.
 - DILARANG MENGARANG CERITA / HALUSINASI. Ceritakan kasus nyata yang pernah terjadi di Indonesia.
 - Akhiri dengan CTA 1 kalimat ajakan diskusi/subscribe ("Bagaimana menurut kalian? Tulis di kolom komentar dan subscribe untuk alur kasus lainnya").
 - Gunakan bahasa Indonesia naratif kriminal yang intens, rapi, dan mencekam tapi enak didengar.
@@ -352,11 +428,11 @@ def generate(content_format: str = None) -> dict:
                 sc["visual_query"] = fallback
 
         for sc in data["scenes"]:
-            sc["text"] = replace_numbers_id(sc.get("text", ""))
+            sc["text"] = replace_numbers_id(clean_algospeak(sc.get("text", "")))
         if "title" in data:
-            data["title"] = replace_numbers_id(data["title"])
+            data["title"] = replace_numbers_id(clean_algospeak(data["title"]))
         if "thumbnail_text" in data:
-            data["thumbnail_text"] = replace_numbers_id(data["thumbnail_text"])
+            data["thumbnail_text"] = replace_numbers_id(clean_algospeak(data["thumbnail_text"]))
         data["full_text"] = " ... ".join(sc["text"] for sc in data["scenes"])
         wc = len(data["full_text"].split())
 
