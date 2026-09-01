@@ -41,7 +41,8 @@
     "misteri-pembunuhan-model-kekey-bandung",
     "misteri-pembunuhan-sisca-yofie-bandung",
     "misteri-kematian-munir-said-thalib",
-    "misteri-kematian-david-hartanto-singapura"
+    "misteri-kematian-david-hartanto-singapura",
+    "misteri-kematian-balita-samarinda"
   ],
   "published": [
     {
@@ -463,8 +464,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260901_004646",
+      "topic": "misteri-kematian-balita-samarinda",
+      "title": "Misteri Terpotongnya Balita Samarinda: Kej4hatan Organ atau Hanyut?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260901_004646_misteri-kematian-balita-samarinda/final.mp4",
+      "video_id": "sblYcGtkSMY",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 45,
-  "_voice_idx": 42
+  "_format_idx": 46,
+  "_voice_idx": 43
 }
