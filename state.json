@@ -43,7 +43,8 @@
     "misteri-kematian-munir-said-thalib",
     "misteri-kematian-david-hartanto-singapura",
     "misteri-kematian-balita-samarinda",
-    "misteri-pembunuhan-ika-rahmawati-semarang"
+    "misteri-pembunuhan-ika-rahmawati-semarang",
+    "misteri-pembunuhan-siti-habibah-jakarta"
   ],
   "published": [
     {
@@ -485,8 +486,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260902_005121",
+      "topic": "misteri-pembunuhan-siti-habibah-jakarta",
+      "title": "Misteri Pembunuhan Mahasiswi Universitas Pancasila yang Belum Terkuak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260902_005121_misteri-pembunuhan-siti-habibah-jakarta/final.mp4",
+      "video_id": "aXyZNYhORDg",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 47,
-  "_voice_idx": 44
+  "_format_idx": 49,
+  "_voice_idx": 45
 }
