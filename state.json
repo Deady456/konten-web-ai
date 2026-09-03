@@ -45,7 +45,8 @@
     "misteri-kematian-balita-samarinda",
     "misteri-pembunuhan-ika-rahmawati-semarang",
     "misteri-pembunuhan-siti-habibah-jakarta",
-    "misteri-kematian-bripka-arfan-saragih"
+    "misteri-kematian-bripka-arfan-saragih",
+    "misteri-pembunuhan-erni-tri-heppy"
   ],
   "published": [
     {
@@ -507,8 +508,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260903_124843",
+      "topic": "misteri-pembunuhan-erni-tri-heppy",
+      "title": "Misteri Pembunuhan Mahasiswi UGM Erni Tri Heppy yang Tak Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260903_124843_misteri-pembunuhan-erni-tri-heppy/final.mp4",
+      "video_id": "6SSXceDFqD4",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 50,
-  "_voice_idx": 46
+  "_format_idx": 51,
+  "_voice_idx": 47
 }
