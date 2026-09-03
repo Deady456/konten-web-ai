@@ -44,7 +44,8 @@
     "misteri-kematian-david-hartanto-singapura",
     "misteri-kematian-balita-samarinda",
     "misteri-pembunuhan-ika-rahmawati-semarang",
-    "misteri-pembunuhan-siti-habibah-jakarta"
+    "misteri-pembunuhan-siti-habibah-jakarta",
+    "misteri-kematian-bripka-arfan-saragih"
   ],
   "published": [
     {
@@ -496,8 +497,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260903_004640",
+      "topic": "misteri-kematian-bripka-arfan-saragih",
+      "title": "Misteri Kematian Bripka Arfan: Polisi Pembongkar Korupsi Tewas Sianida?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260903_004640_misteri-kematian-bripka-arfan-saragih/final.mp4",
+      "video_id": "iDPls32MGkM",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 49,
-  "_voice_idx": 45
+  "_format_idx": 50,
+  "_voice_idx": 46
 }
