@@ -46,7 +46,8 @@
     "misteri-pembunuhan-ika-rahmawati-semarang",
     "misteri-pembunuhan-siti-habibah-jakarta",
     "misteri-kematian-bripka-arfan-saragih",
-    "misteri-pembunuhan-erni-tri-heppy"
+    "misteri-pembunuhan-erni-tri-heppy",
+    "misteri-pembunuhan-tri-ari-yani"
   ],
   "published": [
     {
@@ -518,8 +519,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260904_005035",
+      "topic": "misteri-pembunuhan-tri-ari-yani",
+      "title": "Misteri Pembunuhan Mahasiswi Kebon Jeruk yang Tak Pernah Terkuak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260904_005035_misteri-pembunuhan-tri-ari-yani/final.mp4",
+      "video_id": "TI0X7bhnTuI",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 51,
-  "_voice_idx": 47
+  "_format_idx": 52,
+  "_voice_idx": 48
 }
