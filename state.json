@@ -47,7 +47,8 @@
     "misteri-pembunuhan-siti-habibah-jakarta",
     "misteri-kematian-bripka-arfan-saragih",
     "misteri-pembunuhan-erni-tri-heppy",
-    "misteri-pembunuhan-tri-ari-yani"
+    "misteri-pembunuhan-tri-ari-yani",
+    "misteri-pembunuhan-ella-nurhayati-bandung"
   ],
   "published": [
     {
@@ -529,8 +530,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260904_124720",
+      "topic": "misteri-pembunuhan-ella-nurhayati-bandung",
+      "title": "Misteri dua puluh delapan Tusukan Tanpa Pelaku: Siapa Pembunuh Ella Nurhayati di Bandung Barat?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260904_124720_misteri-pembunuhan-ella-nurhayati-bandung/final.mp4",
+      "video_id": "7dNA8a_aGSg",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 52,
-  "_voice_idx": 48
+  "_format_idx": 53,
+  "_voice_idx": 49
 }
