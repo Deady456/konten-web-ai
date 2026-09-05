@@ -48,7 +48,8 @@
     "misteri-kematian-bripka-arfan-saragih",
     "misteri-pembunuhan-erni-tri-heppy",
     "misteri-pembunuhan-tri-ari-yani",
-    "misteri-pembunuhan-ella-nurhayati-bandung"
+    "misteri-pembunuhan-ella-nurhayati-bandung",
+    "misteri-kematian-akseyna-ui"
   ],
   "published": [
     {
@@ -540,8 +541,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260905_004704",
+      "topic": "misteri-kematian-akseyna-ui",
+      "title": "Misteri Mahasiswa UI Tewas di Danau: Pembunuhan Berencana yang Belum Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260905_004704_misteri-kematian-akseyna-ui/final.mp4",
+      "video_id": "6SZJbcYDHcc",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 53,
-  "_voice_idx": 49
+  "_format_idx": 54,
+  "_voice_idx": 50
 }
