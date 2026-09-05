@@ -49,7 +49,8 @@
     "misteri-pembunuhan-erni-tri-heppy",
     "misteri-pembunuhan-tri-ari-yani",
     "misteri-pembunuhan-ella-nurhayati-bandung",
-    "misteri-kematian-akseyna-ui"
+    "misteri-kematian-akseyna-ui",
+    "misteri-pembunuhan-wartawan-udin-yogyakarta"
   ],
   "published": [
     {
@@ -551,8 +552,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260905_124646",
+      "topic": "misteri-pembunuhan-wartawan-udin-yogyakarta",
+      "title": "Misteri Pembunuhan Wartawan Udin: Skandal Gelap Pembungkaman Jurnalis Bantul",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260905_124646_misteri-pembunuhan-wartawan-udin-yogyakarta/final.mp4",
+      "video_id": "JfxNV7Whg2c",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 54,
-  "_voice_idx": 50
+  "_format_idx": 55,
+  "_voice_idx": 51
 }
