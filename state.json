@@ -50,7 +50,8 @@
     "misteri-pembunuhan-tri-ari-yani",
     "misteri-pembunuhan-ella-nurhayati-bandung",
     "misteri-kematian-akseyna-ui",
-    "misteri-pembunuhan-wartawan-udin-yogyakarta"
+    "misteri-pembunuhan-wartawan-udin-yogyakarta",
+    "misteri-pembunuhan-marsinah-sidoarjo"
   ],
   "published": [
     {
@@ -562,8 +563,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260906_004734",
+      "topic": "misteri-pembunuhan-marsinah-sidoarjo",
+      "title": "MISTERI PEMBUNUHAN MARSINAH: SIAPA DALANG SEBENARNYA?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260906_004734_misteri-pembunuhan-marsinah-sidoarjo/final.mp4",
+      "video_id": "B1aWuwCbM1w",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 55,
-  "_voice_idx": 51
+  "_format_idx": 56,
+  "_voice_idx": 52
 }
