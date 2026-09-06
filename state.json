@@ -51,7 +51,8 @@
     "misteri-pembunuhan-ella-nurhayati-bandung",
     "misteri-kematian-akseyna-ui",
     "misteri-pembunuhan-wartawan-udin-yogyakarta",
-    "misteri-pembunuhan-marsinah-sidoarjo"
+    "misteri-pembunuhan-marsinah-sidoarjo",
+    "misteri-kematian-yodi-prabowo"
   ],
   "published": [
     {
@@ -573,8 +574,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260906_124920",
+      "topic": "misteri-kematian-yodi-prabowo",
+      "title": "Misteri Janggal Editor TV Ditemukan Meninggal di Pinggir Jalan Tol",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260906_124920_misteri-kematian-yodi-prabowo/final.mp4",
+      "video_id": "hLiJfRjoVaU",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 56,
-  "_voice_idx": 52
+  "_format_idx": 57,
+  "_voice_idx": 53
 }
