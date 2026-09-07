@@ -52,7 +52,8 @@
     "misteri-kematian-akseyna-ui",
     "misteri-pembunuhan-wartawan-udin-yogyakarta",
     "misteri-pembunuhan-marsinah-sidoarjo",
-    "misteri-kematian-yodi-prabowo"
+    "misteri-kematian-yodi-prabowo",
+    "misteri-pembunuhan-noven-bogor"
   ],
   "published": [
     {
@@ -584,8 +585,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260907_004655",
+      "topic": "misteri-pembunuhan-noven-bogor",
+      "title": "Terekam CCTV Jelas Tapi Pelaku Belum Tertangkap! Misteri Pembunuhan Noven Bogor",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260907_004655_misteri-pembunuhan-noven-bogor/final.mp4",
+      "video_id": "YkX0mPYVzAI",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 57,
-  "_voice_idx": 53
+  "_format_idx": 58,
+  "_voice_idx": 54
 }
