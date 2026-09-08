@@ -54,7 +54,8 @@
     "misteri-pembunuhan-marsinah-sidoarjo",
     "misteri-kematian-yodi-prabowo",
     "misteri-pembunuhan-noven-bogor",
-    "misteri-hilangnya-tiga-bocah-langkat"
+    "misteri-hilangnya-tiga-bocah-langkat",
+    "misteri-hilangnya-astrid-aprilia-bengkulu"
   ],
   "published": [
     {
@@ -606,8 +607,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260908_004810",
+      "topic": "misteri-hilangnya-astrid-aprilia-bengkulu",
+      "title": "Misteri Hilangnya Astrid Aprilia: Jasad Tak Pernah Ditemukan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260908_004810_misteri-hilangnya-astrid-aprilia-bengkulu/final.mp4",
+      "video_id": "UbBxGJFwPm8",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 59,
-  "_voice_idx": 55
+  "_format_idx": 60,
+  "_voice_idx": 56
 }
