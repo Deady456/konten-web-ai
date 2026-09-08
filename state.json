@@ -55,7 +55,8 @@
     "misteri-kematian-yodi-prabowo",
     "misteri-pembunuhan-noven-bogor",
     "misteri-hilangnya-tiga-bocah-langkat",
-    "misteri-hilangnya-astrid-aprilia-bengkulu"
+    "misteri-hilangnya-astrid-aprilia-bengkulu",
+    "misteri-pembunuhan-ditje-budimulya"
   ],
   "published": [
     {
@@ -617,8 +618,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260908_124747",
+      "topic": "misteri-pembunuhan-ditje-budimulya",
+      "title": "Misteri Pembunuhan Model Ditje: Eksekusi Rahasia yang Tak Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260908_124747_misteri-pembunuhan-ditje-budimulya/final.mp4",
+      "video_id": "ObH1ruZbO3A",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 60,
-  "_voice_idx": 56
+  "_format_idx": 61,
+  "_voice_idx": 57
 }
