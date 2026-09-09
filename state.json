@@ -56,7 +56,8 @@
     "misteri-pembunuhan-noven-bogor",
     "misteri-hilangnya-tiga-bocah-langkat",
     "misteri-hilangnya-astrid-aprilia-bengkulu",
-    "misteri-pembunuhan-ditje-budimulya"
+    "misteri-pembunuhan-ditje-budimulya",
+    "misteri-pembunuhan-ibu-anak-subang"
   ],
   "published": [
     {
@@ -628,8 +629,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260909_005214",
+      "topic": "misteri-pembunuhan-ibu-anak-subang",
+      "title": "MISTERI BAGASI ALPHARD SUBANG: Siapa Pembunuh Ibu dan Anak Ini?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260909_005214_misteri-pembunuhan-ibu-anak-subang/final.mp4",
+      "video_id": "YXUp1lJZbHw",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 61,
-  "_voice_idx": 57
+  "_format_idx": 62,
+  "_voice_idx": 58
 }
