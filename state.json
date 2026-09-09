@@ -57,7 +57,8 @@
     "misteri-hilangnya-tiga-bocah-langkat",
     "misteri-hilangnya-astrid-aprilia-bengkulu",
     "misteri-pembunuhan-ditje-budimulya",
-    "misteri-pembunuhan-ibu-anak-subang"
+    "misteri-pembunuhan-ibu-anak-subang",
+    "misteri-pembunuhan-iwan-budi-semarang"
   ],
   "published": [
     {
@@ -639,8 +640,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260909_125007",
+      "topic": "misteri-pembunuhan-iwan-budi-semarang",
+      "title": "MISTERI SAKSI KORUPSI TANPA KEPALA DI PANTAI MARINA SEMARANG",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260909_125007_misteri-pembunuhan-iwan-budi-semarang/final.mp4",
+      "video_id": "NrvM-c1eVNo",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 62,
-  "_voice_idx": 58
+  "_format_idx": 63,
+  "_voice_idx": 59
 }
