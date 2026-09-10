@@ -59,7 +59,8 @@
     "misteri-pembunuhan-ditje-budimulya",
     "misteri-pembunuhan-ibu-anak-subang",
     "misteri-pembunuhan-iwan-budi-semarang",
-    "misteri-pembunuhan-maria-fransisca-elen-depok"
+    "misteri-pembunuhan-maria-fransisca-elen-depok",
+    "misteri-pembunuhan-raafi-kemang"
   ],
   "published": [
     {
@@ -661,8 +662,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260910_124923",
+      "topic": "misteri-pembunuhan-raafi-kemang",
+      "title": "Misteri Pembunuhan Siswa SMA di Klub Kemang: Pelaku Bebas Tanpa Jejak!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260910_124923_misteri-pembunuhan-raafi-kemang/final.mp4",
+      "video_id": "A0dA6zeJqfY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 65,
-  "_voice_idx": 60
+  "_format_idx": 67,
+  "_voice_idx": 61
 }
