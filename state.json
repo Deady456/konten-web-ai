@@ -58,7 +58,8 @@
     "misteri-hilangnya-astrid-aprilia-bengkulu",
     "misteri-pembunuhan-ditje-budimulya",
     "misteri-pembunuhan-ibu-anak-subang",
-    "misteri-pembunuhan-iwan-budi-semarang"
+    "misteri-pembunuhan-iwan-budi-semarang",
+    "misteri-pembunuhan-maria-fransisca-elen-depok"
   ],
   "published": [
     {
@@ -650,8 +651,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260910_005035",
+      "topic": "misteri-pembunuhan-maria-fransisca-elen-depok",
+      "title": "Misteri Pembunuhan Elen di Mall Depok: Pelaku Tak Pernah Terungkap!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260910_005035_misteri-pembunuhan-maria-fransisca-elen-depok/final.mp4",
+      "video_id": "Hh-s28Xqpkc",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 63,
-  "_voice_idx": 59
+  "_format_idx": 65,
+  "_voice_idx": 60
 }
