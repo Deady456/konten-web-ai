@@ -60,7 +60,8 @@
     "misteri-pembunuhan-ibu-anak-subang",
     "misteri-pembunuhan-iwan-budi-semarang",
     "misteri-pembunuhan-maria-fransisca-elen-depok",
-    "misteri-pembunuhan-raafi-kemang"
+    "misteri-pembunuhan-raafi-kemang",
+    "misteri-pembunuhan-karyawati-iska-nurrohman"
   ],
   "published": [
     {
@@ -672,8 +673,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260911_004822",
+      "topic": "misteri-pembunuhan-karyawati-iska-nurrohman",
+      "title": "Misteri Pembunuhan Karyawati Cikarang: Motif Kelam di Balik Jalan Sunyi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260911_004822_misteri-pembunuhan-karyawati-iska-nurrohman/final.mp4",
+      "video_id": "Cy8LxPoXYMw",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 67,
-  "_voice_idx": 61
+  "_format_idx": 68,
+  "_voice_idx": 62
 }
