@@ -61,7 +61,8 @@
     "misteri-pembunuhan-iwan-budi-semarang",
     "misteri-pembunuhan-maria-fransisca-elen-depok",
     "misteri-pembunuhan-raafi-kemang",
-    "misteri-pembunuhan-karyawati-iska-nurrohman"
+    "misteri-pembunuhan-karyawati-iska-nurrohman",
+    "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi"
   ],
   "published": [
     {
@@ -683,8 +684,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260911_124716",
+      "topic": "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi",
+      "title": "Misteri Pembunuhan Tragis Mahasiswi IPB Amelia di Sukabumi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260911_124716_misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi/final.mp4",
+      "video_id": "e-9lX1xcVhQ",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 68,
-  "_voice_idx": 62
+  "_format_idx": 69,
+  "_voice_idx": 63
 }
