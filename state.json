@@ -62,7 +62,8 @@
     "misteri-pembunuhan-maria-fransisca-elen-depok",
     "misteri-pembunuhan-raafi-kemang",
     "misteri-pembunuhan-karyawati-iska-nurrohman",
-    "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi"
+    "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi",
+    "misteri-pembunuhan-dosen-tari-pekanbaru"
   ],
   "published": [
     {
@@ -694,8 +695,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260912_004833",
+      "topic": "misteri-pembunuhan-dosen-tari-pekanbaru",
+      "title": "Misteri Pembunuhan Dosen Tari Arianto: Kejahatan Senyap Tanpa Pelaku",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260912_004833_misteri-pembunuhan-dosen-tari-pekanbaru/final.mp4",
+      "video_id": "mgvzbty61ZM",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 69,
-  "_voice_idx": 63
+  "_format_idx": 70,
+  "_voice_idx": 64
 }
