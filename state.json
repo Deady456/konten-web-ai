@@ -63,7 +63,8 @@
     "misteri-pembunuhan-raafi-kemang",
     "misteri-pembunuhan-karyawati-iska-nurrohman",
     "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi",
-    "misteri-pembunuhan-dosen-tari-pekanbaru"
+    "misteri-pembunuhan-dosen-tari-pekanbaru",
+    "misteri-kematian-dokter-mawartih-nabire"
   ],
   "published": [
     {
@@ -705,8 +706,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260912_124642",
+      "topic": "misteri-kematian-dokter-mawartih-nabire",
+      "title": "Misteri Tragis Kematian Dokter Paru di Nabire: Pembunuhan Keji di Kamar Terkunci!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260912_124642_misteri-kematian-dokter-mawartih-nabire/final.mp4",
+      "video_id": "NT869apllNY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 70,
-  "_voice_idx": 64
+  "_format_idx": 71,
+  "_voice_idx": 65
 }
