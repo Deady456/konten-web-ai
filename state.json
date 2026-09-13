@@ -64,7 +64,8 @@
     "misteri-pembunuhan-karyawati-iska-nurrohman",
     "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi",
     "misteri-pembunuhan-dosen-tari-pekanbaru",
-    "misteri-kematian-dokter-mawartih-nabire"
+    "misteri-kematian-dokter-mawartih-nabire",
+    "misteri-pembunuhan-rika-indriyani-pemalang"
   ],
   "published": [
     {
@@ -716,8 +717,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260913_004714",
+      "topic": "misteri-pembunuhan-rika-indriyani-pemalang",
+      "title": "Misteri Jasad Seragam Pramuka Pemalang: Siapa Pembunuh Rika Indriyani?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260913_004714_misteri-pembunuhan-rika-indriyani-pemalang/final.mp4",
+      "video_id": "aMn5H9yhJhQ",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 71,
-  "_voice_idx": 65
+  "_format_idx": 72,
+  "_voice_idx": 66
 }
