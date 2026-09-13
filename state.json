@@ -65,7 +65,8 @@
     "misteri-pembunuhan-mahasiswi-ipb-amelia-sukabumi",
     "misteri-pembunuhan-dosen-tari-pekanbaru",
     "misteri-kematian-dokter-mawartih-nabire",
-    "misteri-pembunuhan-rika-indriyani-pemalang"
+    "misteri-pembunuhan-rika-indriyani-pemalang",
+    "misteri-kematian-akbp-buddy-alfrits-towoliu"
   ],
   "published": [
     {
@@ -727,8 +728,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260913_124745",
+      "topic": "misteri-kematian-akbp-buddy-alfrits-towoliu",
+      "title": "Telepon Misterius Sebelum Perwira Polisi Tewas di Rel Kereta Jatinegara!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260913_124745_misteri-kematian-akbp-buddy-alfrits-towoliu/final.mp4",
+      "video_id": "BmN6Tx8G5Kw",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 72,
-  "_voice_idx": 66
+  "_format_idx": 73,
+  "_voice_idx": 67
 }
