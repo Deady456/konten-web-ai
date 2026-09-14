@@ -67,7 +67,8 @@
     "misteri-kematian-dokter-mawartih-nabire",
     "misteri-pembunuhan-rika-indriyani-pemalang",
     "misteri-kematian-akbp-buddy-alfrits-towoliu",
-    "misteri-pembunuhan-dosen-itb-suryo-utomo"
+    "misteri-pembunuhan-dosen-itb-suryo-utomo",
+    "misteri-pembunuhan-setiabudi-13"
   ],
   "published": [
     {
@@ -749,8 +750,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260914_124645",
+      "topic": "misteri-pembunuhan-setiabudi-13",
+      "title": "Misteri Mutilasi Setiabudi tiga belas: Kasus Paling Mengerikan yang Tak Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260914_124645_misteri-pembunuhan-setiabudi-13/final.mp4",
+      "video_id": "doRlSUHZgXE",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 74,
-  "_voice_idx": 68
+  "_format_idx": 75,
+  "_voice_idx": 69
 }
