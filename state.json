@@ -66,7 +66,8 @@
     "misteri-pembunuhan-dosen-tari-pekanbaru",
     "misteri-kematian-dokter-mawartih-nabire",
     "misteri-pembunuhan-rika-indriyani-pemalang",
-    "misteri-kematian-akbp-buddy-alfrits-towoliu"
+    "misteri-kematian-akbp-buddy-alfrits-towoliu",
+    "misteri-pembunuhan-dosen-itb-suryo-utomo"
   ],
   "published": [
     {
@@ -738,8 +739,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260914_004653",
+      "topic": "misteri-pembunuhan-dosen-itb-suryo-utomo",
+      "title": "Misteri Kematian Dosen ITB Suryo Utomo di Waduk Cirata yang Belum Terkuak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260914_004653_misteri-pembunuhan-dosen-itb-suryo-utomo/final.mp4",
+      "video_id": "1k2CSX1grpM",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 73,
-  "_voice_idx": 67
+  "_format_idx": 74,
+  "_voice_idx": 68
 }
