@@ -68,7 +68,8 @@
     "misteri-pembunuhan-rika-indriyani-pemalang",
     "misteri-kematian-akbp-buddy-alfrits-towoliu",
     "misteri-pembunuhan-dosen-itb-suryo-utomo",
-    "misteri-pembunuhan-setiabudi-13"
+    "misteri-pembunuhan-setiabudi-13",
+    "misteri-pembunuhan-intan-marwah-lembang"
   ],
   "published": [
     {
@@ -760,8 +761,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260915_004724",
+      "topic": "misteri-pembunuhan-intan-marwah-lembang",
+      "title": "MISTERI TATO PSIKOPAT: Siapa Pembunuh Intan Marwah di Lembang yang Masih Bebas?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260915_004724_misteri-pembunuhan-intan-marwah-lembang/final.mp4",
+      "video_id": "6Rx99RW-uMk",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 75,
-  "_voice_idx": 69
+  "_format_idx": 76,
+  "_voice_idx": 70
 }
