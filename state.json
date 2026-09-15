@@ -69,7 +69,8 @@
     "misteri-kematian-akbp-buddy-alfrits-towoliu",
     "misteri-pembunuhan-dosen-itb-suryo-utomo",
     "misteri-pembunuhan-setiabudi-13",
-    "misteri-pembunuhan-intan-marwah-lembang"
+    "misteri-pembunuhan-intan-marwah-lembang",
+    "misteri-kematian-mahira-dinabila-medan"
   ],
   "published": [
     {
@@ -771,8 +772,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260915_124748",
+      "topic": "misteri-kematian-mahira-dinabila-medan",
+      "title": "Misteri Kematian Mahasiswi USU Medan: Surat Wasiat Palsu & Racun Sianida",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260915_124748_misteri-kematian-mahira-dinabila-medan/final.mp4",
+      "video_id": "_gndvHVc8aM",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 76,
-  "_voice_idx": 70
+  "_format_idx": 77,
+  "_voice_idx": 71
 }
