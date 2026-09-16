@@ -71,7 +71,8 @@
     "misteri-pembunuhan-setiabudi-13",
     "misteri-pembunuhan-intan-marwah-lembang",
     "misteri-kematian-mahira-dinabila-medan",
-    "misteri-pembunuhan-suprihatin-nganjuk"
+    "misteri-pembunuhan-suprihatin-nganjuk",
+    "misteri-kematian-bripka-mateus-depok"
   ],
   "published": [
     {
@@ -793,8 +794,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260916_124808",
+      "topic": "misteri-kematian-bripka-mateus-depok",
+      "title": "Misteri Kematian Polisi di Pemakaman Depok: Pembunuhan atau Bunuh Diri?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260916_124808_misteri-kematian-bripka-mateus-depok/final.mp4",
+      "video_id": "wFQEahj7nPc",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 79,
-  "_voice_idx": 72
+  "_format_idx": 80,
+  "_voice_idx": 73
 }
