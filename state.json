@@ -70,7 +70,8 @@
     "misteri-pembunuhan-dosen-itb-suryo-utomo",
     "misteri-pembunuhan-setiabudi-13",
     "misteri-pembunuhan-intan-marwah-lembang",
-    "misteri-kematian-mahira-dinabila-medan"
+    "misteri-kematian-mahira-dinabila-medan",
+    "misteri-pembunuhan-suprihatin-nganjuk"
   ],
   "published": [
     {
@@ -782,8 +783,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260916_005054",
+      "topic": "misteri-pembunuhan-suprihatin-nganjuk",
+      "title": "MISTERI PEMBUNUHAN SUPRIHATIN: TEKA-TEKI JERAMI NGANJUK YANG TAK TERECAMKAN!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260916_005054_misteri-pembunuhan-suprihatin-nganjuk/final.mp4",
+      "video_id": "CAFaK6yp9_Y",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 77,
-  "_voice_idx": 71
+  "_format_idx": 79,
+  "_voice_idx": 72
 }
