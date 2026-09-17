@@ -72,7 +72,8 @@
     "misteri-pembunuhan-intan-marwah-lembang",
     "misteri-kematian-mahira-dinabila-medan",
     "misteri-pembunuhan-suprihatin-nganjuk",
-    "misteri-kematian-bripka-mateus-depok"
+    "misteri-kematian-bripka-mateus-depok",
+    "misteri-pembunuhan-sisca-yofie-bandung"
   ],
   "published": [
     {
@@ -804,8 +805,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260917_004652",
+      "topic": "misteri-pembunuhan-sisca-yofie-bandung",
+      "title": "Misteri Pembunuhan Kejam Sisca Yofie: Pencurian Biasa atau Dendam Asmara?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260917_004652_misteri-pembunuhan-sisca-yofie-bandung/final.mp4",
+      "video_id": "NeX1Sl1z1ms",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 80,
-  "_voice_idx": 73
+  "_format_idx": 81,
+  "_voice_idx": 74
 }
