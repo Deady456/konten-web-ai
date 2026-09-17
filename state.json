@@ -73,7 +73,8 @@
     "misteri-kematian-mahira-dinabila-medan",
     "misteri-pembunuhan-suprihatin-nganjuk",
     "misteri-kematian-bripka-mateus-depok",
-    "misteri-pembunuhan-sisca-yofie-bandung"
+    "misteri-pembunuhan-sisca-yofie-bandung",
+    "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir"
   ],
   "published": [
     {
@@ -815,8 +816,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260917_124803",
+      "topic": "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir",
+      "title": "Misteri Pembunuhan Siswi SMA di Perkebunan Sawit Ogan Ilir Yang Belum Terkuak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260917_124803_misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir/final.mp4",
+      "video_id": "BizvtBjjOcg",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 81,
-  "_voice_idx": 74
+  "_format_idx": 82,
+  "_voice_idx": 75
 }
