@@ -74,7 +74,8 @@
     "misteri-pembunuhan-suprihatin-nganjuk",
     "misteri-kematian-bripka-mateus-depok",
     "misteri-pembunuhan-sisca-yofie-bandung",
-    "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir"
+    "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir",
+    "misteri-pembunuhan-tari-arizona-mataram"
   ],
   "published": [
     {
@@ -826,8 +827,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260918_004946",
+      "topic": "misteri-pembunuhan-tari-arizona-mataram",
+      "title": "Terkuak Misteri Pembunuhan Tari Arizona di Mataram yang Belum Terbuka!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260918_004946_misteri-pembunuhan-tari-arizona-mataram/final.mp4",
+      "video_id": "OsRN-rDLuG4",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 82,
-  "_voice_idx": 75
+  "_format_idx": 83,
+  "_voice_idx": 76
 }
