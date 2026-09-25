@@ -75,7 +75,8 @@
     "misteri-kematian-bripka-mateus-depok",
     "misteri-pembunuhan-sisca-yofie-bandung",
     "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir",
-    "misteri-pembunuhan-tari-arizona-mataram"
+    "misteri-pembunuhan-tari-arizona-mataram",
+    "kasus-pembunuhan-dr-neng-koestono-lapan-2018"
   ],
   "published": [
     {
@@ -837,8 +838,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260925_170949",
+      "topic": "kasus-pembunuhan-dr-neng-koestono-lapan-2018",
+      "title": "Misteri Pembunuhan Astronomer LAPAN dua ribu delapan belas yang Belum Terpecahkan, Siapa Pelakunya?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260925_170949_kasus-pembunuhan-dr-neng-koestono-lapan-2018/final.mp4",
+      "video_id": "uGsKoLX0FcE",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 83,
-  "_voice_idx": 76
+  "_format_idx": 84,
+  "_voice_idx": 77
 }
