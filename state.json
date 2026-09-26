@@ -77,7 +77,8 @@
     "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir",
     "misteri-pembunuhan-tari-arizona-mataram",
     "kasus-pembunuhan-dr-neng-koestono-lapan-2018",
-    "penipuan satnet internet satelit dua ribu dua puluh dua"
+    "penipuan satnet internet satelit dua ribu dua puluh dua",
+    "kasus-penipuan-investasi-matahari-group-bandung-2022"
   ],
   "published": [
     {
@@ -859,8 +860,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260926_124731",
+      "topic": "kasus-penipuan-investasi-matahari-group-bandung-2022",
+      "title": "Matahari Group: Penipuan Investasi Menggulung Ratusan Korban di Bandung yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260926_124731_kasus-penipuan-investasi-matahari-group-bandung-2022/final.mp4",
+      "video_id": "GFZqPbk81JU",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 85,
-  "_voice_idx": 78
+  "_format_idx": 86,
+  "_voice_idx": 79
 }
