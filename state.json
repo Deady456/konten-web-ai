@@ -76,7 +76,8 @@
     "misteri-pembunuhan-sisca-yofie-bandung",
     "misteri-pembunuhan-siswi-sma-dian-safitri-ogan-ilir",
     "misteri-pembunuhan-tari-arizona-mataram",
-    "kasus-pembunuhan-dr-neng-koestono-lapan-2018"
+    "kasus-pembunuhan-dr-neng-koestono-lapan-2018",
+    "penipuan satnet internet satelit dua ribu dua puluh dua"
   ],
   "published": [
     {
@@ -848,8 +849,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260926_004841",
+      "topic": "penipuan satnet internet satelit dua ribu dua puluh dua",
+      "title": "Janji Internet Satelit yang Hilang: Kasus Penipuan SatNet Mengguncang Indonesia",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260926_004841_penipuan-satnet-internet-satelit-dua-ribu-dua-puluh-dua/final.mp4",
+      "video_id": "PcOIARh3LKM",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 84,
-  "_voice_idx": 77
+  "_format_idx": 85,
+  "_voice_idx": 78
 }
