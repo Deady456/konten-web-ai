@@ -79,7 +79,8 @@
     "kasus-pembunuhan-dr-neng-koestono-lapan-2018",
     "penipuan satnet internet satelit dua ribu dua puluh dua",
     "kasus-penipuan-investasi-matahari-group-bandung-2022",
-    "kasus-pembunuhan-sari-wulandari-makassar-2021"
+    "kasus-pembunuhan-sari-wulandari-makassar-2021",
+    "hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018"
   ],
   "published": [
     {
@@ -881,8 +882,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260927_124718",
+      "topic": "hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018",
+      "title": "Misteri Empat Mahasiswa Gadjah Mada Menghilang di Lereng Merapi Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260927_124718_hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018/final.mp4",
+      "video_id": "r9foAai8H34",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 87,
-  "_voice_idx": 80
+  "_format_idx": 88,
+  "_voice_idx": 81
 }
