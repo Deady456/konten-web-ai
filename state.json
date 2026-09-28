@@ -81,7 +81,8 @@
     "kasus-penipuan-investasi-matahari-group-bandung-2022",
     "kasus-pembunuhan-sari-wulandari-makassar-2021",
     "hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018",
-    "kasus-pembunuhan-nia-wulandari-surabaya-2020"
+    "kasus-pembunuhan-nia-wulandari-surabaya-2020",
+    "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung"
   ],
   "published": [
     {
@@ -903,8 +904,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260928_124713",
+      "topic": "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung",
+      "title": "Misteri Pembunuhan Petani di Desa Tanjung Bumi Lampung: Jejak Tembakan yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260928_124713_kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung/final.mp4",
+      "video_id": "foOP--uNUjE",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 89,
-  "_voice_idx": 82
+  "_format_idx": 90,
+  "_voice_idx": 83
 }
