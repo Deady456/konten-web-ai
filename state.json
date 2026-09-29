@@ -83,7 +83,8 @@
     "hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018",
     "kasus-pembunuhan-nia-wulandari-surabaya-2020",
     "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung",
-    "kasus-pembunuhan-rina-sari-depok-2022"
+    "kasus-pembunuhan-rina-sari-depok-2022",
+    "kasus-pembunuhan-rina-wibowo-padang-2017"
   ],
   "published": [
     {
@@ -925,8 +926,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260929_124828",
+      "topic": "kasus-pembunuhan-rina-wibowo-padang-2017",
+      "title": "Misteri Pembunuhan di Padang dua ribu tujuh belas: Kasus Tak Terpecahkan yang Mengguncang Kota",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260929_124828_kasus-pembunuhan-rina-wibowo-padang-2017/final.mp4",
+      "video_id": "jbp7GefkVv4",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 91,
-  "_voice_idx": 84
+  "_format_idx": 92,
+  "_voice_idx": 85
 }
