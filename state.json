@@ -82,7 +82,8 @@
     "kasus-pembunuhan-sari-wulandari-makassar-2021",
     "hilangnya-empat-mahasiswa-gadjah-mada-merapi-2018",
     "kasus-pembunuhan-nia-wulandari-surabaya-2020",
-    "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung"
+    "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung",
+    "kasus-pembunuhan-rina-sari-depok-2022"
   ],
   "published": [
     {
@@ -914,8 +915,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260929_004800",
+      "topic": "kasus-pembunuhan-rina-sari-depok-2022",
+      "title": "Misteri Pembunuhan Rina Sari di Depok: Jejak Hilang, Penyidikan Membeku",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260929_004800_kasus-pembunuhan-rina-sari-depok-2022/final.mp4",
+      "video_id": "HN715pKoVXY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 90,
-  "_voice_idx": 83
+  "_format_idx": 91,
+  "_voice_idx": 84
 }
