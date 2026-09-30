@@ -85,7 +85,8 @@
     "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung",
     "kasus-pembunuhan-rina-sari-depok-2022",
     "kasus-pembunuhan-rina-wibowo-padang-2017",
-    "kasus-pembunuhan-laila-hidayah-cibinong-2019"
+    "kasus-pembunuhan-laila-hidayah-cibinong-2019",
+    "misteri-pembunuhan-hotel-grand-zuri-bandung-2021"
   ],
   "published": [
     {
@@ -947,8 +948,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260930_124746",
+      "topic": "misteri-pembunuhan-hotel-grand-zuri-bandung-2021",
+      "title": "Misteri Pembunuhan di Hotel Grand Zuri Bandung dua ribu dua puluh satu: Kasus Tak Terpecahkan yang Mengguncang Kota",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260930_124746_misteri-pembunuhan-hotel-grand-zuri-bandung-2021/final.mp4",
+      "video_id": "wfzSX8P2L30",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 93,
-  "_voice_idx": 86
+  "_format_idx": 94,
+  "_voice_idx": 87
 }
