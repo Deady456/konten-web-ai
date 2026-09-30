@@ -84,7 +84,8 @@
     "kasus-pembunuhan-nia-wulandari-surabaya-2020",
     "kasus-pembunuhan-joko-santoso-tanjung-bumi-lampung",
     "kasus-pembunuhan-rina-sari-depok-2022",
-    "kasus-pembunuhan-rina-wibowo-padang-2017"
+    "kasus-pembunuhan-rina-wibowo-padang-2017",
+    "kasus-pembunuhan-laila-hidayah-cibinong-2019"
   ],
   "published": [
     {
@@ -936,8 +937,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20260930_004720",
+      "topic": "kasus-pembunuhan-laila-hidayah-cibinong-2019",
+      "title": "Mayat Terbungkus Kayu Mengapung di Citarum: Misteri Pembunuhan Laila Hidayah yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20260930_004720_kasus-pembunuhan-laila-hidayah-cibinong-2019/final.mp4",
+      "video_id": "pYFRSpbaRVI",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 92,
-  "_voice_idx": 85
+  "_format_idx": 93,
+  "_voice_idx": 86
 }
