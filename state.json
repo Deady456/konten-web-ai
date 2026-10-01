@@ -87,7 +87,8 @@
     "kasus-pembunuhan-rina-wibowo-padang-2017",
     "kasus-pembunuhan-laila-hidayah-cibinong-2019",
     "misteri-pembunuhan-hotel-grand-zuri-bandung-2021",
-    "kasus-penipuan-mitra-global-surabaya-2023"
+    "kasus-penipuan-mitra-global-surabaya-2023",
+    "kasus-pembunuhan-siti-nurbaya-banten"
   ],
   "published": [
     {
@@ -969,8 +970,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261001_124727",
+      "topic": "kasus-pembunuhan-siti-nurbaya-banten",
+      "title": "Misteri Pembunuhan Siti Nurbaya di Banten: Jejak Hilang, Jeritan yang Menggema",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261001_124727_kasus-pembunuhan-siti-nurbaya-banten/final.mp4",
+      "video_id": "BhvhCkYhgns",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 95,
-  "_voice_idx": 88
+  "_format_idx": 96,
+  "_voice_idx": 89
 }
