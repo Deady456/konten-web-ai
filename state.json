@@ -86,7 +86,8 @@
     "kasus-pembunuhan-rina-sari-depok-2022",
     "kasus-pembunuhan-rina-wibowo-padang-2017",
     "kasus-pembunuhan-laila-hidayah-cibinong-2019",
-    "misteri-pembunuhan-hotel-grand-zuri-bandung-2021"
+    "misteri-pembunuhan-hotel-grand-zuri-bandung-2021",
+    "kasus-penipuan-mitra-global-surabaya-2023"
   ],
   "published": [
     {
@@ -958,8 +959,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261001_004737",
+      "topic": "kasus-penipuan-mitra-global-surabaya-2023",
+      "title": "Misteri Penipuan Investasi Mitra Global yang Membuat Ribuan Investor Terpuruk",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261001_004737_kasus-penipuan-mitra-global-surabaya-2023/final.mp4",
+      "video_id": "ql9nmJJAV6I",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 94,
-  "_voice_idx": 87
+  "_format_idx": 95,
+  "_voice_idx": 88
 }
