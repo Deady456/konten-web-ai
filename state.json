@@ -89,7 +89,8 @@
     "misteri-pembunuhan-hotel-grand-zuri-bandung-2021",
     "kasus-penipuan-mitra-global-surabaya-2023",
     "kasus-pembunuhan-siti-nurbaya-banten",
-    "penipuan-investasi-spacecoin-indonesia-2022"
+    "penipuan-investasi-spacecoin-indonesia-2022",
+    "misteri-hilang-tiga-mahasiswa-jember-2022"
   ],
   "published": [
     {
@@ -991,8 +992,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261002_124723",
+      "topic": "misteri-hilang-tiga-mahasiswa-jember-2022",
+      "title": "MISTERI HILANGNYA TIGA MAHASISWA JEMBER: Jejak yang Menghilang Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261002_124723_misteri-hilang-tiga-mahasiswa-jember-2022/final.mp4",
+      "video_id": "6gvLLsy3iVA",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 97,
-  "_voice_idx": 90
+  "_format_idx": 98,
+  "_voice_idx": 91
 }
