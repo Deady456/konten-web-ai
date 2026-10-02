@@ -88,7 +88,8 @@
     "kasus-pembunuhan-laila-hidayah-cibinong-2019",
     "misteri-pembunuhan-hotel-grand-zuri-bandung-2021",
     "kasus-penipuan-mitra-global-surabaya-2023",
-    "kasus-pembunuhan-siti-nurbaya-banten"
+    "kasus-pembunuhan-siti-nurbaya-banten",
+    "penipuan-investasi-spacecoin-indonesia-2022"
   ],
   "published": [
     {
@@ -980,8 +981,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261002_004755",
+      "topic": "penipuan-investasi-spacecoin-indonesia-2022",
+      "title": "Misteri Penipuan SpaceCoin: Jutaan Rupiah Menghilang, Pelaku Masih Kabur!",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261002_004755_penipuan-investasi-spacecoin-indonesia-2022/final.mp4",
+      "video_id": "RV5xD0J1zBg",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 96,
-  "_voice_idx": 89
+  "_format_idx": 97,
+  "_voice_idx": 90
 }
