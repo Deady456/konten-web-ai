@@ -91,7 +91,8 @@
     "kasus-pembunuhan-siti-nurbaya-banten",
     "penipuan-investasi-spacecoin-indonesia-2022",
     "misteri-hilang-tiga-mahasiswa-jember-2022",
-    "misteri-hilang-peneliti-satelit-bandung"
+    "misteri-hilang-peneliti-satelit-bandung",
+    "kasus-pembunuhan-niken-depok"
   ],
   "published": [
     {
@@ -1013,8 +1014,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261003_124818",
+      "topic": "kasus-pembunuhan-niken-depok",
+      "title": "Misteri Pembunuhan Niken di Apartemen Depok: Jejak Hilang, Koneksi Antariksa?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261003_124818_kasus-pembunuhan-niken-depok/final.mp4",
+      "video_id": "ivm0vSGAiW8",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 99,
-  "_voice_idx": 92
+  "_format_idx": 100,
+  "_voice_idx": 93
 }
