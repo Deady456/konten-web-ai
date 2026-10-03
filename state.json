@@ -90,7 +90,8 @@
     "kasus-penipuan-mitra-global-surabaya-2023",
     "kasus-pembunuhan-siti-nurbaya-banten",
     "penipuan-investasi-spacecoin-indonesia-2022",
-    "misteri-hilang-tiga-mahasiswa-jember-2022"
+    "misteri-hilang-tiga-mahasiswa-jember-2022",
+    "misteri-hilang-peneliti-satelit-bandung"
   ],
   "published": [
     {
@@ -1002,8 +1003,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261003_004759",
+      "topic": "misteri-hilang-peneliti-satelit-bandung",
+      "title": "MISTERI HILANGNYA PENELITI SATELIT BANDUNG: JEJAK MENGUAP DI MALAM GELAP",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261003_004759_misteri-hilang-peneliti-satelit-bandung/final.mp4",
+      "video_id": "FM7K3yRp8Wk",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 98,
-  "_voice_idx": 91
+  "_format_idx": 99,
+  "_voice_idx": 92
 }
