@@ -93,7 +93,8 @@
     "misteri-hilang-tiga-mahasiswa-jember-2022",
     "misteri-hilang-peneliti-satelit-bandung",
     "kasus-pembunuhan-niken-depok",
-    "penipuan-investasi-mooncoin"
+    "penipuan-investasi-mooncoin",
+    "kasus-pembunuhan-anggi-yuliana-surabaya-2015"
   ],
   "published": [
     {
@@ -1035,8 +1036,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261004_124708",
+      "topic": "kasus-pembunuhan-anggi-yuliana-surabaya-2015",
+      "title": "Malam Kelam di Surabaya: Misteri Pembunuhan Anggi Yuliana yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261004_124708_kasus-pembunuhan-anggi-yuliana-surabaya-2015/final.mp4",
+      "video_id": "pKreD3a9pXk",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 101,
-  "_voice_idx": 94
+  "_format_idx": 102,
+  "_voice_idx": 95
 }
