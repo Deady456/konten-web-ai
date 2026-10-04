@@ -92,7 +92,8 @@
     "penipuan-investasi-spacecoin-indonesia-2022",
     "misteri-hilang-tiga-mahasiswa-jember-2022",
     "misteri-hilang-peneliti-satelit-bandung",
-    "kasus-pembunuhan-niken-depok"
+    "kasus-pembunuhan-niken-depok",
+    "penipuan-investasi-mooncoin"
   ],
   "published": [
     {
@@ -1024,8 +1025,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261004_004714",
+      "topic": "penipuan-investasi-mooncoin",
+      "title": "Misteri Penipuan Investasi MoonCoin: Puluhan Korban Terjerat Janji Sinar Satelit",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261004_004714_penipuan-investasi-mooncoin/final.mp4",
+      "video_id": "gRbIkxuc09o",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 100,
-  "_voice_idx": 93
+  "_format_idx": 101,
+  "_voice_idx": 94
 }
