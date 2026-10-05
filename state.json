@@ -94,7 +94,8 @@
     "misteri-hilang-peneliti-satelit-bandung",
     "kasus-pembunuhan-niken-depok",
     "penipuan-investasi-mooncoin",
-    "kasus-pembunuhan-anggi-yuliana-surabaya-2015"
+    "kasus-pembunuhan-anggi-yuliana-surabaya-2015",
+    "pembunuhan-hotel-santika-surabaya-2023"
   ],
   "published": [
     {
@@ -1046,8 +1047,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261005_004802",
+      "topic": "pembunuhan-hotel-santika-surabaya-2023",
+      "title": "Misteri Tembakan di Hotel Santika Surabaya: Kasus Pembunuhan Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261005_004802_pembunuhan-hotel-santika-surabaya-2023/final.mp4",
+      "video_id": "ryB8-ZOmc_0",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 102,
-  "_voice_idx": 95
+  "_format_idx": 103,
+  "_voice_idx": 96
 }
