@@ -95,7 +95,8 @@
     "kasus-pembunuhan-niken-depok",
     "penipuan-investasi-mooncoin",
     "kasus-pembunuhan-anggi-yuliana-surabaya-2015",
-    "pembunuhan-hotel-santika-surabaya-2023"
+    "pembunuhan-hotel-santika-surabaya-2023",
+    "pembunuhan-munir-said-thalib-pesawat"
   ],
   "published": [
     {
@@ -1057,8 +1058,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261005_124700",
+      "topic": "pembunuhan-munir-said-thalib-pesawat",
+      "title": "Misteri Penembakan Munir di Pesawat: Siapa Pelakunya yang Tersembunyi?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261005_124700_pembunuhan-munir-said-thalib-pesawat/final.mp4",
+      "video_id": "9cjsKVPvfCc",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 103,
-  "_voice_idx": 96
+  "_format_idx": 104,
+  "_voice_idx": 97
 }
