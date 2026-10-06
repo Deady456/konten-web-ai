@@ -97,7 +97,8 @@
     "kasus-pembunuhan-anggi-yuliana-surabaya-2015",
     "pembunuhan-hotel-santika-surabaya-2023",
     "pembunuhan-munir-said-thalib-pesawat",
-    "kasus-penipuan-investasi-orbit-nusantara-2023"
+    "kasus-penipuan-investasi-orbit-nusantara-2023",
+    "pembunuhan-panti-jompo-cipanas-2022"
   ],
   "published": [
     {
@@ -1079,8 +1080,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261006_124706",
+      "topic": "pembunuhan-panti-jompo-cipanas-2022",
+      "title": "Misteri Pembunuhan di Panti Jompo Cipanas: Kasus yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261006_124706_pembunuhan-panti-jompo-cipanas-2022/final.mp4",
+      "video_id": "E7Ao5rZ4pdU",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 105,
-  "_voice_idx": 98
+  "_format_idx": 106,
+  "_voice_idx": 99
 }
