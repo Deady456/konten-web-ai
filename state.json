@@ -96,7 +96,8 @@
     "penipuan-investasi-mooncoin",
     "kasus-pembunuhan-anggi-yuliana-surabaya-2015",
     "pembunuhan-hotel-santika-surabaya-2023",
-    "pembunuhan-munir-said-thalib-pesawat"
+    "pembunuhan-munir-said-thalib-pesawat",
+    "kasus-penipuan-investasi-orbit-nusantara-2023"
   ],
   "published": [
     {
@@ -1068,8 +1069,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261006_004855",
+      "topic": "kasus-penipuan-investasi-orbit-nusantara-2023",
+      "title": "Misteri Penipuan Investasi Orbit Nusantara: Ribuan Korban Tertipu Janji Keuntungan Antariksa",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261006_004855_kasus-penipuan-investasi-orbit-nusantara-2023/final.mp4",
+      "video_id": "O5lKjdjAR7Y",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 104,
-  "_voice_idx": 97
+  "_format_idx": 105,
+  "_voice_idx": 98
 }
