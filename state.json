@@ -98,7 +98,8 @@
     "pembunuhan-hotel-santika-surabaya-2023",
     "pembunuhan-munir-said-thalib-pesawat",
     "kasus-penipuan-investasi-orbit-nusantara-2023",
-    "pembunuhan-panti-jompo-cipanas-2022"
+    "pembunuhan-panti-jompo-cipanas-2022",
+    "kasus-pembunuhan-tiga-wanita-karawang-2023"
   ],
   "published": [
     {
@@ -1090,8 +1091,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261007_004713",
+      "topic": "kasus-pembunuhan-tiga-wanita-karawang-2023",
+      "title": "Misteri Tiga Wanita Dibunuh di Gang Karawang: Jejak Darah yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261007_004713_kasus-pembunuhan-tiga-wanita-karawang-2023/final.mp4",
+      "video_id": "xRVTSZxPHAc",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 106,
-  "_voice_idx": 99
+  "_format_idx": 107,
+  "_voice_idx": 100
 }
