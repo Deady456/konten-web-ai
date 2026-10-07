@@ -99,7 +99,8 @@
     "pembunuhan-munir-said-thalib-pesawat",
     "kasus-penipuan-investasi-orbit-nusantara-2023",
     "pembunuhan-panti-jompo-cipanas-2022",
-    "kasus-pembunuhan-tiga-wanita-karawang-2023"
+    "kasus-pembunuhan-tiga-wanita-karawang-2023",
+    "misteri-mayat-remaja-sungai-citarum-2022"
   ],
   "published": [
     {
@@ -1101,8 +1102,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261007_124754",
+      "topic": "misteri-mayat-remaja-sungai-citarum-2022",
+      "title": "Misteri Mayat Remaja di Sungai Citarum: Jejak yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261007_124754_misteri-mayat-remaja-sungai-citarum-2022/final.mp4",
+      "video_id": "kXqzup9MqHw",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 107,
-  "_voice_idx": 100
+  "_format_idx": 108,
+  "_voice_idx": 101
 }
