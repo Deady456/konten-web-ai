@@ -100,7 +100,8 @@
     "kasus-penipuan-investasi-orbit-nusantara-2023",
     "pembunuhan-panti-jompo-cipanas-2022",
     "kasus-pembunuhan-tiga-wanita-karawang-2023",
-    "misteri-mayat-remaja-sungai-citarum-2022"
+    "misteri-mayat-remaja-sungai-citarum-2022",
+    "kasus-pembunuhan-pulau-sangihe-2022"
   ],
   "published": [
     {
@@ -1112,8 +1113,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261008_004759",
+      "topic": "kasus-pembunuhan-pulau-sangihe-2022",
+      "title": "Misteri Pembunuhan di Pulau Sangihe dua ribu dua puluh dua: Jejak Jeritan yang Tak Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261008_004759_kasus-pembunuhan-pulau-sangihe-2022/final.mp4",
+      "video_id": "rU9n0xZjun0",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 108,
-  "_voice_idx": 101
+  "_format_idx": 109,
+  "_voice_idx": 102
 }
