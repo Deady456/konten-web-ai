@@ -101,7 +101,8 @@
     "pembunuhan-panti-jompo-cipanas-2022",
     "kasus-pembunuhan-tiga-wanita-karawang-2023",
     "misteri-mayat-remaja-sungai-citarum-2022",
-    "kasus-pembunuhan-pulau-sangihe-2022"
+    "kasus-pembunuhan-pulau-sangihe-2022",
+    "pembunuhan-ahmad-fauzi-semanggi-2022"
   ],
   "published": [
     {
@@ -1123,8 +1124,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261008_124714",
+      "topic": "pembunuhan-ahmad-fauzi-semanggi-2022",
+      "title": "MISTERI PEMBUNUHAN TUKANG KAYU AHMAD FAUZI DI SEMARANG dua ribu dua puluh dua YANG BELUM TERPECahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261008_124714_pembunuhan-ahmad-fauzi-semanggi-2022/final.mp4",
+      "video_id": "0j1SrrAXkq0",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 109,
-  "_voice_idx": 102
+  "_format_idx": 110,
+  "_voice_idx": 103
 }
