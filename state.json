@@ -102,7 +102,8 @@
     "kasus-pembunuhan-tiga-wanita-karawang-2023",
     "misteri-mayat-remaja-sungai-citarum-2022",
     "kasus-pembunuhan-pulau-sangihe-2022",
-    "pembunuhan-ahmad-fauzi-semanggi-2022"
+    "pembunuhan-ahmad-fauzi-semanggi-2022",
+    "pembunuhan-siti-fatimah-bandung-2015"
   ],
   "published": [
     {
@@ -1134,8 +1135,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261009_004903",
+      "topic": "pembunuhan-siti-fatimah-bandung-2015",
+      "title": "Misteri Pembunuhan Siti Fatimah di Bandung: Jeritan yang Tak Pernah Padam",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261009_004903_pembunuhan-siti-fatimah-bandung-2015/final.mp4",
+      "video_id": "za9yZo1ptVM",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 110,
-  "_voice_idx": 103
+  "_format_idx": 111,
+  "_voice_idx": 104
 }
