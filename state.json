@@ -103,7 +103,8 @@
     "misteri-mayat-remaja-sungai-citarum-2022",
     "kasus-pembunuhan-pulau-sangihe-2022",
     "pembunuhan-ahmad-fauzi-semanggi-2022",
-    "pembunuhan-siti-fatimah-bandung-2015"
+    "pembunuhan-siti-fatimah-bandung-2015",
+    "kasus-pembunuhan-bontang-2018-nia-anggraini"
   ],
   "published": [
     {
@@ -1145,8 +1146,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261009_124716",
+      "topic": "kasus-pembunuhan-bontang-2018-nia-anggraini",
+      "title": "Jeritan Malam di Bontang: Misteri Pembunuhan Nia Anggraini yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261009_124716_kasus-pembunuhan-bontang-2018-nia-anggraini/final.mp4",
+      "video_id": "tuspWkBQsZY",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 111,
-  "_voice_idx": 104
+  "_format_idx": 112,
+  "_voice_idx": 105
 }
