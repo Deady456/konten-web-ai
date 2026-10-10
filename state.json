@@ -105,7 +105,8 @@
     "pembunuhan-ahmad-fauzi-semanggi-2022",
     "pembunuhan-siti-fatimah-bandung-2015",
     "kasus-pembunuhan-bontang-2018-nia-anggraini",
-    "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua"
+    "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua",
+    "kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua"
   ],
   "published": [
     {
@@ -1167,8 +1168,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261010_124723",
+      "topic": "kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua",
+      "title": "Misteri Pembunuhan Dita di Sukabumi: Jejak Menghilang dan Pelaku Tak Terungkap",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261010_124723_kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua/final.mp4",
+      "video_id": "E2AAFsbMnRM",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 113,
-  "_voice_idx": 106
+  "_format_idx": 114,
+  "_voice_idx": 107
 }
