@@ -21,14 +21,17 @@ HEADERS = {
 JUNK_WORDS = {"cartoon", "drawing", "illustration", "anime", "clipart", "vector", "meme", "banner", "ad"}
 
 GENERIC_NICHES = [
-    "cinematic motion background",
-    "futuristic technology digital",
-    "nature landscape dramatic",
-    "abstract light movement",
-    "macro science detailed",
-    "dark atmospheric cinematic",
-    "aerial view cinematic",
-    "neon abstract motion",
+    "dark crime scene investigation",
+    "police car flashing lights night",
+    "yellow police tape crime",
+    "foggy dark street night",
+    "mysterious silhouette hallway",
+    "dark rainy city street cinematic",
+    "interrogation room dramatic light",
+    "courtroom gavel justice dark",
+    "cctv camera security night",
+    "abandoned building dark shadows",
+    "detective desk paperwork evidence",
 ]
 
 def probe_duration(path: Path) -> float:
@@ -79,17 +82,8 @@ def expand_queries(scene: dict) -> list[str]:
         elif len(v_words) == 1 and v_words[0] not in queries:
             queries.append(v_words[0])
 
-    # 4. Text/narration contextual keywords
-    text = scene.get("text", "")
-    if text:
-        text_words = [tw.strip(".,!?:;\"'").lower() for tw in text.split() if len(tw) > 3 and not tw.startswith("http")]
-        if len(text_words) >= 3:
-            kw_phrase = " ".join(text_words[:3])
-            if kw_phrase not in queries:
-                queries.append(kw_phrase)
-
-    # 5. Generic rich cinematic fallbacks
-    queries.extend([random.choice(GENERIC_NICHES), "cinematic abstract background"])
+    # 4. Generic rich cinematic crime fallbacks
+    queries.extend([random.choice(GENERIC_NICHES), random.choice(GENERIC_NICHES)])
     
     # Return unique, non-empty queries
     seen = set()

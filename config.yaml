@@ -1,11 +1,11 @@
 niche: "kasus kriminal nyata lokal Indonesia yang viral dan belum terpecahkan (investigasi pembunuhan, penipuan besar, misteri hilangnya orang, jejak kriminal di Indonesia)"
-audience: "penggemar sains Indonesia yang tertarik dengan antariksa, astronomi, dan penemuan kosmik terbaru"
+audience: "penonton Indonesia yang menyukai kisah nyata, investigasi kriminal, misteri tak terpecahkan, dan alur kasus kepolisian"
 language: id
 
 script:
   model: openai/gpt-oss-120b
-  target_seconds: 80
-  words_per_second: 2.3
+  target_seconds: 42
+  words_per_second: 2.4
 
 content_variation:
   enabled: true
@@ -55,8 +55,8 @@ upload:
   privacy: "public"
   category_id: "27"
   made_for_kids: false
-  channel: "animewebai"
-  default_tags: ["fakta antariksa", "galaxy", "tata surya", "planet", "bintang", "lubang hitam", "nebula", "roket", "NASA", "eksplorasi luar angkasa", "astronomi", "fakta luar angkasa"]
+  channel: "kasuslokal"
+  default_tags: ["kasus kriminal", "true crime indonesia", "kasus viral", "misteri indonesia", "kronologi kasus", "kisah nyata", "alur cerita kasus", "investigasi kriminal", "detektif", "shorts"]
 
 
 
