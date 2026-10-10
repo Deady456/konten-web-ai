@@ -104,7 +104,8 @@
     "kasus-pembunuhan-pulau-sangihe-2022",
     "pembunuhan-ahmad-fauzi-semanggi-2022",
     "pembunuhan-siti-fatimah-bandung-2015",
-    "kasus-pembunuhan-bontang-2018-nia-anggraini"
+    "kasus-pembunuhan-bontang-2018-nia-anggraini",
+    "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua"
   ],
   "published": [
     {
@@ -1156,8 +1157,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261010_004740",
+      "topic": "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua",
+      "title": "Misteri Pembunuhan Ilmuwan Satelit di Bandung: Lampu Berkedip, Jejak Hilang",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261010_004740_pembunuhan-ilmuwan-satelit-lapan-bandung-dua-ribu-dua-puluh-/final.mp4",
+      "video_id": "orb1aLiH3Ek",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 112,
-  "_voice_idx": 105
+  "_format_idx": 113,
+  "_voice_idx": 106
 }
