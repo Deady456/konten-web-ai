@@ -106,7 +106,8 @@
     "pembunuhan-siti-fatimah-bandung-2015",
     "kasus-pembunuhan-bontang-2018-nia-anggraini",
     "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua",
-    "kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua"
+    "kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua",
+    "Kasus Pembunuhan Rudi Hartono di Desa Tegal dua ribu dua belas"
   ],
   "published": [
     {
@@ -1178,8 +1179,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261010_204522",
+      "topic": "Kasus Pembunuhan Rudi Hartono di Desa Tegal dua ribu dua belas",
+      "title": "Malam Kelam di Desa Tegal: Jeritan Membunuh yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261010_204522_kasus-pembunuhan-rudi-hartono-di-desa-tegal-dua-ribu-dua-bel/final.mp4",
+      "video_id": "HSTM12T0K_U",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 114,
-  "_voice_idx": 107
+  "_format_idx": 115,
+  "_voice_idx": 108
 }
