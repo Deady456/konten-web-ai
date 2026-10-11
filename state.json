@@ -107,7 +107,8 @@
     "kasus-pembunuhan-bontang-2018-nia-anggraini",
     "pembunuhan ilmuwan satelit lapan bandung dua ribu dua puluh dua",
     "kasus-pembunuhan-dita-sukabumi-tahun-dua-ribu-dua-puluh-dua",
-    "Kasus Pembunuhan Rudi Hartono di Desa Tegal dua ribu dua belas"
+    "Kasus Pembunuhan Rudi Hartono di Desa Tegal dua ribu dua belas",
+    "kasus-pembunuhan-nisa-amalia-bogor-dua ribu dua puluh dua"
   ],
   "published": [
     {
@@ -1189,8 +1190,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261011_004703",
+      "topic": "kasus-pembunuhan-nisa-amalia-bogor-dua ribu dua puluh dua",
+      "title": "Misteri Pembunuhan Nisa Amalia di Bogor: Jejak DNA Tak Teridentifikasi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261011_004703_kasus-pembunuhan-nisa-amalia-bogor-dua-ribu-dua-puluh-dua/final.mp4",
+      "video_id": "4Z-WolRIe5A",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 115,
-  "_voice_idx": 108
+  "_format_idx": 116,
+  "_voice_idx": 109
 }
