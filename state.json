@@ -110,7 +110,8 @@
     "Kasus Pembunuhan Rudi Hartono di Desa Tegal dua ribu dua belas",
     "kasus-pembunuhan-nisa-amalia-bogor-dua ribu dua puluh dua",
     "penipuan-bola-gold-yogyakarta",
-    "kasus-pembunuhan-desa-lintas-lampung-2021"
+    "kasus-pembunuhan-desa-lintas-lampung-2021",
+    "pembunuhan-hutan-kalimantan-2021"
   ],
   "published": [
     {
@@ -1222,8 +1223,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261012_124713",
+      "topic": "pembunuhan-hutan-kalimantan-2021",
+      "title": "Misteri Pembunuhan di Hutan Kalimantan: Korban Tanpa Jejak, Pelaku Tak Teridentifikasi",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261012_124713_pembunuhan-hutan-kalimantan-2021/final.mp4",
+      "video_id": "Y3qPoCo_lTw",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 118,
-  "_voice_idx": 111
+  "_format_idx": 119,
+  "_voice_idx": 112
 }
