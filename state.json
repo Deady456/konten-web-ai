@@ -112,7 +112,8 @@
     "penipuan-bola-gold-yogyakarta",
     "kasus-pembunuhan-desa-lintas-lampung-2021",
     "pembunuhan-hutan-kalimantan-2021",
-    "pembunuhan-dedi-syafruddin-padang-2020"
+    "pembunuhan-dedi-syafruddin-padang-2020",
+    "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh"
   ],
   "published": [
     {
@@ -1244,8 +1245,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261013_124707",
+      "topic": "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh",
+      "title": "Jeritan Malam di Tanjung: Pembunuhan Nia Ayu yang Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261013_124707_kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-pulu/final.mp4",
+      "video_id": "At_8rQ87dtY",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 120,
-  "_voice_idx": 113
+  "_format_idx": 121,
+  "_voice_idx": 114
 }
