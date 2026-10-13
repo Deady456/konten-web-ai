@@ -111,7 +111,8 @@
     "kasus-pembunuhan-nisa-amalia-bogor-dua ribu dua puluh dua",
     "penipuan-bola-gold-yogyakarta",
     "kasus-pembunuhan-desa-lintas-lampung-2021",
-    "pembunuhan-hutan-kalimantan-2021"
+    "pembunuhan-hutan-kalimantan-2021",
+    "pembunuhan-dedi-syafruddin-padang-2020"
   ],
   "published": [
     {
@@ -1233,8 +1234,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261013_004710",
+      "topic": "pembunuhan-dedi-syafruddin-padang-2020",
+      "title": "Misteri Pembunuhan Wartawan Dedi Syafruddin di Padang: Siapa yang Menodai Kebenaran?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261013_004710_pembunuhan-dedi-syafruddin-padang-2020/final.mp4",
+      "video_id": "30XYoogYTYM",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 119,
-  "_voice_idx": 112
+  "_format_idx": 120,
+  "_voice_idx": 113
 }
