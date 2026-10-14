@@ -114,7 +114,8 @@
     "pembunuhan-hutan-kalimantan-2021",
     "pembunuhan-dedi-syafruddin-padang-2020",
     "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh",
-    "kasus-pembunuhan-ningsih-pasuruan-2023"
+    "kasus-pembunuhan-ningsih-pasuruan-2023",
+    "kasus-wayan-mirna-salihin-pembunuhan-kopi"
   ],
   "published": [
     {
@@ -1266,8 +1267,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261014_124657",
+      "topic": "kasus-wayan-mirna-salihin-pembunuhan-kopi",
+      "title": "Misteri Kopi Beracun: Bagaimana Satu Tegukan Menghancurkan Nyawa Mirna Salihin",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261014_124657_kasus-wayan-mirna-salihin-pembunuhan-kopi/final.mp4",
+      "video_id": "33_72ILuIpo",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 122,
-  "_voice_idx": 115
+  "_format_idx": 123,
+  "_voice_idx": 116
 }
