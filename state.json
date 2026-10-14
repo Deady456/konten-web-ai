@@ -113,7 +113,8 @@
     "kasus-pembunuhan-desa-lintas-lampung-2021",
     "pembunuhan-hutan-kalimantan-2021",
     "pembunuhan-dedi-syafruddin-padang-2020",
-    "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh"
+    "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh",
+    "kasus-pembunuhan-ningsih-pasuruan-2023"
   ],
   "published": [
     {
@@ -1255,8 +1256,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261014_004717",
+      "topic": "kasus-pembunuhan-ningsih-pasuruan-2023",
+      "title": "Misteri Pembunuhan Ningsih di Pasuruan: Jejak Hilang, Tuduhan Menggantung",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261014_004717_kasus-pembunuhan-ningsih-pasuruan-2023/final.mp4",
+      "video_id": "WNfDk29In-Y",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 121,
-  "_voice_idx": 114
+  "_format_idx": 122,
+  "_voice_idx": 115
 }
