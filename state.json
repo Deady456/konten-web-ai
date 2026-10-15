@@ -115,7 +115,8 @@
     "pembunuhan-dedi-syafruddin-padang-2020",
     "kasus-pembunuhan-nia-ayu-banjarmasin-tahun-dua-ribu-dua-puluh",
     "kasus-pembunuhan-ningsih-pasuruan-2023",
-    "kasus-wayan-mirna-salihin-pembunuhan-kopi"
+    "kasus-wayan-mirna-salihin-pembunuhan-kopi",
+    "kasus-pembunuhan-di-rsud-soetomo-surabaya-2022"
   ],
   "published": [
     {
@@ -1277,8 +1278,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261015_004706",
+      "topic": "kasus-pembunuhan-di-rsud-soetomo-surabaya-2022",
+      "title": "Misteri Pembunuhan di RSUD Soetomo Surabaya yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261015_004706_kasus-pembunuhan-di-rsud-soetomo-surabaya-2022/final.mp4",
+      "video_id": "yY1pTvv1t_8",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 123,
-  "_voice_idx": 116
+  "_format_idx": 124,
+  "_voice_idx": 117
 }
