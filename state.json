@@ -118,7 +118,8 @@
     "kasus-wayan-mirna-salihin-pembunuhan-kopi",
     "kasus-pembunuhan-di-rsud-soetomo-surabaya-2022",
     "Pembunuhan Siti Fatimah Pontianak",
-    "pembunuhan-nabila-cirebon-2022"
+    "pembunuhan-nabila-cirebon-2022",
+    "kasus-pembunuhan-keluarga-rawa-pening-2020"
   ],
   "published": [
     {
@@ -1310,8 +1311,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261016_124704",
+      "topic": "kasus-pembunuhan-keluarga-rawa-pening-2020",
+      "title": "Misteri Pembunuhan Empat Keluarga di Rawa Pening: Jejak yang Hilang Tanpa Pelaku",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261016_124704_kasus-pembunuhan-keluarga-rawa-pening-2020/final.mp4",
+      "video_id": "TtYT0a5LDi0",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 126,
-  "_voice_idx": 119
+  "_format_idx": 127,
+  "_voice_idx": 120
 }
