@@ -117,7 +117,8 @@
     "kasus-pembunuhan-ningsih-pasuruan-2023",
     "kasus-wayan-mirna-salihin-pembunuhan-kopi",
     "kasus-pembunuhan-di-rsud-soetomo-surabaya-2022",
-    "Pembunuhan Siti Fatimah Pontianak"
+    "Pembunuhan Siti Fatimah Pontianak",
+    "pembunuhan-nabila-cirebon-2022"
   ],
   "published": [
     {
@@ -1299,8 +1300,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261016_004703",
+      "topic": "pembunuhan-nabila-cirebon-2022",
+      "title": "Misteri Pembunuhan Nabila di Cirebon: Kasus Belum Terpecahkan yang Mengguncang Kota",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261016_004703_pembunuhan-nabila-cirebon-2022/final.mp4",
+      "video_id": "vONMpQGsWac",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 125,
-  "_voice_idx": 118
+  "_format_idx": 126,
+  "_voice_idx": 119
 }
