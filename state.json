@@ -119,7 +119,8 @@
     "kasus-pembunuhan-di-rsud-soetomo-surabaya-2022",
     "Pembunuhan Siti Fatimah Pontianak",
     "pembunuhan-nabila-cirebon-2022",
-    "kasus-pembunuhan-keluarga-rawa-pening-2020"
+    "kasus-pembunuhan-keluarga-rawa-pening-2020",
+    "pembunuhan-keluarga-jambi-2022"
   ],
   "published": [
     {
@@ -1321,8 +1322,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261017_004748",
+      "topic": "pembunuhan-keluarga-jambi-2022",
+      "title": "Misteri Pembunuhan Keluarga di Desa Bener, Jambi: Jejak Hilang Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261017_004748_pembunuhan-keluarga-jambi-2022/final.mp4",
+      "video_id": "g5bPFMwiyqM",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 127,
-  "_voice_idx": 120
+  "_format_idx": 128,
+  "_voice_idx": 121
 }
