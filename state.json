@@ -120,7 +120,8 @@
     "Pembunuhan Siti Fatimah Pontianak",
     "pembunuhan-nabila-cirebon-2022",
     "kasus-pembunuhan-keluarga-rawa-pening-2020",
-    "pembunuhan-keluarga-jambi-2022"
+    "pembunuhan-keluarga-jambi-2022",
+    "kasus-pembunuhan-winda-kurniawan-malang-2021"
   ],
   "published": [
     {
@@ -1332,8 +1333,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261017_124710",
+      "topic": "kasus-pembunuhan-winda-kurniawan-malang-2021",
+      "title": "Misteri Pembunuhan Winda Kurniawan di Malang: Siapa Pelaku yang Masih Menghilang?",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261017_124710_kasus-pembunuhan-winda-kurniawan-malang-2021/final.mp4",
+      "video_id": "MnSD73B0dgY",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 128,
-  "_voice_idx": 121
+  "_format_idx": 129,
+  "_voice_idx": 122
 }
