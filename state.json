@@ -121,7 +121,8 @@
     "pembunuhan-nabila-cirebon-2022",
     "kasus-pembunuhan-keluarga-rawa-pening-2020",
     "pembunuhan-keluarga-jambi-2022",
-    "kasus-pembunuhan-winda-kurniawan-malang-2021"
+    "kasus-pembunuhan-winda-kurniawan-malang-2021",
+    "kasus-mayat-sungai-malang-2022"
   ],
   "published": [
     {
@@ -1343,8 +1344,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261018_004708",
+      "topic": "kasus-mayat-sungai-malang-2022",
+      "title": "Misteri Mayat di Sungai Sunyi: Kasus Pembunuhan Tak Terpecahkan di Malang",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261018_004708_kasus-mayat-sungai-malang-2022/final.mp4",
+      "video_id": "8Y6iajcKqlQ",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 129,
-  "_voice_idx": 122
+  "_format_idx": 130,
+  "_voice_idx": 123
 }
