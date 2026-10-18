@@ -122,7 +122,8 @@
     "kasus-pembunuhan-keluarga-rawa-pening-2020",
     "pembunuhan-keluarga-jambi-2022",
     "kasus-pembunuhan-winda-kurniawan-malang-2021",
-    "kasus-mayat-sungai-malang-2022"
+    "kasus-mayat-sungai-malang-2022",
+    "kasus pembunuhan pasangan suami istri mobil tergantung jambi"
   ],
   "published": [
     {
@@ -1354,8 +1355,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261018_124710",
+      "topic": "kasus pembunuhan pasangan suami istri mobil tergantung jambi",
+      "title": "Misteri Mobil Tergantung di Jambi: Pembunuhan Sepasang Suami Istri Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261018_124710_kasus-pembunuhan-pasangan-suami-istri-mobil-tergantung-jambi/final.mp4",
+      "video_id": "QJrTB99gk68",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 130,
-  "_voice_idx": 123
+  "_format_idx": 131,
+  "_voice_idx": 124
 }
