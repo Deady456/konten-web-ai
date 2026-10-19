@@ -124,7 +124,8 @@
     "kasus-pembunuhan-winda-kurniawan-malang-2021",
     "kasus-mayat-sungai-malang-2022",
     "kasus pembunuhan pasangan suami istri mobil tergantung jambi",
-    "kasus pembunuhan mahasiswa nia bandung 2021"
+    "kasus pembunuhan mahasiswa nia bandung 2021",
+    "kasus-pembunuhan-suci-nuraini-tanjung-priok-2022"
   ],
   "published": [
     {
@@ -1376,8 +1377,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261019_124712",
+      "topic": "kasus-pembunuhan-suci-nuraini-tanjung-priok-2022",
+      "title": "Misteri Pembunuhan Suci Nuraini di Tanjung Priok: Kasus yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261019_124712_kasus-pembunuhan-suci-nuraini-tanjung-priok-2022/final.mp4",
+      "video_id": "BAavvOMy0CA",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 132,
-  "_voice_idx": 125
+  "_format_idx": 133,
+  "_voice_idx": 126
 }
