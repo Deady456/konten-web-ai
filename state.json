@@ -123,7 +123,8 @@
     "pembunuhan-keluarga-jambi-2022",
     "kasus-pembunuhan-winda-kurniawan-malang-2021",
     "kasus-mayat-sungai-malang-2022",
-    "kasus pembunuhan pasangan suami istri mobil tergantung jambi"
+    "kasus pembunuhan pasangan suami istri mobil tergantung jambi",
+    "kasus pembunuhan mahasiswa nia bandung 2021"
   ],
   "published": [
     {
@@ -1365,8 +1366,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261019_004704",
+      "topic": "kasus pembunuhan mahasiswa nia bandung 2021",
+      "title": "Misteri Pembunuhan Mahasiswa Nia di Bandung dua ribu dua puluh satu: Kasus yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261019_004704_kasus-pembunuhan-mahasiswa-nia-bandung-2021/final.mp4",
+      "video_id": "vKGCUbPdgRU",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 131,
-  "_voice_idx": 124
+  "_format_idx": 132,
+  "_voice_idx": 125
 }
