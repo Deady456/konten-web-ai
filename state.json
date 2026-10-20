@@ -126,7 +126,8 @@
     "kasus pembunuhan pasangan suami istri mobil tergantung jambi",
     "kasus pembunuhan mahasiswa nia bandung 2021",
     "kasus-pembunuhan-suci-nuraini-tanjung-priok-2022",
-    "pembunuhan-keluarga-cikondang-bandung-2022"
+    "pembunuhan-keluarga-cikondang-bandung-2022",
+    "kasus-pembunuhan-gadis-remaja-jombang-2021"
   ],
   "published": [
     {
@@ -1398,8 +1399,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261020_124657",
+      "topic": "kasus-pembunuhan-gadis-remaja-jombang-2021",
+      "title": "Misteri Jeritan Malam Jombang: Gadis Remaja Hilang Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261020_124657_kasus-pembunuhan-gadis-remaja-jombang-2021/final.mp4",
+      "video_id": "xBzyIYc2r3Y",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 134,
-  "_voice_idx": 127
+  "_format_idx": 135,
+  "_voice_idx": 128
 }
