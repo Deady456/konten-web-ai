@@ -128,7 +128,8 @@
     "kasus-pembunuhan-suci-nuraini-tanjung-priok-2022",
     "pembunuhan-keluarga-cikondang-bandung-2022",
     "kasus-pembunuhan-gadis-remaja-jombang-2021",
-    "Kasus Pembunuhan Dini Yogyakarta 2019"
+    "Kasus Pembunuhan Dini Yogyakarta 2019",
+    "pembunuhan-siti-rahayu-cianjur-2023"
   ],
   "published": [
     {
@@ -1420,8 +1421,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261021_124701",
+      "topic": "pembunuhan-siti-rahayu-cianjur-2023",
+      "title": "Misteri Pembunuhan Siti Rahayu di Cianjur: Kasus Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261021_124701_pembunuhan-siti-rahayu-cianjur-2023/final.mp4",
+      "video_id": "fTrN77puPRE",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 136,
-  "_voice_idx": 129
+  "_format_idx": 137,
+  "_voice_idx": 130
 }
