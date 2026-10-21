@@ -127,7 +127,8 @@
     "kasus pembunuhan mahasiswa nia bandung 2021",
     "kasus-pembunuhan-suci-nuraini-tanjung-priok-2022",
     "pembunuhan-keluarga-cikondang-bandung-2022",
-    "kasus-pembunuhan-gadis-remaja-jombang-2021"
+    "kasus-pembunuhan-gadis-remaja-jombang-2021",
+    "Kasus Pembunuhan Dini Yogyakarta 2019"
   ],
   "published": [
     {
@@ -1409,8 +1410,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261021_004707",
+      "topic": "Kasus Pembunuhan Dini Yogyakarta 2019",
+      "title": "Misteri Pembunuhan Dini di Yogyakarta: Jejak CCTV yang Hilang & Kasus Tak Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261021_004707_kasus-pembunuhan-dini-yogyakarta-2019/final.mp4",
+      "video_id": "6Vag43osgiA",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 135,
-  "_voice_idx": 128
+  "_format_idx": 136,
+  "_voice_idx": 129
 }
