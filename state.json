@@ -129,7 +129,8 @@
     "pembunuhan-keluarga-cikondang-bandung-2022",
     "kasus-pembunuhan-gadis-remaja-jombang-2021",
     "Kasus Pembunuhan Dini Yogyakarta 2019",
-    "pembunuhan-siti-rahayu-cianjur-2023"
+    "pembunuhan-siti-rahayu-cianjur-2023",
+    "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022"
   ],
   "published": [
     {
@@ -1431,8 +1432,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261022_004709",
+      "topic": "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022",
+      "title": "Misteri Pembunuhan Keluarga di Desa Pangkalan, Lampung dua ribu dua puluh dua \u2013 Jejak Hilang Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261022_004709_kasus-pembunuhan-keluarga-di-desa-pangkalan-lampung-2022/final.mp4",
+      "video_id": "d87bmcJUgN0",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 137,
-  "_voice_idx": 130
+  "_format_idx": 138,
+  "_voice_idx": 131
 }
