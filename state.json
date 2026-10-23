@@ -131,7 +131,8 @@
     "Kasus Pembunuhan Dini Yogyakarta 2019",
     "pembunuhan-siti-rahayu-cianjur-2023",
     "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022",
-    "kasus-pembunuhan-keluarga-cianjur-2022"
+    "kasus-pembunuhan-keluarga-cianjur-2022",
+    "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas"
   ],
   "published": [
     {
@@ -1453,8 +1454,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261023_124651",
+      "topic": "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas",
+      "title": "Misteri Pembunuhan Brutal Keluarga di Bintaro Tahun Dua Ribu Dua Belas: Kasus Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261023_124651_pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas/final.mp4",
+      "video_id": "-9JaVDCeyM8",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 139,
-  "_voice_idx": 132
+  "_format_idx": 140,
+  "_voice_idx": 133
 }
