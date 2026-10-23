@@ -130,7 +130,8 @@
     "kasus-pembunuhan-gadis-remaja-jombang-2021",
     "Kasus Pembunuhan Dini Yogyakarta 2019",
     "pembunuhan-siti-rahayu-cianjur-2023",
-    "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022"
+    "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022",
+    "kasus-pembunuhan-keluarga-cianjur-2022"
   ],
   "published": [
     {
@@ -1442,8 +1443,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261023_004659",
+      "topic": "kasus-pembunuhan-keluarga-cianjur-2022",
+      "title": "Misteri Pembunuhan Keluarga Sumarno di Cianjur dua ribu dua puluh dua: Jeritan di Tengah Kegelapan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261023_004659_kasus-pembunuhan-keluarga-cianjur-2022/final.mp4",
+      "video_id": "-PaSNQHwD1c",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 138,
-  "_voice_idx": 131
+  "_format_idx": 139,
+  "_voice_idx": 132
 }
