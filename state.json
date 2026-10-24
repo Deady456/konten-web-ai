@@ -133,7 +133,8 @@
     "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022",
     "kasus-pembunuhan-keluarga-cianjur-2022",
     "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas",
-    "pembunuhan-riska-yogyakarta-2022"
+    "pembunuhan-riska-yogyakarta-2022",
+    "hilangnya-tiga-mahasiswa-universitas-jambi-2023"
   ],
   "published": [
     {
@@ -1475,8 +1476,18 @@
       "publish_at": null,
       "format": "news_breakdown",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261024_124707",
+      "topic": "hilangnya-tiga-mahasiswa-universitas-jambi-2023",
+      "title": "Misteri Tiga Mahasiswa Hilang di Jambi: Jejak yang Menghilang Tanpa Jejak",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261024_124707_hilangnya-tiga-mahasiswa-universitas-jambi-2023/final.mp4",
+      "video_id": "_5lQrcrWU4k",
+      "publish_at": null,
+      "format": "list",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 141,
-  "_voice_idx": 134
+  "_format_idx": 142,
+  "_voice_idx": 135
 }
