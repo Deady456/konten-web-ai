@@ -132,7 +132,8 @@
     "pembunuhan-siti-rahayu-cianjur-2023",
     "Kasus Pembunuhan Keluarga di Desa Pangkalan Lampung 2022",
     "kasus-pembunuhan-keluarga-cianjur-2022",
-    "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas"
+    "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas",
+    "pembunuhan-riska-yogyakarta-2022"
   ],
   "published": [
     {
@@ -1464,8 +1465,18 @@
       "publish_at": null,
       "format": "deep_dive",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261024_010135",
+      "topic": "pembunuhan-riska-yogyakarta-2022",
+      "title": "Jeritan Bisu di Kamar Kos Yogyakarta: Misteri Pembunuhan Mahasiswa yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261024_010135_pembunuhan-riska-yogyakarta-2022/final.mp4",
+      "video_id": "rZj7KyJtHjM",
+      "publish_at": null,
+      "format": "news_breakdown",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 140,
-  "_voice_idx": 133
+  "_format_idx": 141,
+  "_voice_idx": 134
 }
