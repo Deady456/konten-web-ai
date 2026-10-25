@@ -134,7 +134,8 @@
     "kasus-pembunuhan-keluarga-cianjur-2022",
     "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas",
     "pembunuhan-riska-yogyakarta-2022",
-    "hilangnya-tiga-mahasiswa-universitas-jambi-2023"
+    "hilangnya-tiga-mahasiswa-universitas-jambi-2023",
+    "Kasus Pembunuhan Tembakan Malam di Desa Selamat, Lampung"
   ],
   "published": [
     {
@@ -1486,8 +1487,18 @@
       "publish_at": null,
       "format": "list",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261025_004653",
+      "topic": "Kasus Pembunuhan Tembakan Malam di Desa Selamat, Lampung",
+      "title": "Malam Tembakan Memecah Keheningan: Misteri Pembunuhan di Desa Selamat Lampung",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261025_004653_kasus-pembunuhan-tembakan-malam-di-desa-selamat-lampung/final.mp4",
+      "video_id": "SMQwbQi44wY",
+      "publish_at": null,
+      "format": "story",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 142,
-  "_voice_idx": 135
+  "_format_idx": 143,
+  "_voice_idx": 136
 }
