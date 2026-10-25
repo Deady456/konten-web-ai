@@ -135,7 +135,8 @@
     "pembunuhan-keluarga-bintaro-tahun-dua-ribu-dua-belas",
     "pembunuhan-riska-yogyakarta-2022",
     "hilangnya-tiga-mahasiswa-universitas-jambi-2023",
-    "Kasus Pembunuhan Tembakan Malam di Desa Selamat, Lampung"
+    "Kasus Pembunuhan Tembakan Malam di Desa Selamat, Lampung",
+    "kasus-pembunuhan-gadis-lima-belas-tahun-malang-2023"
   ],
   "published": [
     {
@@ -1497,8 +1498,18 @@
       "publish_at": null,
       "format": "story",
       "voice": "unknown"
+    },
+    {
+      "ts": "20261025_124711",
+      "topic": "kasus-pembunuhan-gadis-lima-belas-tahun-malang-2023",
+      "title": "Misteri Pembunuhan Gadis Lima Belas Tahun di Malang yang Belum Terpecahkan",
+      "path": "/home/runner/work/konten-web-ai/konten-web-ai/output/20261025_124711_kasus-pembunuhan-gadis-lima-belas-tahun-malang-2023/final.mp4",
+      "video_id": "Vt9rYOIF72c",
+      "publish_at": null,
+      "format": "deep_dive",
+      "voice": "unknown"
     }
   ],
-  "_format_idx": 143,
-  "_voice_idx": 136
+  "_format_idx": 144,
+  "_voice_idx": 137
 }
