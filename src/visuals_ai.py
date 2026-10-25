@@ -195,6 +195,10 @@ import base64
 def generate_imagen(prompt: str, out_path: Path, width=1080, height=1920) -> bool:
     ratio = "9:16" if height > width else ("16:9" if width > height else "1:1")
     
+    if not api_key:
+        print("  [9Router] NINEROUTER_KEY is required")
+        return False
+
     payload = {
         "instances": [{"prompt": prompt}],
         "parameters": {"sampleCount": 1, "aspectRatio": ratio}
@@ -260,7 +264,7 @@ def generate_openrouter_image(prompt: str, out_path: Path, model: str = "ag/gemi
     import os
     from .config import OPENROUTER_API_KEYS, LLM_BASE_URL
     url = f"{LLM_BASE_URL}/images/generations"
-    api_key = OPENROUTER_API_KEYS[0] if OPENROUTER_API_KEYS else ""
+    api_key = os.environ.get("NINEROUTER_KEY", "")
     if not api_key:
         print("  No OpenRouter API key configured")
         return False
@@ -301,8 +305,9 @@ def generate_shellshock_image(prompt: str, out_path, model: str = "cf/@cf/black-
     import os, base64, requests
     from pathlib import Path
     out_path = Path(out_path)
-    gateway_url = os.environ.get("SHELLSHOCK_URL", "http://13.214.34.200:20128/v1/images/generations")
-    api_key = os.environ.get("SHELLSHOCK_API_KEY", "sk-1f7d1788ce9c1aa7-qgi726-f1cb1818")
+    gateway_base = os.environ.get("NINEROUTER_URL", "https://router.otakai.cloud").rstrip("/")
+    gateway_url = f"{gateway_base}/v1/images/generations"
+    api_key = os.environ.get("NINEROUTER_KEY", "")
 
     payload = {
         "model": model,
