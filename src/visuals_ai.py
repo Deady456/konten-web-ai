@@ -195,10 +195,6 @@ import base64
 def generate_imagen(prompt: str, out_path: Path, width=1080, height=1920) -> bool:
     ratio = "9:16" if height > width else ("16:9" if width > height else "1:1")
     
-    if not api_key:
-        print("  [9Router] NINEROUTER_KEY is required")
-        return False
-
     payload = {
         "instances": [{"prompt": prompt}],
         "parameters": {"sampleCount": 1, "aspectRatio": ratio}
@@ -265,6 +261,10 @@ def generate_openrouter_image(prompt: str, out_path: Path, model: str = "ag/gemi
     from .config import OPENROUTER_API_KEYS, LLM_BASE_URL
     url = f"{LLM_BASE_URL}/images/generations"
     api_key = os.environ.get("NINEROUTER_KEY", "")
+
+    if not api_key:
+        print("  [9Router] NINEROUTER_KEY is required")
+        return False
     if not api_key:
         print("  No OpenRouter API key configured")
         return False
